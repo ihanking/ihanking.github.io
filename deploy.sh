@@ -10,7 +10,7 @@ npm run build
 cd public
 
 git init
-git remote add origin https://github.com/ihanking/ihanking.github.io.git
+#git remote add origin https://github.com/ihanking/ihanking.github.io.git
 git add .
 git commit -m 'deploy'
 
