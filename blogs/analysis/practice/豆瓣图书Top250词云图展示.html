@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>豆瓣图书Top250词云图展示 | Hank&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="专注于爬虫、数据分析与挖掘,涉及python、sql、go、js">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.36fffe06.css" as="style"><link rel="preload" href="/assets/js/app.fabc9d41.js" as="script"><link rel="preload" href="/assets/js/3.5fe052d6.js" as="script"><link rel="preload" href="/assets/js/1.26d2071d.js" as="script"><link rel="preload" href="/assets/js/17.a521ea86.js" as="script"><link rel="prefetch" href="/assets/js/10.413ced61.js"><link rel="prefetch" href="/assets/js/11.638c51a6.js"><link rel="prefetch" href="/assets/js/12.f5743ea6.js"><link rel="prefetch" href="/assets/js/13.dfaa4493.js"><link rel="prefetch" href="/assets/js/14.06c1d4b1.js"><link rel="prefetch" href="/assets/js/15.6bf3fc4b.js"><link rel="prefetch" href="/assets/js/16.468e1c40.js"><link rel="prefetch" href="/assets/js/18.622c048d.js"><link rel="prefetch" href="/assets/js/19.c0031164.js"><link rel="prefetch" href="/assets/js/20.65ec1697.js"><link rel="prefetch" href="/assets/js/21.a9a1a642.js"><link rel="prefetch" href="/assets/js/22.6bd4be37.js"><link rel="prefetch" href="/assets/js/23.2a3265b3.js"><link rel="prefetch" href="/assets/js/24.14bf4c88.js"><link rel="prefetch" href="/assets/js/25.2ec63e8c.js"><link rel="prefetch" href="/assets/js/26.a2a000b1.js"><link rel="prefetch" href="/assets/js/27.87d67993.js"><link rel="prefetch" href="/assets/js/28.78806133.js"><link rel="prefetch" href="/assets/js/29.3db552ba.js"><link rel="prefetch" href="/assets/js/30.81d1cf6c.js"><link rel="prefetch" href="/assets/js/31.8df64240.js"><link rel="prefetch" href="/assets/js/32.7f0c1884.js"><link rel="prefetch" href="/assets/js/33.bdc0ef1a.js"><link rel="prefetch" href="/assets/js/34.1d57f3c5.js"><link rel="prefetch" href="/assets/js/35.ded2d684.js"><link rel="prefetch" href="/assets/js/36.c02bf25c.js"><link rel="prefetch" href="/assets/js/37.2f9beed3.js"><link rel="prefetch" href="/assets/js/38.5b1b8e8a.js"><link rel="prefetch" href="/assets/js/39.06ca66db.js"><link rel="prefetch" href="/assets/js/4.4bd9dd63.js"><link rel="prefetch" href="/assets/js/40.854d3967.js"><link rel="prefetch" href="/assets/js/41.dadc127e.js"><link rel="prefetch" href="/assets/js/42.c7d1ac3c.js"><link rel="prefetch" href="/assets/js/43.7413140a.js"><link rel="prefetch" href="/assets/js/44.13968d88.js"><link rel="prefetch" href="/assets/js/45.03758ed7.js"><link rel="prefetch" href="/assets/js/46.f9b6fa09.js"><link rel="prefetch" href="/assets/js/47.1564016b.js"><link rel="prefetch" href="/assets/js/48.2ea3586c.js"><link rel="prefetch" href="/assets/js/49.a6995025.js"><link rel="prefetch" href="/assets/js/5.f0dd78c3.js"><link rel="prefetch" href="/assets/js/50.4952e772.js"><link rel="prefetch" href="/assets/js/51.b6941d50.js"><link rel="prefetch" href="/assets/js/52.80605b8a.js"><link rel="prefetch" href="/assets/js/53.886c17d9.js"><link rel="prefetch" href="/assets/js/54.7ca7a2ae.js"><link rel="prefetch" href="/assets/js/55.ebef3919.js"><link rel="prefetch" href="/assets/js/56.90db625c.js"><link rel="prefetch" href="/assets/js/57.3f5813e8.js"><link rel="prefetch" href="/assets/js/58.f0972485.js"><link rel="prefetch" href="/assets/js/59.81a9868a.js"><link rel="prefetch" href="/assets/js/6.00aabcc1.js"><link rel="prefetch" href="/assets/js/60.a62e69cb.js"><link rel="prefetch" href="/assets/js/61.969b38e5.js"><link rel="prefetch" href="/assets/js/62.33ab5fa3.js"><link rel="prefetch" href="/assets/js/63.85364840.js"><link rel="prefetch" href="/assets/js/64.e5ba9b8e.js"><link rel="prefetch" href="/assets/js/65.f73a5a62.js"><link rel="prefetch" href="/assets/js/66.66140af3.js"><link rel="prefetch" href="/assets/js/67.d720a4f9.js"><link rel="prefetch" href="/assets/js/68.fe9c9f14.js"><link rel="prefetch" href="/assets/js/69.91cf5eed.js"><link rel="prefetch" href="/assets/js/7.de697a5f.js"><link rel="prefetch" href="/assets/js/70.a2d98011.js"><link rel="prefetch" href="/assets/js/71.18ed283e.js"><link rel="prefetch" href="/assets/js/72.70e471f8.js"><link rel="prefetch" href="/assets/js/73.f41bdc05.js"><link rel="prefetch" href="/assets/js/74.c24a3bc0.js"><link rel="prefetch" href="/assets/js/75.4cf13853.js"><link rel="prefetch" href="/assets/js/76.ecde64c8.js"><link rel="prefetch" href="/assets/js/77.a0821364.js"><link rel="prefetch" href="/assets/js/78.22a82515.js"><link rel="prefetch" href="/assets/js/79.9b8d0ae2.js"><link rel="prefetch" href="/assets/js/8.2b4c60e7.js"><link rel="prefetch" href="/assets/js/80.8b6edfce.js"><link rel="prefetch" href="/assets/js/81.94f6556b.js"><link rel="prefetch" href="/assets/js/82.ca11c3c2.js"><link rel="prefetch" href="/assets/js/9.02c22cc6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36fffe06.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Hank's Blog</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hank</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Hank's Blog" class="logo"> <span class="site-name">Hank's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/算法学习/" class="nav-link"><i class="iconfont undefined"></i>
+  算法学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析实战/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析报告/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析报告
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据思维学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据思维学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据可视化/" class="nav-link"><i class="iconfont undefined"></i>
+  数据可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫实战/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Go学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Go学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Python学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python实战/" class="nav-link"><i class="iconfont undefined"></i>
+  Python实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Scrapy框架学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Scrapy框架学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫学习/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫实战实战/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫实战实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/统计学/" class="nav-link"><i class="iconfont undefined"></i>
+  统计学
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress-reco
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/ihanking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Hank
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>65</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>32</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/算法学习/" class="nav-link"><i class="iconfont undefined"></i>
+  算法学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析实战/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析报告/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析报告
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据思维学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据思维学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据可视化/" class="nav-link"><i class="iconfont undefined"></i>
+  数据可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫实战/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/博客搭建/" class="nav-link"><i class="iconfont undefined"></i>
+  博客搭建
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Go学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Go学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Python学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试题/" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python实战/" class="nav-link"><i class="iconfont undefined"></i>
+  Python实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Scrapy框架学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Scrapy框架学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫学习/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫实战实战/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫实战实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库学习/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/统计学/" class="nav-link"><i class="iconfont undefined"></i>
+  统计学
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress-reco
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/ihanking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>豆瓣图书Top250词云图展示</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hank</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>豆瓣图书Top250词云图展示</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>Hank</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-08-26</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>pyecharts</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="项目背景"><a href="#项目背景" class="header-anchor">#</a> 项目背景</h2> <p>从豆瓣图书Top250抓取数据，并通过词云图展示</p> <h3 id="导入库"><a href="#导入库" class="header-anchor">#</a> 导入库</h3> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree <span class="token comment">#解析库</span>
+<span class="token keyword">import</span> time <span class="token comment">#时间</span>
+<span class="token keyword">import</span> random <span class="token comment">#随机函数</span>
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> requests <span class="token comment">#请求库</span>
+<span class="token keyword">import</span> jieba <span class="token comment">#导入结巴分词</span>
+<span class="token keyword">from</span> pyecharts<span class="token punctuation">.</span>charts <span class="token keyword">import</span> WordCloud
+<span class="token keyword">from</span> pyecharts <span class="token keyword">import</span> options <span class="token keyword">as</span> opts
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="数据抓取"><a href="#数据抓取" class="header-anchor">#</a> 数据抓取</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">#循环构造网址</span>
+<span class="token keyword">def</span> <span class="token function">format_url</span><span class="token punctuation">(</span>base_url<span class="token punctuation">,</span>pages<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    urls<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>pages <span class="token operator">*</span> <span class="token number">25</span><span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        urls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>base_url<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> urls
+
+<span class="token comment">#解析单个页面</span>
+<span class="token keyword">def</span> <span class="token function">parse_page</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#创建一个存储结果的容器</span>
+    result<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    html<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+    bs<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> bs<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'//tr[@class=&quot;item&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#书籍中文名</span>
+        book_ch_name<span class="token operator">=</span>i<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'td[2]/div[1]/a[1]/@title'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token comment">#评分</span>
+        score<span class="token operator">=</span>i<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'td[2]/div[2]/span[2]'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+        <span class="token comment">#书籍信息</span>
+        book_info<span class="token operator">=</span>i<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'td[2]/p[@class=&quot;pl&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+        <span class="token comment">#评价数量由于数据不规整，使用字符串方法进行数据处理</span>
+        comment_num<span class="token operator">=</span>i<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'td[2]/div[2]/span[3]'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">'(\n'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">'\n)'</span><span class="token punctuation">)</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token comment">#一句话概括</span>
+            brief<span class="token operator">=</span>i<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'td[2]/p[@class=&quot;quote&quot;]/span'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+        <span class="token keyword">except</span><span class="token punctuation">:</span>
+            brief<span class="token operator">=</span><span class="token boolean">None</span>
+        <span class="token comment">#这里的cache是存储每一循环的结果，然后通过下一步操作循环更新result里面的数据</span>
+        cache<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'中文名'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>book_ch_name<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'评分'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>score<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'书籍信息'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>book_info<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'评价数量'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>comment_num<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'一句话概括'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>brief<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        result<span class="token operator">=</span>pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>result<span class="token punctuation">,</span>cache<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+
+<span class="token comment">#主函数</span>
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    final_result<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    base_url<span class="token operator">=</span><span class="token string">'https://book.douban.com/top250?start={}'</span>
+    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'</span><span class="token punctuation">}</span>
+    urls<span class="token operator">=</span>format_url<span class="token punctuation">(</span>base_url<span class="token punctuation">,</span>pages<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
+        res<span class="token operator">=</span>parse_page<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+        final_result<span class="token operator">=</span>pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>final_result<span class="token punctuation">,</span>res<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> final_result
+
+<span class="token comment">#运行函数</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    final_result <span class="token operator">=</span> main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><h2 id="提取词云图展示的数据"><a href="#提取词云图展示的数据" class="header-anchor">#</a> 提取词云图展示的数据</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">#提取书名、评分、评价数量</span>
+book_top250<span class="token operator">=</span>final_result<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'中文名'</span><span class="token punctuation">,</span><span class="token string">'评分'</span><span class="token punctuation">,</span><span class="token string">'评价数量'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+<span class="token comment">#将书名转为列表</span>
+book_name<span class="token operator">=</span>book_top250<span class="token punctuation">[</span><span class="token string">'中文名'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">#将评分转为列表</span>
+book_score<span class="token operator">=</span>book_top250<span class="token punctuation">[</span><span class="token string">'评分'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">#将评价人数转为列表</span>
+book_comment_num<span class="token operator">=</span>book_top250<span class="token punctuation">[</span><span class="token string">'评价数量'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#去除多余字符&quot;人评价&quot;</span>
+book_comment_num<span class="token operator">=</span><span class="token punctuation">[</span>x<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">&quot;人评价&quot;</span><span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> book_comment_num <span class="token keyword">if</span> x<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token string">''</span><span class="token punctuation">]</span>
+
+<span class="token comment">#用for循环合并数据</span>
+a<span class="token operator">=</span><span class="token punctuation">[</span>z <span class="token keyword">for</span> z <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>book_name<span class="token punctuation">,</span>book_comment_num<span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="绘图设置"><a href="#绘图设置" class="header-anchor">#</a> 绘图设置</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>c<span class="token operator">=</span><span class="token punctuation">(</span>
+    <span class="token comment">#wordcloud类实例化</span>
+    WordCloud<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">#添加图名称、数据、字体的随机大小、图像类型</span>
+    <span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>a<span class="token punctuation">,</span>word_size_range<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>shape<span class="token operator">=</span><span class="token string">&quot;diamond&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment">#设置标题</span>
+    <span class="token punctuation">.</span>set_global_opts<span class="token punctuation">(</span>title_opts<span class="token operator">=</span>opts<span class="token punctuation">.</span>TitleOpts<span class="token punctuation">(</span>title<span class="token operator">=</span><span class="token string">&quot;豆瓣图书Top250&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language- extra-class"><pre><code>/Users/Hank/opt/anaconda3/lib/python3.7/site-packages/pyecharts/charts/chart.py:14: PendingDeprecationWarning: pyecharts 所有图表类型将在 v1.9.0 版本开始强制使用 ChartItem 进行数据项配置 :)
+  super().__init__(init_opts=init_opts)
+</code></pre></div><h2 id="结果展示"><a href="#结果展示" class="header-anchor">#</a> 结果展示</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>c<span class="token punctuation">.</span>render_notebook<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/4/2020, 12:21:55 PM</span></div></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.fabc9d41.js" defer></script><script src="/assets/js/3.5fe052d6.js" defer></script><script src="/assets/js/1.26d2071d.js" defer></script><script src="/assets/js/17.a521ea86.js" defer></script>
+  </body>
+</html>
