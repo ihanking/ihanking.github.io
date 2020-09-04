@@ -503,4 +503,47 @@ on e.emp_no=s.emp_no
 where s.to_date='9999-01-01'
 ```
 
+[60.按照salary的累计和running_total，其中running_total为前N个当前( to_date = '9999-01-01')员工的salary累计和，其他以此类推](https://www.nowcoder.com/practice/58824cd644ea47d7b2b670c506a159a6?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select s1.emp_no,s1.salary,
+(select sum(s2.salary) from salaries as s2
+where s2.emp_no<=s1.emp_no
+and s2.to_date='9999-01-01'
+) as running_total
+from salaries as s1
+where s1.to_date='9999-01-01'
+order by s1.emp_no
+```
+
+[61.对于employees表中，输出first_name排名(按first_name升序排序)为奇数的first_name](https://www.nowcoder.com/practice/e3cf1171f6cc426bac85fd4ffa786594?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select first_name from employees e1
+where (select count(*) from employees e2 where e1.first_name>=e2.first_name) %2=1;
+```
+
+[62.id为用户主键id，number代表积分情况，让你写一个sql查询，积分表里面出现三次以及三次以上的积分](https://www.nowcoder.com/practice/c69ac94335744480aa50646864b7f24d?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select number
+from grade
+group by number
+having count(number)>=3;
+```
+
+[63.请你根据上表，输出通过的题目的排名，通过题目个数相同的，排名相同，此时按照id升序排列](https://www.nowcoder.com/practice/cd2e10a588dc4c1db0407d0bf63394f3?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select a.id, a.number,(select count(distinct b.number)
+from passing_number b
+where a.number<=b.number) rank
+from passing_number a
+order by a.number desc,a.id;
+```
+
+[64.请你找到每个人的任务情况，并且输出出来，没有任务的也要输出，而且输出结果按照person的id升序排序](https://www.nowcoder.com/practice/9dd9182d029a4f1d8c1324b63fc719c9?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select p.id,p.name,t.content
+from person p
+left join task t
+on p.id=t.person_id
+order by p.id asc
+```
 

@@ -94,7 +94,18 @@ module.exports = {
     "author": "Hank",
     "authorAvatar": "/avatar.png",
     //"record": "xxxx",
-    "startYear": "2020"
+    "startYear": "2020",
+    vssueConfig: {
+      platform: 'github',
+      owner: 'ihanking',
+      repo: 'vssue',
+      clientId: '49bd8c8133b2552d409a',
+      clientSecret: 'f2d678bed3c0c52e9d25ebab5eda15e393d1bfad',
+    },
+    // "valineConfig": {
+    //   "appId": "9EcPctz8VByNhjQKT54mJDOx-gzGzoHsz",//process.env.LEANCLOUD_APP_ID,
+    //   "appKey": "DzM9rJEzytfEXUlbCycHc8kB"//process.env.LEANCLOUD_APP_KEY,
+    // }
   },
   "markdown": {
     "lineNumbers": true
