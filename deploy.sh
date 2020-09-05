@@ -15,6 +15,7 @@ git add .
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f origin master
+#git push -f origin master
+git push origin master --force
 
 cd -
