@@ -18,4 +18,4 @@ git commit -m 'deploy'
 #git push -f origin master
 git push origin master --force
 
-cd -
+# cd -
