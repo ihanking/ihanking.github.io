@@ -28,19 +28,57 @@ module.exports = {
         "icon": "reco-home"
       },
       {
-        "text": "时间线",
-        "link": "/timeline/",
-        "icon": "reco-date"
-      },
-      {
-        "text": "文档",
+        "text": "爬虫",
         "icon": "reco-message",
         "items": [
           {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
+            "text": "爬虫实战",
+            "link": "/docs/spider/actual/"
+          },
+          {
+            "text": "Scrapy框架",
+            "link": "/docs/spider/scrapy/"
+          },
+          {
+            "text": "解析数据",
+            "link": "/docs/spider/parse/"
+          },
+          {
+            "text": "其他",
+            "link": "/docs/spider/other/"
+          },
         ]
+      },
+      {
+        "text": "数据分析",
+        "icon": "reco-message",
+        "items": [
+          {
+            "text": "数分实战",
+            "link": "/docs/analysis/actual/"
+          },
+          {
+            "text": "可视化",
+            "link": "/docs/analysis/visualization/"
+          },
+          {
+            "text": "数据思维",
+            "link": "/docs/analysis/thinking/"
+          },
+          {
+            "text": "数据处理",
+            "link": "/docs/analysis/process/"
+          },
+          {
+            "text": "分析报告",
+            "link": "/docs/analysis/report/"
+          },
+        ]
+      },
+      {
+        "text": "时间线",
+        "link": "/timeline/",
+        "icon": "reco-date"
       },
       {
         "text": "联系",
