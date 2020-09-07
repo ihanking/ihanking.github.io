@@ -1,6 +1,6 @@
 module.exports = {
   "title": "Hank's Blog",
-  "description": "专注于爬虫、数据分析与挖掘,涉及python、sql、go、js",
+  "description": "专注于爬虫、数据分析与挖掘,涉及python/sql/go/js",
   "dest": "public",
   "base":"",
   "head": [
@@ -28,54 +28,6 @@ module.exports = {
         "icon": "reco-home"
       },
       {
-        "text": "爬虫",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "爬虫实战",
-            "link": "/docs/spider/actual/"
-          },
-          {
-            "text": "Scrapy框架",
-            "link": "/docs/spider/scrapy/"
-          },
-          {
-            "text": "解析数据",
-            "link": "/docs/spider/parse/"
-          },
-          {
-            "text": "其他",
-            "link": "/docs/spider/other/"
-          },
-        ]
-      },
-      {
-        "text": "数据分析",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "数分实战",
-            "link": "/docs/analysis/actual/"
-          },
-          {
-            "text": "可视化",
-            "link": "/docs/analysis/visualization/"
-          },
-          {
-            "text": "数据思维",
-            "link": "/docs/analysis/thinking/"
-          },
-          {
-            "text": "数据处理",
-            "link": "/docs/analysis/process/"
-          },
-          {
-            "text": "分析报告",
-            "link": "/docs/analysis/report/"
-          },
-        ]
-      },
-      {
         "text": "时间线",
         "link": "/timeline/",
         "icon": "reco-date"
@@ -92,21 +44,14 @@ module.exports = {
         ]
       }
     ],
-    "sidebar": {
-      "/docs/analysis/actual/": [],
-      "/docs/analysis/process/": [],
-      "/docs/analysis/report/": [],
-      "/docs/analysis/thinking/": [],
-      "/docs/analysis/visualization/": [],
-    },
     "type": "blog",
     "blogConfig": {
       "category": {
-        "location": 4,
+        "location": 2,
         "text": "分类"
       },
       "tag": {
-        "location": 5,
+        "location": 3w,
         "text": "标签"
       }
     },
