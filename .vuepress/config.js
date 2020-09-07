@@ -51,7 +51,7 @@ module.exports = {
         "text": "分类"
       },
       "tag": {
-        "location": 3w,
+        "location": 3,
         "text": "标签"
       }
     },
