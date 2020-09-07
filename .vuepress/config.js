@@ -93,21 +93,20 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-      ]
+      "/docs/analysis/actual/": [],
+      "/docs/analysis/process/": [],
+      "/docs/analysis/report/": [],
+      "/docs/analysis/thinking/": [],
+      "/docs/analysis/visualization/": [],
     },
     "type": "blog",
     "blogConfig": {
       "category": {
-        "location": 2,
+        "location": 4,
         "text": "分类"
       },
       "tag": {
-        "location": 3,
+        "location": 5,
         "text": "标签"
       }
     },
