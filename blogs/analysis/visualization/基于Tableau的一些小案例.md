@@ -1,9 +1,9 @@
 ---
-title: "基于Tableau各省市售电量分析"
-date: 2020-09-05
+title: 电影《信条》数据分析
+date: 2020-09-06
 draft: false
-tags: ["tableau"]
-categories: ["数据可视化"]
+tags: ["requests","pandas"]
+categories: ["数据分析实战"]
 ---
 
 ## 各省市售电量分析
@@ -14,4 +14,8 @@ categories: ["数据可视化"]
 
 ![市场-销售条形图](/images/202009/市场-销售条形图.png)
 
+## 生产效率分析
 
+![劳动生产效率倾斜图](/images/202009/劳动生产效率倾斜图.png)
+
+![五点网络图](/images/202009/五点网络图.png)
