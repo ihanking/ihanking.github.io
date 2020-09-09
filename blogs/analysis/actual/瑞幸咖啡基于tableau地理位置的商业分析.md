@@ -1,8 +1,8 @@
 ---
-title: 瑞幸咖啡基于地理位置的商业分析
+title: 瑞幸咖啡基于tableau地理位置的商业分析
 date: 2020-09-03
 draft: false
-tags: ["pandas"]
+tags: ["pandas","tableau"]
 categories: ["分析实战"]
 ---
 
