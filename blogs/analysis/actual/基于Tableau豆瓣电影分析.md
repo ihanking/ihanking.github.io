@@ -3,7 +3,7 @@ title: "基于Tableau豆瓣电影分析"
 date: 2020-09-01
 draft: false
 tags: ["tableau"]
-categories: ["数据分析实战"]
+categories: ["分析实战"]
 ---
 
 ## 豆瓣电影分析

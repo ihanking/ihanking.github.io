@@ -1,5 +1,5 @@
 ---
-title: "搭建个人数据分析平台"
+title: 基于Superset搭建个人的数据分析平台
 date: 2020-08-26
 draft: false
 tags: ["superset"]

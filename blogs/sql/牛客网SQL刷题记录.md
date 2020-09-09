@@ -547,3 +547,16 @@ on p.id=t.person_id
 order by p.id asc
 ```
 
+[65.请你找出每个岗位分数排名前2的用户，得到的结果先按照language的name升序排序，再按照积分降序排序，最后按照grade的id升序排序，得到结果如下](https://www.nowcoder.com/practice/b83f8b0e7e934d95a56c24f047260d91?tpId=82&&tqId=35082&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select g1.id, g1.name, g1.score
+from (grade gr 
+join language l on gr.language_id=l.id)g1
+where (
+    select count(distinct g2.score)
+    from grade g2
+    where g2.score>=g1.score and g1.language_id=g2.language_id)<=2 
+order by g1.name,g1.score desc ,g1.id;
+```
+
+
