@@ -2,7 +2,7 @@
 title: Pandas缺失值处理
 date: 2019-12-04
 draft: false
-tags: ["pandas","数据清洗"]
+tags: ["pandas"]
 categories: ["数据处理"]
 ---
 

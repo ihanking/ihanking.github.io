@@ -1,5 +1,5 @@
 ---
-title: Pyecharts数据可视化饼图绘制
+title: Pyecharts之饼图绘制
 date: 2020-09-09
 draft: false
 tags: ["pyecharts"]

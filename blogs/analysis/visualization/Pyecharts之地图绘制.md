@@ -1,5 +1,5 @@
 ---
-title: Pyecharts数据可视化地图绘制
+title: Pyecharts之地图绘制
 date: 2020-09-09
 draft: false
 tags: ["pyecharts"]
