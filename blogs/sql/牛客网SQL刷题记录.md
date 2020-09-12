@@ -559,4 +559,14 @@ where (
 order by g1.name,g1.score desc ,g1.id;
 ```
 
+[68.请你写出一个sql语句查询每个用户最近一天登录的日子，用户的名字，以及用户用的设备的名字，并且查询结果按照user的name升序排序，上面的例子查询结果如下](https://www.nowcoder.com/practice/7cc3c814329546e89e71bb45c805c9ad?tpId=82&&tqId=35085&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select user.name as u_n, client.name as c_n, max(login.date) as d
+from login
+inner join user
+on user.id=login.user_id
+inner join client
+on client.id=login.client_id
+group by u_n
+```
 

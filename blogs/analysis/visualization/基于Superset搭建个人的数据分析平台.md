@@ -48,6 +48,13 @@ python superset init
 python superset runserver -d
 ```
 
+### 遇到的问题
+
+**1.创建用户名和密码是报错**
+```
+AttributeError: 'NoneType' object has no attribute 'auth_type'
+```
+
 
 ## Docker环境
 
@@ -106,3 +113,15 @@ python superset runserver -d
 停止 `docker stop 容器ID`
 
 开启 `docker start 容器ID`
+
+## 源码安装
+
+克隆github源码到本地
+```
+git clone https://github.com/apache/incubator-superset/
+cd incubator-superset
+
+docker-compose up
+```
+
+配置完成后直接访问 `http://localhost:8088` 即可
