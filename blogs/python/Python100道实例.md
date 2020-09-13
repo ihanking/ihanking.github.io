@@ -1,5 +1,5 @@
 ---
-title: "Python练习"
+title: Python100道实例
 date: 2019-12-11
 categories: ["Python学习"]
 ---
@@ -9,7 +9,7 @@ categories: ["Python学习"]
 
 **程序分析：**  遍历全部可能，把有重复的剃掉。
 
-```
+```python
 total=0
 for i in range(1,5):
     for j in range(1,5):
@@ -21,7 +21,7 @@ print(total)
 ```
 **简便方法：**  用itertools中的permutations即可。
 
-```
+```python
 import itertools
 sum2=0
 a=[1,2,3,4]
@@ -37,7 +37,7 @@ print(sum2)
 
 **程序分析：**  分区间计算即可。
 
-```
+```python
 profit=int(input('Show me the money: '))
 bonus=0
 thresholds=[100000,100000,200000,200000,400000]
@@ -59,15 +59,14 @@ print(bonus)
 
 **程序分析：**  因为168对于指数爆炸来说实在太小了，所以可以直接省略数学分析，用最朴素的方法来获取上限:
 
-```
+```python
 n=0
 while (n+1)**2-n*n<=168:
     n+=1
 
 print(n+1)
-----------
 
-85
+#85
 
 ```
 
@@ -75,7 +74,7 @@ print(n+1)
 至于判断是否是完全平方数，最简单的方法是：平方根的值小数为0即可。
 结合起来：
 
-```
+```python
 n=0
 while (n+1)**2-n*n<=168:
     n+=1
@@ -91,7 +90,7 @@ for i in range((n+1)**2):
 
 **程序分析：**  特殊情况，闰年时需考虑二月多加一天：
 
-```
+```python
 def isLeapYear(y):
     return (y%400==0 or (y%4==0 and y%100!=0))
 DofM=[0,31,28,31,30,31,30,31,31,30,31,30]
@@ -112,7 +111,7 @@ print(res+day)
 
 **程序分析：**  练练手就随便找个排序算法实现一下，偷懒就直接调函数。
 
-```
+```python
 raw=[]
 for i in range(3):
     x=int(input('int%d: '%(i)))
@@ -139,7 +138,7 @@ print(sorted(raw2))
 
 **程序分析：**  斐波那契数列（Fibonacci sequence），从1,1开始，后面每一项等于前面两项之和。图方便就递归实现，图性能就用循环。
 
-```
+```python
 # 递归实现
 def Fib(n):
     return 1 if n<=2 else Fib(n-1)+Fib(n-2)
@@ -161,7 +160,7 @@ print(a)
 
 **程序分析：**  使用列表[:]，拿不准可以调用copy模块。
 
-```
+```python
 import copy
 a = [1,2,3,4,['a','b']]
 
@@ -193,7 +192,7 @@ e= [1, 2, 3, 4, ['a', 'b']]
 
 **程序分析：** 分行与列考虑，共9行9列，i控制行，j控制列。
 
-```
+```python
 for i in range(1,10):
     for j in range(1,i+1):
         print('%d*%d=%2ld '%(i,j,i*j),end='')
@@ -206,7 +205,7 @@ for i in range(1,10):
 
 **程序分析：**  使用 time 模块的 sleep() 函数。
 
-```
+```python
 import time
 for i in range(4):
     print(str(int(time.time()))[-2:])
@@ -219,7 +218,7 @@ for i in range(4):
 
 **程序分析：**  同009.
 
-```
+```python
 import time
 
 for i in range(4):
@@ -233,7 +232,7 @@ for i in range(4):
 
 **程序分析：**  我认为原文的解法有点扯，没有考虑3个月成熟的问题，人家还是婴儿怎么生孩子？考虑到三个月成熟，可以构建四个数据，其中：一月兔每个月长大成为二月兔，二月兔变三月兔，三月兔变成年兔，成年兔（包括新成熟的三月兔）生等量的一月兔。
 
-```
+```python
 month=int(input('繁殖几个月？： '))
 month_1=1
 month_2=0
@@ -254,7 +253,7 @@ for i in range(month):
 
 **程序分析：**  判断素数的方法：用一个数分别去除2到sqrt(这个数)，如果能被整除，则表明此数不是素数，反之是素数。 
 
-```
+```python
 import math
 for i in range(100,200):
     flag=0
@@ -285,7 +284,7 @@ for i in range(100,200):
 
 **程序分析：**  利用for循环控制100-999个数，每个数分解出个位，十位，百位。
 
-```
+```python
 for i in range(100,1000):
     s=str(i)
     one=int(s[-1])
@@ -301,7 +300,7 @@ for i in range(100,1000):
 
 **程序分析：**  根本不需要判断是否是质数，从2开始向数本身遍历，能整除的肯定是最小的质数。
 
-```
+```python
 target=int(input('输入一个整数：'))
 print(target,'= ',end='')
 
@@ -336,7 +335,7 @@ while True:
 
 **程序分析：**  用条件判断即可。
 
-```
+```python
 points=int(input('输入分数：'))
 if points>=90:
     grade='A'
@@ -353,7 +352,7 @@ print(grade)
 
 **程序分析：**  使用 datetime 模块。
 
-```
+```python
 import datetime
 print(datetime.date.today())
 print(datetime.date(2333,2,3))
@@ -369,7 +368,7 @@ print(day)
 
 **程序分析：**  利用 while 或 for 语句,条件为输入的字符不为 '\n'。
 
-```
+```python
 string=input("输入字符串：")
 alp=0
 num=0
@@ -397,7 +396,7 @@ print('other: ',oth)
 
 **程序分析：** 用字符串解决。
 
-```
+```python
 a=input('被加数字：')
 n=int(input('加几次？：'))
 res=0
@@ -413,7 +412,7 @@ print('结果是：',res)
 
 **程序分析：** 将每一对因子加进集合，在这个过程中已经自动去重。最后的结果要求不计算其本身。
 
-```
+```python
 def factor(num):
     target=int(num)
     res=set()
@@ -434,7 +433,7 @@ for i in range(2,1001):
 
 **程序分析：** 无
 
-```
+```python
 high=200.
 total=100
 for i in range(10):
@@ -450,7 +449,7 @@ print('总长：',total)
 
 **程序分析：** 按规则反向推断：猴子有一个桃子，他偷来一个桃子，觉得不够又偷来了与手上等量的桃子，一共偷了9天。
 
-```
+```python
 peach=1
 for i in range(9):
     peach=(peach+1)*2
@@ -463,7 +462,7 @@ print(peach)
 
 **程序分析：** 找到条件下不重复的三个对手即可。
 
-```
+```python
 a=set(['x','y','z'])
 b=set(['x','y','z'])
 c=set(['x','y','z'])
@@ -490,7 +489,7 @@ for i in a:
 
 **程序分析：** 递归调用即可。
 
-```
+```python
 def draw(num):
     a="*"*(2*(4-num)+1)
     print(a.center(9,' '))
@@ -506,7 +505,7 @@ draw(4)
 
 **程序分析：** 就是斐波那契数列的后一项除以前一项。
 
-```
+```python
 a = 2.0
 b = 1.0
 s = 0
@@ -523,7 +522,7 @@ print (s)
 
 **程序分析：** 1+2!+3!+...+20!=1+2(1+3(1+4(...20(1))))
 
-```
+```python
 res=1
 for i in range(20,1,-1):
     res=i*res+1
@@ -536,7 +535,7 @@ print(res)
 
 **程序分析：** 递归调用即可。
 
-```
+```python
 def factorial(n):
     return n*factorial(n-1) if n>1 else 1
 print(factorial(5))
@@ -548,7 +547,7 @@ print(factorial(5))
 
 **程序分析：** 递归真是蠢方法。
 
-```
+```python
 def rec(string):
     if len(string)!=1:
         rec(string[1:])
@@ -563,7 +562,7 @@ rec(input('string here:'))
 
 **程序分析：** 就一等差数列。
 
-```
+```python
 def age(n):
     if n==1:
         return 10
@@ -577,7 +576,7 @@ print(age(5))
 
 **程序分析：** 学会分解出每一位数,用字符串的方法总是比较省事。
 
-```
+```python
 n=int(input('输入一个正整数：'))
 n=str(n)
 print('%d位数'%len(n))
@@ -590,7 +589,7 @@ print(n[::-1])
 
 **程序分析：** 用字符串比较方便,就算输入的不是数字都ok。
 
-```
+```python
 n=input("随便你输入啥啦：")
 a=0
 b=len(n)-1
@@ -611,7 +610,7 @@ if flag:
 
 **程序分析：** 这里用字典的形式直接将对照关系存好。
 
-```
+```python
 weekT={'h':'thursday',
        'u':'tuesday'}
 weekS={'a':'saturday',
@@ -635,7 +634,7 @@ else:
 
 **程序分析：** 无。
 
-```
+```python
 a = ['one', 'two', 'three']
 print(a[::-1])
 ```
@@ -646,7 +645,7 @@ print(a[::-1])
 
 **程序分析：** 无。
 
-```
+```python
 L = [1,2,3,4,5]
 print(','.join(str(n) for n in L))
 ```
@@ -657,9 +656,10 @@ print(','.join(str(n) for n in L))
 
 **程序分析：** 无。
 
-```
+```python
 def hello():
     print('Hello World!')
+
 def helloAgain():
     for i in range(2):
         hello()
@@ -674,7 +674,8 @@ if __name__=='__main__':
 
 **程序分析：** 无。
 
-```
+```python
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -684,6 +685,7 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
 print(bcolors.WARNING + "警告的颜色字体?" + bcolors.ENDC)
 ```
 
@@ -693,7 +695,8 @@ print(bcolors.WARNING + "警告的颜色字体?" + bcolors.ENDC)
 
 **程序分析：** 用else执行for循环的奖励代码（如果for是正常完结，非break）。
 
-```
+```python
+
 lo=int(input('下限：'))
 hi=int(input('上限：'))
 for i in range(lo,hi+1):
@@ -711,7 +714,8 @@ for i in range(lo,hi+1):
 
 **程序分析：** 同实例005。
 
-```
+```python
+
 raw=[]
 for i in range(10):
     x=int(input('int%d: '%(i)))
@@ -731,7 +735,7 @@ print(raw)
 
 **程序分析：** 无。
 
-```
+```python
 mat=[[1,2,3],
      [3,4,5],
      [4,5,6]
@@ -748,7 +752,7 @@ print(res)
 
 **程序分析：** 首先判断此数是否大于最后一个数，然后再考虑插入中间的数的情况，插入后此元素之后的数，依次后移一个位置。
 
-```
+```python
 lis=[1,10,100,1000,10000,100000]
 n=int(input('insert a number: '))
 lis.append(n)
@@ -766,7 +770,7 @@ print(lis)
 
 **程序分析：** 依次交换位置，或者直接调用reverse方法。
 
-```
+```python
 lis=[1,10,100,1000,10000,100000]
 for i in range(int(len(lis)/2)):
     lis[i],lis[len(lis)-1-i]=lis[len(lis)-1-i],lis[i]
@@ -787,7 +791,7 @@ print(lis)
 
 **程序分析：** 构造类，了解类的方法与变量。
 
-```
+```python
 def dummy():
     i=0
     print(i)
@@ -811,7 +815,7 @@ for i in range(50):
 
 **程序分析：** python中的变量作用域。
 
-```
+```python
 i=0
 n=0
 def dummy():
@@ -840,7 +844,7 @@ for k in range(20):
 
 **程序分析：** 综合实例041和实例042。
 
-```
+```python
 class dummy:
     num=1
     def Num(self):
@@ -861,7 +865,7 @@ for i in range(5):
 
 **程序分析：** 创建一个新的矩阵，使用 for 迭代并取出 X 和 Y 矩阵中对应位置的值，相加后放到新矩阵的对应位置中。
 
-```
+```python
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
@@ -886,7 +890,7 @@ print(res)
 
 **程序分析：** 无
 
-```
+```python
 res=0
 for i in range(1,101):
     res+=i
@@ -899,7 +903,7 @@ print(res)
 
 **程序分析：** 无
 
-```
+```python
 while True:
     try:
         n=float(input('输入一个数字：'))
@@ -919,7 +923,7 @@ while True:
 
 **程序分析：** 无
 
-```
+```python
 def exc(a,b):
     return (b,a)
 a=0
@@ -934,7 +938,7 @@ print(a,b)
 
 **程序分析：** 无
 
-```
+```python
 a=int(input('a='))
 b=int(input('b='))
 if a<b:
@@ -951,7 +955,7 @@ else:
 
 **程序分析：** 无
 
-```
+```python
 Max=lambda x,y:x*(x>=y)+y*(y>x)
 Min=lambda x,y:x*(x<=y)+y*(y<x)
 
@@ -968,7 +972,7 @@ print(Min(a,b))
 
 **程序分析：** 使用 random 模块。
 
-```
+```python
 import random
 print(random.uniform(10,20))
 ```
@@ -979,7 +983,7 @@ print(random.uniform(10,20))
 
 **程序分析：** 0&0=0; 0&1=0; 1&0=0; 1&1=1。
 
-```
+```python
 a=0o77
 print(a)
 b=a&3
@@ -994,7 +998,7 @@ print(b)
 
 **程序分析：** 0|0=0; 0|1=1; 1|0=1; 1|1=1
 
-```
+```python
 a=0o77
 print(a|3)
 print(a|3|7)
@@ -1006,7 +1010,7 @@ print(a|3|7)
 
 **程序分析：** 0^0=0; 0^1=1; 1^0=1; 1^1=0
 
-```
+```python
 a=0o77
 print(a^3)
 print(a^3^7)
@@ -1041,7 +1045,7 @@ print('d:',bin(d))
 
 **程序分析：** ~0=1; ~1=0; 
 
-```
+```python
 print(~234)
 print(~~234)
 ```
@@ -1052,7 +1056,7 @@ print(~~234)
 
 **程序分析：** 无。
 
-```
+```python
 from tkinter import *
 canvas=Canvas(width=800,height=600,bg='yellow')
 canvas.pack(expand=YES,fill=BOTH)
@@ -1071,7 +1075,7 @@ mainloop()
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     from tkinter import *
  
@@ -1106,7 +1110,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     from tkinter import *
     root = Tk()
@@ -1133,7 +1137,7 @@ if __name__ == '__main__':
 
 **程序分析：** 丑。
 
-```
+```python
 if __name__  == '__main__':
     from tkinter import *
     canvas = Canvas(width = 300,height = 300,bg = 'green')
@@ -1173,7 +1177,7 @@ if __name__  == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 s='zhangguang101'
 print(len(s))
 ```
@@ -1184,7 +1188,7 @@ print(len(s))
 
 **程序分析：** 无。
 
-```
+```python
 def generate(numRows):
     r = [[1]]
     for i in range(1,numRows):
@@ -1201,7 +1205,7 @@ for i in a:
 
 **程序分析：** 无。
 
-```
+```python
 s1='aabbxuebixuebi'
 s2='ab'
 s3='xue'
@@ -1215,7 +1219,7 @@ print(s1.find(s3))
 
 **程序分析：** 使用 tkinter。
 
-```
+```python
 if __name__ == '__main__':
     from tkinter import *
     x = 360
@@ -1238,7 +1242,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     from tkinter import *
     canvas = Canvas(width = 400,height = 600,bg = 'white')
@@ -1264,7 +1268,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 import math
 from tkinter import *
 
@@ -1313,7 +1317,7 @@ if __name__ == '__main__':
 
 **程序分析：** 同实例005。
 
-```
+```python
 raw=[]
 for i in range(3):
     x=int(input('int%d: '%(i)))
@@ -1340,7 +1344,7 @@ print(sorted(raw2))
 
 **程序分析：** 无。
 
-```
+```python
 li=[3,2,5,7,8,1,5]
 
 li[-1],li[li.index(min(li))]=li[li.index(min(li))],li[-1]
@@ -1359,7 +1363,7 @@ print(li)
 
 **程序分析：** 无。
 
-```
+```python
 from collections import *
 li=[1,2,3,4,5,6,7,8,9]
 deq=deque(li,maxlen=len(li))
@@ -1374,7 +1378,7 @@ print(list(deq))
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     nmax = 50
     n = int(input('请输入总人数:'))
@@ -1407,7 +1411,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 def lenofstr(s):
     return len(s)
 
@@ -1420,7 +1424,7 @@ print(lenofstr('tanxiaofengsheng'))
 
 **程序分析：** 无。
 
-```
+```python
 N = 3
 #stu
 # num : string
@@ -1455,7 +1459,7 @@ if __name__ == '__main__':
 
 **程序分析：** 原文不太靠谱。
 
-```
+```python
 class Node:
 
     def __init__(self, data):
@@ -1551,7 +1555,7 @@ if __name__=='__main__':
 
 **程序分析：** 无。
 
-```
+```python
 class Node:
 
     def __init__(self, data):
@@ -1648,7 +1652,7 @@ if __name__=='__main__':
 
 **程序分析：** 排序可使用 sort() 方法，连接可以使用 + 号或 extend() 方法。
 
-```
+```python
 a=[2,6,8]
 b=[7,0,4]
 a.extend(b)
@@ -1662,7 +1666,7 @@ print(a)
 
 **程序分析：** 鬼知道是什么。
 
-```
+```python
 if __name__ == '__main__':
     for i in range(5):
         n = 0
@@ -1679,7 +1683,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 def peven(n):
     i = 0
     s = 0.0
@@ -1712,7 +1716,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 l=['moyu','niupi','xuecaibichi','shengfaji','42']
 for i in range(len(l)):
     print(l[i])
@@ -1724,7 +1728,7 @@ for i in range(len(l)):
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     person = {"li":18,"wang":50,"zhang":20,"sun":22}
     m = 'li'
@@ -1741,7 +1745,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 l=['baaa','aaab','aaba','aaaa','abaa']
 l.sort()
 print(l)
@@ -1753,7 +1757,7 @@ print(l)
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     i = 0
     j = 1
@@ -1780,7 +1784,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 a = 809
 for i in range(10,100):
     b = i * a
@@ -1803,7 +1807,7 @@ for i in range(10,100):
 
 **程序分析：** 无。
 
-```
+```python
 n=eval('0o'+str(int(input('八进制输入：'))))
 print(n)
 ```
@@ -1822,7 +1826,7 @@ print(n)
 
 组成4位数是7*8*8*4个。
 
-```
+```python
 if __name__ == '__main__':
     sum = 4
     s = 4
@@ -1842,7 +1846,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 delimiter = ','
 mylist = ['Brazil', 'Russia', 'India', 'China']
 print(delimiter.join(mylist))
@@ -1854,7 +1858,7 @@ print(delimiter.join(mylist))
 
 **程序分析：** 999999 / 13 = 76923。
 
-```
+```python
 if __name__ == '__main__':
     zi = int(input('输入一个数字:'))
     n1 = 1
@@ -1879,7 +1883,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 a='guangtou'
 b='feipang'
 print(b+a)
@@ -1891,7 +1895,7 @@ print(b+a)
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     class student:
         x = 0
@@ -1923,7 +1927,7 @@ for i in range(3):
 
 **程序分析：** 无。
 
-```
+```python
 n=input()
 n = str(n)
 a=[]
@@ -1941,7 +1945,7 @@ print ("".join('%s' %s for s in a))
 
 **程序分析：** 无。
 
-```
+```python
 #list  
 #新建列表  
 testList=[10086,'中国移动',[1,2,4,5]]  
@@ -1978,7 +1982,7 @@ print (col2even)
 
 **程序分析：** 无。
 
-```
+```python
 
 if __name__ == '__main__':
     import time
@@ -1993,7 +1997,7 @@ if __name__ == '__main__':
 
 **程序分析：** 如何浪费时间。
 
-```
+```python
 
 if __name__ == '__main__':
     import time
@@ -2011,7 +2015,7 @@ if __name__ == '__main__':
 
 **程序分析：** 如何浪费时间。
 
-```
+```python
 
 if __name__ == '__main__':
     import time
@@ -2028,7 +2032,7 @@ if __name__ == '__main__':
 
 **程序分析：** 如何浪费时间。
 
-```
+```python
 
 if __name__ == '__main__':
     import time
@@ -2071,7 +2075,7 @@ if __name__ == '__main__':
 
 **程序分析：** 看看就得了，dateutil是个第三方库。
 
-```
+```python
 from dateutil import parser
 dt = parser.parse("Aug 28 2015 12:00AM")
 print (dt)
@@ -2083,7 +2087,7 @@ print (dt)
 
 **程序分析：** 无。
 
-```
+```python
 s1='xuebixuebixuebixuebixuebixuebixuebixue'
 s2='xuebi'
 print(s1.count(s2))
@@ -2095,7 +2099,7 @@ print(s1.count(s2))
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     from sys import stdout
     filename = input('输入文件名:\n')
@@ -2114,7 +2118,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     fp = open('test.txt','w')
     string = input('please input a string:\n')
@@ -2131,7 +2135,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 if __name__ == '__main__':
     import string
     fp = open('test1.txt')
@@ -2157,7 +2161,7 @@ if __name__ == '__main__':
 
 **程序分析：** 无。
 
-```
+```python
 i = ['a', 'b']
 l = [1, 2]
 print (dict(zip(i,l)))

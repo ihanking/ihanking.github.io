@@ -2,7 +2,6 @@
 title: "Python面试题"
 date: 2019-12-10
 draft: false
-tags: ["Python面试"]
 categories: ["面试题"]
 ---
 ## Python语言特性
@@ -11,7 +10,7 @@ categories: ["面试题"]
 
 看两个例子:
 
-```
+```python
 a = 1
 def fun(a):
     a = 2
@@ -19,7 +18,7 @@ fun(a)
 print a  # 1
 ```
 
-```
+```python
 a = []
 def fun(a):
     a.append(1)
@@ -31,7 +30,7 @@ print a  # [1]
 
 通过`id`来看引用`a`的内存地址可以比较理解：
 
-```
+```python
 a = 1
 def fun(a):
     print "func_in",id(a)   # func_in 41322472
@@ -48,7 +47,7 @@ print a  # 1
 
 而第2个例子`a`引用保存的内存值就不会发生变化：
 
-```
+```python
 a = []
 def fun(a):
     print "func_in",id(a)  # func_in 53629256
@@ -72,7 +71,8 @@ print a  # [1]
 
 Python其实有3个方法,即静态方法(staticmethod),类方法(classmethod)和实例方法,如下:
 
-```
+```python
+
 def foo(x):
     print "executing foo(%s)"%(x)
 
@@ -114,7 +114,8 @@ a=A()
 
 > 实例化之后，每个实例单独拥有的变量。
 
-```
+```python
+
 class Test(object):  
     num_of_instance = 0  
     def __init__(self, name):  
@@ -132,7 +133,8 @@ if __name__ == '__main__':
 
 > 补充的例子
 
-```
+```python
+
 class Person:
     name="aaa"
 
@@ -148,7 +150,7 @@ print Person.name  # aaa
 
 可以看看下面的例子:
 
-```
+```python
 class Person:
     name=[]
 
@@ -168,7 +170,7 @@ print Person.name  # [1]
 
 自省就是面向对象的语言所写的程序在运行时,所能知道对象的类型.简单一句就是运行时能够获得对象的类型.比如type(),dir(),getattr(),hasattr(),isinstance().
 
-```
+```python
 a = [1,2,3]
 b = {'a':1,'b':2,'c':3}
 c = True
@@ -180,13 +182,13 @@ print isinstance(a,list)  # True
 
 可能你见过列表推导时,却没有见过字典推导式,在2.7中才加入的:
 
-```
+```python
 d = {key: value for (key, value) in iterable}
 ```
 
 ### 7 Python中单下划线和双下划线
 
-```
+```python
 >>> class MyClass():
 ...     def __init__(self):
 ...             self.__superprivate = "Hello"
@@ -217,13 +219,13 @@ AttributeError: myClass instance has no attribute '__superprivate'
 
 .format在许多方面看起来更便利.对于`%`最烦人的是它无法同时传递一个变量和元组.你可能会想下面的代码不会有什么问题:
 
-```
+```python
 "hi there %s" % name
 ```
 
 但是,如果name恰好是(1,2,3),它将会抛出一个TypeError异常.为了保证它总是正确的,你必须这样做:
 
-```
+```python
 "hi there %s" % (name,)   # 提供一个单元素的数组而不是一个参数
 ```
 
@@ -246,7 +248,7 @@ http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format
 问：  将列表生成式中[]改成() 之后数据结构是否改变？ 
 答案：是，从列表变为生成器
 
-```
+```python
 >>> L = [x*x for x in range(10)]
 >>> L
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
@@ -261,8 +263,7 @@ http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format
 用`*args`和`**kwargs`只是为了方便并没有强制使用它们.
 
 当你不确定你的函数里将要传递多少参数时你可以用`*args`.例如,它可以传递任意数量的参数:
-
-```
+```python
 >>> def print_everything(*args):
         for count, thing in enumerate(args):
 ...         print '{0}. {1}'.format(count, thing)
@@ -275,7 +276,7 @@ http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format
 
 相似的,`**kwargs`允许你使用没有事先定义的参数名:
 
-```
+```python
 >>> def table_things(**kwargs):
 ...     for name, value in kwargs.items():
 ...         print '{0} = {1}'.format(name, value)
@@ -287,7 +288,7 @@ apple = fruit
 
 你也可以混着用.命名参数首先获得参数值然后所有的其他参数都传递给`*args`和`**kwargs`.命名参数在列表的最前端.例如:
 
-```
+```python
 def table_things(titlestring, **kwargs)
 ```
 
@@ -295,7 +296,7 @@ def table_things(titlestring, **kwargs)
 
 当调用函数时你也可以用`*`和`**`语法.例如:
 
-```
+```python
 >>> def print_three_things(a, b, c):
 ...     print 'a = {0}, b = {1}, c = {2}'.format(a,b,c)
 ...
@@ -360,7 +361,7 @@ http://stackoverflow.com/questions/3394835/args-and-kwargs
 
 > 一个旧式类的深度优先的例子
 
-```
+```python
 class A():
     def foo1(self):
         print "A"
@@ -403,7 +404,7 @@ ps: `__metaclass__`是创建类时起作用.所以我们可以分别使用`__met
 
 #### 1 使用`__new__`方法
 
-```
+```python
 class Singleton(object):
     def __new__(cls, *args, **kw):
         if not hasattr(cls, '_instance'):
@@ -419,7 +420,7 @@ class MyClass(Singleton):
 
 创建实例时把所有实例的`__dict__`指向同一个字典,这样它们具有相同的属性和方法.
 
-```
+```python
 
 class Borg(object):
     _state = {}
@@ -434,7 +435,7 @@ class MyClass2(Borg):
 
 #### 3 装饰器版本
 
-```
+```python
 def singleton(cls):
     instances = {}
     def getinstance(*args, **kw):
@@ -452,7 +453,7 @@ class MyClass:
 
 作为python的模块是天然的单例模式
 
-```
+```python
 # mysingleton.py
 class My_Singleton(object):
     def foo(self):
@@ -526,7 +527,7 @@ python中函数式编程支持:
 
 filter 函数的功能相当于过滤器。调用一个布尔函数`bool_func`来迭代遍历每个seq中的元素；返回一个使`bool_seq`返回值为true的元素的序列。
 
-```
+```python
 >>>a = [1,2,3,4,5,6,7]
 >>>b = filter(lambda x: x > 5, a)
 >>>print b
@@ -535,7 +536,7 @@ filter 函数的功能相当于过滤器。调用一个布尔函数`bool_func`�
 
 map函数是对一个序列的每个项依次执行函数，下面是对一个序列每个项都乘以2：
 
-```
+```python
 >>> a = map(lambda x:x*2,[1,2,3])
 >>> list(a)
 [2, 4, 6]
@@ -543,7 +544,7 @@ map函数是对一个序列的每个项依次执行函数，下面是对一个�
 
 reduce函数是对一个序列的每个项迭代调用函数，下面是求3的阶乘：
 
-```
+```python
 >>> reduce(lambda x,y:x*y,range(1,4))
 6
 ```
@@ -552,7 +553,7 @@ reduce函数是对一个序列的每个项迭代调用函数，下面是求3的�
 
 引用和copy(),deepcopy()的区别
 
-```
+```python
 import copy
 a = [1, 2, 3, 4, ['a', 'b']]  #原始对象
 
@@ -624,6 +625,7 @@ is是对比地址,==是对比值
 推荐：[Python 2.7.x 与 Python 3.x 的主要差异](http://chenqx.github.io/2014/11/10/Key-differences-between-Python-2-7-x-and-Python-3-x/)
 
 ### 29 super init
+
 super() lets you avoid referring to the base class explicitly, which can be nice. But the main advantage comes with multiple inheritance, where all sorts of fun stuff can happen. See the standard docs on super if you haven't already.
 
 Note that the syntax changed in Python 3.0: you can just say super().`__init__`() instead of super(ChildB, self).`__init__`() which IMO is quite a bit nicer.
@@ -633,9 +635,11 @@ http://stackoverflow.com/questions/576169/understanding-python-super-with-init-m
 [Python2.7中的super方法浅见](http://blog.csdn.net/mrlevo520/article/details/51712440)
 
 ### 30 range and xrange
+
 都在循环时使用，xrange内存性能更好。
 for i in range(0, 20):
 for i in xrange(0, 20):
+
 What is the difference between range and xrange functions in Python 2.X?
  range creates a list, so if you do range(1, 10000000) it creates a list in memory with 9999999 elements.
  xrange is a sequence object that evaluates lazily.
@@ -1103,13 +1107,13 @@ AVL是严格平衡树，因此在增加或者删除节点的时候，根据不�
 
 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
 
-```
+```python
 fib = lambda n: n if n <= 2 else fib(n - 1) + fib(n - 2)
 ```
 
 第二种记忆方法
 
-```
+```python
 def memo(func):
     cache = {}
     def wrap(*args):
@@ -1128,7 +1132,7 @@ def fib(i):
 
 第三种方法
 
-```
+```python
 def fib(n):
     a, b = 0, 1
     for _ in xrange(n):
@@ -1140,7 +1144,7 @@ def fib(n):
 
 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
 
-```
+```python
 fib = lambda n: n if n < 2 else 2 * fib(n - 1)
 ```
 
@@ -1160,7 +1164,7 @@ f = lambda n: 1 if n < 2 else f(n - 1) + f(n - 2)
 
 使用Step-wise线性搜索。
 
-```
+```python
 def get_value(l, r, c):
     return l[r][c]
 
@@ -1184,13 +1188,13 @@ def find(l, x):
 
 用集合
 
-```
+```python
 list(set(l))
 ```
 
 用字典
 
-```
+```python
 l1 = ['b','c','d','b','c','a','a']
 l2 = {}.fromkeys(l1).keys()
 print l2
@@ -1198,7 +1202,7 @@ print l2
 
 用字典并保持顺序
 
-```
+```python
 l1 = ['b','c','d','b','c','a','a']
 l2 = list(set(l1))
 l2.sort(key=l1.index)
@@ -1207,7 +1211,7 @@ print l2
 
 列表推导式
 
-```
+```python
 l1 = ['b','c','d','b','c','a','a']
 l2 = []
 [l2.append(i) for i in l1 if not i in l2]
@@ -1223,7 +1227,7 @@ print single
 
 `1->2->3->4`转换成`2->1->4->3`.
 
-```
+```python
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -1245,13 +1249,13 @@ class Solution:
 
 #### 1 直接创建
 
-```
+```python
 dict = {'name':'earth', 'port':'80'}
 ```
 
 #### 2 工厂方法
 
-```
+```python
 items=[('name','earth'),('port','80')]
 dict2=dict(items)
 dict1=dict((['name','earth'],['port','80']))
@@ -1259,7 +1263,7 @@ dict1=dict((['name','earth'],['port','80']))
 
 #### 3 fromkeys()方法
 
-```
+```python
 dict1={}.fromkeys(('x','y'),-1)
 dict={'x':-1,'y':-1}
 dict2={}.fromkeys(('x','y'))
@@ -1272,7 +1276,7 @@ dict2={'x':None, 'y':None}
 
 >  尾递归
 
-```
+```python
 def _recursion_merge_sort2(l1, l2, tmp):
     if len(l1) == 0 or len(l2) == 0:
         tmp.extend(l1)
@@ -1308,7 +1312,7 @@ def recursion_merge_sort2(l1, l2):
 再把旧列表加到新列表后面
 
 
-```
+```python
 def loop_merge_sort(l1, l2):
     tmp = []
     while len(l1) > 0 and len(l2) > 0:
@@ -1326,7 +1330,7 @@ def loop_merge_sort(l1, l2):
 
 > pop弹出
 
-```
+```python
 a = [1,2,3,7]
 b = [3,4,5]
 
@@ -1353,7 +1357,7 @@ print merge_sortedlist(a,b)
 
 ![](http://hi.csdn.net/attachment/201106/28/0_1309244136MWLP.gif)
 
-```
+```python
 # 使用a,b两个list来模拟链表，可以看出交叉点是 7这个节点
 a = [1,2,3,7,9,1,5]
 b = [4,5,7,9,1,5]
@@ -1372,7 +1376,7 @@ for i in range(1,min(len(a),len(b))):
 
 > 另外一种比较正规的方法，构造链表类
 
-```
+```python
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -1404,7 +1408,7 @@ def node(l1, l2):
 修改了一下:
 
 
-```
+```python
 #coding:utf-8
 class ListNode:
     def __init__(self, x):
@@ -1444,7 +1448,7 @@ def node(l1, l2):
 ### 10 二分查找
 
 
-```
+```python
 
 #coding:utf-8
 def binary_search(list, item):
@@ -1469,7 +1473,7 @@ print binary_search(mylist, 3)
 
 ### 11 快排
 
-```
+```python
 #coding:utf-8
 def quicksort(list):
     if len(list)<2:
@@ -1491,7 +1495,7 @@ print quicksort([2,4,6,7,1,2,5])
 ### 12 找零问题
 
 
-```
+```python
 
 #coding:utf-8
 #values是硬币的面值values = [ 25, 21, 10, 5, 1]
@@ -1525,7 +1529,7 @@ def coinChange(values,valuesCounts,money,coinsUsed):
 
 ### 14 二叉树节点
 
-```
+```python
 
 class Node(object):
     def __init__(self, data, left=None, right=None):
@@ -1539,7 +1543,7 @@ tree = Node(1, Node(3, Node(7, Node(0)), Node(6)), Node(2, Node(5), Node(4)))
 
 ### 15 层次遍历
 
-```
+```python
 
 def lookup(root):
     row = [root]
@@ -1551,7 +1555,7 @@ def lookup(root):
 
 ### 16 深度遍历
 
-```
+```python
 
 def deep(root):
     if not root:
@@ -1569,8 +1573,7 @@ if __name__ == '__main__':
 
 深度遍历改变顺序就OK了
 
-```
-
+```python
 #coding:utf-8
 #二叉树的遍历
 #简单的二叉树节点类
@@ -1621,7 +1624,7 @@ def maxDepth(root):
 
 ### 19 求两棵树是否相同
 
-```
+```python
 def isSameTree(p, q):
     if p == None and q == None:
         return True
@@ -1635,7 +1638,7 @@ def isSameTree(p, q):
 
 推荐: http://blog.csdn.net/hinyunsin/article/details/6315502
 
-```
+```python
 def rebuild(pre, center):
     if not pre:
         return
@@ -1655,7 +1658,7 @@ def deep(root):
 
 ### 21 单链表逆置
 
-```
+```python
 class Node(object):
     def __init__(self, data=None, next=None):
         self.data = data
@@ -1687,7 +1690,7 @@ while root:
 
 ### 22 两个字符串是否是变位词
 
-```
+```python
 class Anagram:
     """
     @:param s1: The first string
