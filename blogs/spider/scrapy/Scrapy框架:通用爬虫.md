@@ -2,7 +2,7 @@
 title: "Scrapy框架:通用爬虫"
 date: 2019-12-06
 draft: false
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫学习"]
 ---
 #### 通用爬虫之CrawlSpider

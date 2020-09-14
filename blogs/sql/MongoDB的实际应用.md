@@ -2,7 +2,7 @@
 title: "MongoDB的实际应用"
 date: 2019-12-05
 draft: false
-tags: ["MongoDB"]
+tags: ["mongodb"]
 categories: ["数据库学习"]
 ---
 

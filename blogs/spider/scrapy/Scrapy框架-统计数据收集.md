@@ -2,7 +2,7 @@
 title: 'Scrapy框架:统计数据收集'
 date: 2019-12-04
 draft: false
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫学习"]
 ---
 

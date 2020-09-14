@@ -2,7 +2,7 @@
 title: 'Scrapy框架:入门案例'
 date: 2019-12-04
 draft: false
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫学习"]
 ---
 #### 创建项目:

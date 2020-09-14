@@ -1,7 +1,7 @@
 ---
 title: 'Scrapy框架:爬取链家二手房信息'
 date: 2019-12-04
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫实战"]
 ---
 #### 创建爬虫项目

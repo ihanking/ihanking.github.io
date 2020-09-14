@@ -2,7 +2,7 @@
 title: 'Scrapy框架:抓取猫眼电影TOP100'
 date: 2019-12-04
 draft: false
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫实战"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Scrapy框架 基本命令"
 date: 2019-12-04
 draft: false
-tags: ["Scrapy"]
+tags: ["scrapy"]
 categories: ["爬虫学习"]
 ---
 

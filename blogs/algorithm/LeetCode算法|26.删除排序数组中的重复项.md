@@ -1,5 +1,5 @@
 ---
-title: 26.删除排序数组中的重复项
+title: LeetCode算法|26.删除排序数组中的重复项
 date: 2020-09-13
 draft: false
 tags: ["leetcode"]

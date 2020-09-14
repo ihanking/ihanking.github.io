@@ -2,7 +2,7 @@
 title: "MySQL的实际应用"
 date: 2019-12-04
 draft: false
-tags: ["MySQL"]
+tags: ["mysql"]
 categories: ["数据库学习"]
 ---
 
