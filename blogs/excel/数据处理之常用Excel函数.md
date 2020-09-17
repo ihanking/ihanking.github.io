@@ -101,7 +101,7 @@ CONCATENATE 和 &
 ```
 =SUBSTITUTE(text, old_text, new_text, instance_num)
 ```
-![SUBSTITUTE](/images/202009/10SUBSTITUTE.jpg)
+![SUBSTITUTE](/images/202009/10/SUBSTITUTE.jpg)
 
 **6.查找文本在单元格中的位置**
 
@@ -137,7 +137,7 @@ FIND,SEARCH,MID综合使用
 =VLOOKUP(F2,$A$2:$D$55,4,0)
 ```
 
-![vlookup2](/images/202009/vlookup2.jpg)
+![vlookup2](/images/202009/10/vlookup2.jpg)
 
 **反向查找**
 
@@ -253,7 +253,7 @@ COLUMN
 =HYPERLINK(link_location, friendly_name)
 ```
 
-![hyperlink](/images/20209/11/hyperlink.jpg)
+![hyperlink](/images/202009/11/hyperlink.jpg)
 
 
 ## 逻辑运算函数
@@ -290,18 +290,22 @@ COUNT COUNTIF COUNTIFS
 ```
 
 单条件计数
+
 ![countif](/images/202009/11/countif.jpg)
 
 多条件计数
+
 ![countifs](/images/202009/11/countifs.jpg)
 
 
 COUNT(统计目标区域有多少个数值类型的单元格)
+
 ![count](/images/202009/11/count.jpg)
 
 
 COUNTA(统计所有非空单元格个数) 和 COUNTBLANK(统计空白单元格个数) 
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823145254795-959887578.png)
+
+![COUNTA](/images/202009/14/COUNTA.png)
 
 
 ### 求和
@@ -319,127 +323,8 @@ SUMIF
 ![sumif2](/images/202009/11/sumif2.jpg)
 
 
-
-**LEN、LENB**
-
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823112541458-879712903.png)
-
-
-
-* 时间函数
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823113345008-702634932.png)
-
-* DAYS
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823142820072-1528277778.png)
-
-
-
-
-* COUNT(统计目标区域有多少个数值类型的单元格)
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823145243344-1039504412.png)
-
-
-* COUNTA(统计所有非空单元格个数) 和 COUNTBLANK(统计空白单元格个数) 
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823145254795-959887578.png)
-
-
-* COUNTIF(计算出现的个数)
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823150024387-1238294660.png)
-
-
-* SUMIF()
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823150857968-1963019855.png)
-
-
-
-**VLOOKUP函数**
-
-跨表查询
-![](https://img2020.cnblogs.com/blog/793818/202007/793818-20200707110915900-1533901181.png)
-
-
-数字和文本格式互转
-![](https://img2020.cnblogs.com/blog/793818/202007/793818-20200707093145321-497059157.png)
-
-近似匹配
-![](https://img2020.cnblogs.com/blog/793818/202007/793818-20200707095833760-1727342234.png)
-
-**INDEX和MATCH嵌套使用**
-
-vlookup有个缺点是无法从右向左查询，可以用index和match嵌套查询实现
-![](https://img2020.cnblogs.com/blog/793818/202007/793818-20200707112303863-434782135.png)
-
-
-**COUNTIF函数**
-
-COUNTIF函数用来计算单元格区域内符合条件的单元格个数。
-
-COUNTIF函数只有两个参数
-COUNTIF(单元格区域,计算的条件)
-
-例如：计算上海市的数量
-![](https://images2018.cnblogs.com/blog/793818/201808/793818-20180802225338503-753884019.png)
-
-
-**LEN、LENB**
-
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823112541458-879712903.png)
-
-
-**MID**
-
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823111921014-90399712.png)
-
-
-**LEFT,RIGHT**
-
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823111749217-1277510012.png)
-
-
-**CONCATENATE 和 &**
-
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823111607436-704897198.png)
-
-
-
-
-**FIND,SEARCH,MID**
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823111135291-515428132.png)
-
-
-**时间函数**
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823113345008-702634932.png)
-
-**DAYS**
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823142820072-1528277778.png)
-
-
-**IF**
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823143635935-1823218638.png)
-对应函数```=IF(AND(B13=1,C13=1)=TRUE,"男神",IF(AND(B13=1,C13=0)=TRUE,"靠脸吃饭",IF(AND(B13=0,C13=1)=TRUE,"肌肉男","是个好人")))```
-
-
-**COUNT**
-统计目标区域有多少个数值类型的单元格
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823145243344-1039504412.png)
-
-
-**COUNTA和COUNTBLANK**
-COUNTA(统计所有非空单元格个数) 
-COUNTBLANK(统计空白单元格个数) 
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823145254795-959887578.png)
-
-
-**COUNTIF**
-计算出现的个数
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823150024387-1238294660.png)
-
-
-**SUMIF**
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823150857968-1963019855.png)
-
 ## 数据透视表
 
 数据透视表的简单应用
 
-![](https://img2018.cnblogs.com/blog/793818/201908/793818-20190823112229024-1597094634.png)
+![toushibiao](/images/202009/14/toushibiao.png)
