@@ -37,8 +37,6 @@ inner join (select * from score where score.cid='02') t2
 on t1.sid=t2.sid;
 ```
 
-
-
 1.3 查询上过"01"课程但可能没上过"02"课程的学生 (这种情况显示为 null)
 
 
