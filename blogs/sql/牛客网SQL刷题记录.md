@@ -570,3 +570,20 @@ on client.id=login.client_id
 group by u_n
 ```
 
+[72.请你写一个sql语句查询各个岗位分数的平均数，并且按照分数降序排序，结果保留小数点后面3位(3位之后四舍五入)](https://www.nowcoder.com/practice/f41b94b4efce4b76b27dd36433abe398?tpId=82&&tqId=35492&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select job, round(avg(score)*1.0,3) as avg
+from grade
+group by job
+order by avg desc;
+```
+
+[73.请你写一个sql语句查询用户分数大于其所在工作(job)分数的平均分的所有grade的属性，并且以id的升序排序](https://www.nowcoder.com/practice/f456dedf88a64f169aadd648491a27c1?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
+```sql
+select * from grade g
+where score > (select avg(score) from grade where job=g.job)
+order by g.id asc;
+```
+
+
+
