@@ -1,9 +1,9 @@
 ---
-title: 数据处理之常用Excel函数
+title: 数据处理|常用Excel函数
 date: 2020-09-09
 draft: false
 tags: ["excel"]
-categories: ["数据处理"]
+categories: ["数据分析系列"]
 ---
 
 ## 前言
