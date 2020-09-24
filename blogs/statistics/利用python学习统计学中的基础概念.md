@@ -1,5 +1,5 @@
 ---
-title: 利用python回顾统计学中的基础概念
+title: 利用python学习统计学中的基础概念
 date: 2020-09-19
 draft: false
 categories: ["统计学"]
