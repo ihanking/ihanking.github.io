@@ -1,9 +1,9 @@
 ---
-title: "使用Airtest进行App爬虫"
+title: 爬虫实战|使用Airtest进行App爬虫
 date: 2019-12-06
 draft: false
 tags: ["airtest","app"]
-categories: ["爬虫实战"]
+categories: ["爬虫系列"]
 ---
 
 ### 前言

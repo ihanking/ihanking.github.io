@@ -2,7 +2,7 @@
 title: "牛客网SQL刷题记录"
 date: 2020-08-26
 draft: false
-categories: ["数据库学习"]
+categories: ["数据库系列"]
 ---
 
 

@@ -1,9 +1,9 @@
 ---
-title: "Scrapy框架:通用爬虫"
+title: "Scrapy框架|通用爬虫"
 date: 2019-12-06
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 #### 通用爬虫之CrawlSpider
 步骤01: 创建爬虫项目

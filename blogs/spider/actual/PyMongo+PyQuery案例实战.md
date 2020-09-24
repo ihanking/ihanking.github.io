@@ -1,9 +1,9 @@
 ---
-title: "PyMongo+PyQuery案例实战"
+title: 爬虫实战|PyMongo+PyQuery案例实战
 date: 2020-08-26
 draft: false
 tags: ["aiohttp",'pymongo']
-categories: ["爬虫实战"]
+categories: ["爬虫系列"]
 ---
 
 ```python

@@ -1,9 +1,9 @@
 ---
-title: 'Scrapy框架:统计数据收集'
+title: 'Scrapy框架|统计数据收集'
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 通过stats属性来使用数据收集器

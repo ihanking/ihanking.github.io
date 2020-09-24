@@ -22,14 +22,6 @@ categories: ["数据处理"]
 
 - 时间序列函数
 
-## 关联匹配
-
-## 计算统计
-
-## 时间序列
-
-## 文本清洗
-
 ## 文本清洗函数
 
 1.常用的文本清洗函数
@@ -178,8 +170,6 @@ COLUMN
 =VLOOKUP($G2,$A$2:$E$55,COLUMN(D1),0)
 ```
 
-
-
 ### HLOOKUP
 
 ```
@@ -267,6 +257,13 @@ COLUMN
 =IF(AND(B13=1,C13=1)=TRUE,"男神",IF(AND(B13=1,C13=0)=TRUE,"靠脸吃饭",IF(AND(B13=0,C13=1)=TRUE,"肌肉男","是个好人")))
 ```
 
+### AVERAGEIF
+
+`=AVERAGEIF($D$4:$D$1046,H5,$F$4:$F$1046)`
+
+![averageif](/images/202009/24/averageif.png)
+
+
 ## 计算统计函数
 
 ### 求最值
@@ -291,7 +288,13 @@ COUNT COUNTIF COUNTIFS
 
 单条件计数
 
+例1
+
 ![countif](/images/202009/11/countif.jpg)
+
+例2
+
+![countif2](/images/202009/24/countif.png)
 
 多条件计数
 
@@ -321,10 +324,3 @@ SUMIF
 ![sumif](/images/202009/11/sumif.jpg)
 
 ![sumif2](/images/202009/11/sumif2.jpg)
-
-
-## 数据透视表
-
-数据透视表的简单应用
-
-![toushibiao](/images/202009/14/toushibiao.png)

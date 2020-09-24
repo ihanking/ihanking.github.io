@@ -2,7 +2,7 @@
 title: "SQL复习"
 date: 2020-08-26
 draft: false
-categories: ["数据库学习"]
+categories: ["数据库系列"]
 ---
 
 ### 一:复习前的准备

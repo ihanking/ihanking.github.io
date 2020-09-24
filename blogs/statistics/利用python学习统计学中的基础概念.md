@@ -2,7 +2,7 @@
 title: 利用python学习统计学中的基础概念
 date: 2020-09-19
 draft: false
-categories: ["统计学"]
+categories: ["概率与数理统计"]
 ---
 
 本文用到的相关python库

@@ -1,9 +1,9 @@
 ---
-title: Pandas基础操作
+title: 数据处理|Pandas基础操作
 date: 2020-09-02
 draft: false
 tags: ["pandas"]
-categories: ["数据处理"]
+categories: ["数据分析系列"]
 ---
 
 ## 行列操作

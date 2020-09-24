@@ -1,9 +1,9 @@
 ---
-title: 'Scrapy框架:Settings.py'
+title: 'Scrapy框架|Settings.py'
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 ```
 #Scrapy项目名字

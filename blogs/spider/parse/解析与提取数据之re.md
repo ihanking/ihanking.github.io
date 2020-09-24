@@ -3,7 +3,7 @@ title: "解析与提取数据之re"
 date: 2019-12-06
 draft: false
 tags: ["re"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 对比xpath, re对文本结构的数据处理更加灵活

@@ -1,9 +1,9 @@
 ﻿---
-title: "利用PyQt5交互导出数据"
+title: "Python实战|利用PyQt5交互导出数据"
 date: 2020-08-26
 draft: false
 tags: ["pyqt5",'pandas','xlwings']
-categories: ["Python实战"]
+categories: ["Python学习"]
 ---
 
 

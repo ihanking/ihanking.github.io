@@ -1,9 +1,9 @@
 ---
-title: "使用Airtest爬取某咖啡app数据v1"
+title: 爬虫实战|使用Airtest爬取某咖啡app数据v1
 date: 2020-08-26
 draft: false
 tags: ["app","airtest"]
-categories: ["爬虫实战"]
+categories: ["爬虫系列"]
 ---
 
 ```python

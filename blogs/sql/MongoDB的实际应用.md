@@ -3,7 +3,7 @@ title: "MongoDB的实际应用"
 date: 2019-12-05
 draft: false
 tags: ["mongodb"]
-categories: ["数据库学习"]
+categories: ["数据库系列"]
 ---
 
 ### MongoDB基本操作

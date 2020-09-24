@@ -1,9 +1,9 @@
 ---
-title: 'Scrapy框架:Request回调函数'
+title: 'Scrapy框架|Request回调函数'
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 **Request回调函数**
 ```

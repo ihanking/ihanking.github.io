@@ -1,9 +1,9 @@
 ---
-title: "Scrapy框架 基本命令"
+title: "Scrapy框架|基本命令"
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 #### 创建爬虫项目

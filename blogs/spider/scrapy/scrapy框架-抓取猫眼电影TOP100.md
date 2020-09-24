@@ -1,9 +1,9 @@
 ---
-title: 'Scrapy框架:抓取猫眼电影TOP100'
+title: 'Scrapy框架|抓取猫眼电影TOP100'
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫实战"]
+categories: ["爬虫系列"]
 ---
 
 需求：

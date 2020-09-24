@@ -3,7 +3,7 @@ title: "解析与提取数据之xpath"
 date: 2019-12-06
 draft: false
 tags: ["xpath"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 日常工作主要使用xpath进行数据的解析和提取，归于xpath有着强大的功能，适应大多数的网页结构。

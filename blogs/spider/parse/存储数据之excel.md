@@ -3,7 +3,7 @@ title: "存储数据之excel"
 date: 2019-12-06
 draft: false
 tags: ["excel"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 * 第一种方式是使用pandas库

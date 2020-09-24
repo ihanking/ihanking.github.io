@@ -1,9 +1,9 @@
 ---
-title: Pandas重复值处理
+title: 数据处理|Pandas重复值处理
 date: 2019-12-04
 draft: false
 tags: ["pandas"]
-categories: ["数据处理"]
+categories: ["数据分析系列"]
 ---
 
 **导包**

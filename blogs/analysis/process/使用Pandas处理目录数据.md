@@ -1,9 +1,9 @@
 ---
-title: 使用Pandas处理文件夹数据
+title: 数据处理|使用Pandas处理文件夹数据
 date: 2020-09-06
 draft: false
 tags: ["requests","pandas"]
-categories: ["数据处理"]
+categories: ["数据分析系列"]
 ---
 
 ## 前言

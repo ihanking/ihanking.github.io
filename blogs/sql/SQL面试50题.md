@@ -2,7 +2,7 @@
 title: SQL面试50题
 date: 2020-09-11
 draft: false
-categories: ["数据库学习"]
+categories: ["数据库系列"]
 ---
 
 为了面试，重新再刷一遍sql实战题

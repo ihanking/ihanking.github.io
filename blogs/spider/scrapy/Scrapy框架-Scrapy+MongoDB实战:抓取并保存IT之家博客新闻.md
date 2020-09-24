@@ -1,9 +1,9 @@
 ---
-title: "Scrapy框架:Scrapy+MongoDB实战:抓取并保存IT之家博客新闻"
+title: "Scrapy框架|Scrapy+MongoDB实战:抓取并保存IT之家博客新闻"
 date: 2019-12-06
 draft: false
 tags: ["scrapy","mongodb"]
-categories: ["爬虫实战"]
+categories: ["爬虫系列"]
 ---
 #### 创建项目
 ```

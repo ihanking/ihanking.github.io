@@ -1,9 +1,9 @@
 ---
-title: 基于geopy将地址转为经纬度
+title: 数据处理|基于geopy将地址转为经纬度
 date: 2020-09-19
 draft: false
 tags: ["pandas"]
-categories: ["数据处理"]
+categories: ["数据分析系列"]
 ---
 
 安装geopy包

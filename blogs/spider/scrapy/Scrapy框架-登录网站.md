@@ -1,9 +1,9 @@
 ---
-title: "Scrapy框架 登录网站"
+title: "Scrapy框架|登录网站"
 date: 2019-12-04
 draft: false
 tags: ["scrapy"]
-categories: ["爬虫学习"]
+categories: ["爬虫系列"]
 ---
 
 ### 使用cookies登录网站
