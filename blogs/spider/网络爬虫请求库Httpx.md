@@ -182,7 +182,7 @@ asyncio.run(main())
 对比起这两个写法，显然httpx少掉些代码
 
 请求方法都是异步的，因此您应该`response = await client.get(...)`对以下所有内容使用样式：
-
+```
 AsyncClient.get(url, ...)
 AsyncClient.options(url, ...)
 AsyncClient.head(url, ...)
@@ -192,7 +192,7 @@ AsyncClient.patch(url, ...)
 AsyncClient.delete(url, ...)
 AsyncClient.request(method, url, ...)
 AsyncClient.send(request, ...)
-
+```
 
 到此就一般请求、代理、异步处理作了简单介绍，更多功能可以参考[官网](https://www.python-httpx.org/)学习。
 
