@@ -149,7 +149,7 @@ client = httpx.Client(limits=limits)
 
 >HTTPX默认情况下提供标准的同步API，但是如果需要，还可以为您提供异步客户端的选项。异步是一种并发模型，其效率远远高于多线程，并且可以提供显着的性能优势并允许使用长期存在的网络连接（例如WebSockets）。如果您使用的是异步Web框架，则还需要使用异步客户端来发送传出的HTTP请求。
 
-我们先看在 aiohttp 中是如何创建并发送请求的
+先看在 aiohttp 中是如何创建并发送请求的
 
 ```python
 import aiohttp
@@ -166,13 +166,33 @@ async def main():
 需要使用两个 async with 来完成一个请求,然后我们看看 httpx 怎么实现的呢
 
 ```python
-async with httpx.AsyncClient() as client:
-    resp = await client.get('http://httpbin.org/get')
-    assert resp.status_code == 200
-    html = resp.text
+import asyncio
+import httpx
+
+async def main():
+    async with httpx.AsyncClient() as client:
+        resp = await client.get('http://httpbin.org/get')
+        assert resp.status_code == 200
+        html = resp.text
+        print(html)
+
+asyncio.run(main())
 ```
 
 对比起这两个写法，显然httpx少掉些代码
+
+请求方法都是异步的，因此您应该`response = await client.get(...)`对以下所有内容使用样式：
+
+AsyncClient.get(url, ...)
+AsyncClient.options(url, ...)
+AsyncClient.head(url, ...)
+AsyncClient.post(url, ...)
+AsyncClient.put(url, ...)
+AsyncClient.patch(url, ...)
+AsyncClient.delete(url, ...)
+AsyncClient.request(method, url, ...)
+AsyncClient.send(request, ...)
+
 
 到此就一般请求、代理、异步处理作了简单介绍，更多功能可以参考[官网](https://www.python-httpx.org/)学习。
 
