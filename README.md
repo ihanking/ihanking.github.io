@@ -2,7 +2,7 @@
 home: true
 heroText: Hank's Blog
 tagline: 专注于爬虫/数据挖掘分析/机器学习,涉及编程包括但不限于python/sql/go/js
-heroImage: /hero.png
+heroImage: #/hero.png
 heroImageStyle: {
     maxWidth: '100px',
     width: '10%',

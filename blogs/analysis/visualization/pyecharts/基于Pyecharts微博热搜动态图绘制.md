@@ -1,5 +1,5 @@
 ---
-title: 微博热搜动态图绘制
+title: 基于Pyecharts微博热搜动态图绘制
 date: 2020-09-18
 draft: false
 tags: ["pyecharts"]

@@ -1,5 +1,5 @@
 ---
-title: 深圳地铁动态图绘制
+title: 基于Pyecharts深圳地铁动态图绘制
 date: 2020-09-19
 draft: false
 tags: ["pyecharts"]
