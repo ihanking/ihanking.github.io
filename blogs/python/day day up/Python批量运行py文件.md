@@ -1,5 +1,5 @@
 ---
-title: 一日一技|python批量运行py文件
+title: Python批量运行py文件
 date: 2020-09-24
 draft: false
 tags: ["python"]

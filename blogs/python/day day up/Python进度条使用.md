@@ -1,5 +1,5 @@
 ---
-title: 一日一技|Python进度条使用
+title: Python进度条使用
 date: 2020-09-18
 draft: false
 tags: ["python"]
