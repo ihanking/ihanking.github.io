@@ -585,5 +585,24 @@ where score > (select avg(score) from grade where job=g.job)
 order by g.id asc;
 ```
 
+[74.请你找出每个岗位分数排名前2的用户，得到的结果先按照language的name升序排序，再按照积分降序排序，最后按照grade的id升序排序，得到结果如下](https://www.nowcoder.com/practice/b83f8b0e7e934d95a56c24f047260d91?tpId=82&&tqId=35494&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select g1.id, g1.name, g1.score
+from (grade gr 
+join language l on gr.language_id=l.id)g1
+where (
+    select count(distinct g2.score)
+    from grade g2
+    where g2.score>=g1.score and g1.language_id=g2.language_id)<=2 
+order by g1.name,g1.score desc ,g1.id;
+```
+
+[75.请你写一个sql语句查询各个岗位分数升序排列之后的中位数位置的范围，并且按job升序排序，结果如下](https://www.nowcoder.com/practice/502fb6e2b1ad4e56aa2e0dd90c6edf3c?tpId=82&&tqId=35495&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select job,
+case count(*)%2 when 1 then count(*)/2+1 else count(*)/2 end as stsr,count(*)/2+1 as end
+from grade
+group by job;
+```
 
 
