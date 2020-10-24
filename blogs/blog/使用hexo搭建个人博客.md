@@ -2,8 +2,7 @@
 title: "使用hexo搭建个人博客"
 date: 2019-12-06T21:23:32+08:00
 draft: false
-tags: ["hexo"]
-categories: ["博客搭建"]
+tags: ["blog","hexo"]
 ---
 #### 新建项目
 

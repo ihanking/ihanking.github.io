@@ -2,7 +2,7 @@
 title: Python统计分析
 date: 2020-09-24
 draft: false
-categories: ["概率论与数理统计"]
+categories: ["统计学系列"]
 ---
 
 **本文流程**

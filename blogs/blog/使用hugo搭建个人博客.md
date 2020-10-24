@@ -2,8 +2,7 @@
 title: "使用hugo搭建个人博客"
 date: 2019-12-05
 draft: false
-tags: ["hugo"]
-categories: ["博客搭建"]
+tags: ["hugo","blog"]
 ---
 
 ### 安装

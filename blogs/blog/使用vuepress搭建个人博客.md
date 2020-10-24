@@ -1,8 +1,7 @@
 ---
 title: 使用vuepress搭建个人博客
 date: 2020-09-04
-tags: ["vuepress"]
-categories: ["博客搭建"]
+tags: ["vuepress","blog"]
 ---
 
 ## 安装

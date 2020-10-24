@@ -2,8 +2,7 @@
 title: "使用Github Actions搭建hugo"
 date: 2020-08-26
 draft: false
-tags: ["hugo"]
-categories: ["博客搭建"]
+tags: ["blog","hugo"]
 ---
 
 #### 前言
