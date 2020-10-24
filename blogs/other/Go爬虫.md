@@ -2,7 +2,7 @@
 title: "Go爬虫"
 date: 2020-08-28
 draft: false
-categories: ["Go学习"]
+tags: ["golang"]
 ---
 
 
