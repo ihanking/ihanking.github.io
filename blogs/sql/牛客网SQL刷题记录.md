@@ -2,6 +2,7 @@
 title: "牛客网SQL刷题记录"
 date: 2020-08-26
 draft: false
+tags: ["sqlite"]
 categories: ["数据库系列"]
 ---
 

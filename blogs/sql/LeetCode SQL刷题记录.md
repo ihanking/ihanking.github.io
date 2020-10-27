@@ -2,6 +2,7 @@
 title: "LeetCode SQL刷题记录"
 date: 2020-08-27
 draft: false
+tags: ["mysql"]
 categories: ["数据库系列"]
 ---
 

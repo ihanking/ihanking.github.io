@@ -2,6 +2,7 @@
 title: "SQL复习"
 date: 2020-08-26
 draft: false
+tags: ["mysql"]
 categories: ["数据库系列"]
 ---
 
