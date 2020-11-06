@@ -2,7 +2,7 @@
 title: 基于Tableau的一些小案例
 date: 2020-09-06
 draft: false
-tags: ["requests","pandas"]
+tags: ["requests","pandas","tableau"]
 categories: ["数据可视化"]
 ---
 

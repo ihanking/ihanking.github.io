@@ -2,7 +2,7 @@
 title: "Python面试题"
 date: 2019-12-10
 draft: false
-categories: ["面试题"]
+tags: ["面试题"]
 ---
 ## Python语言特性
 

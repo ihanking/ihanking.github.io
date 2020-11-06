@@ -276,9 +276,25 @@ group by de.dept_no,t.title
 ```
 
 [27.给出每个员工每年薪水涨幅超过5000的员工编号emp_no、薪水变更开始日期from_date以及薪水涨幅值salary_growth，并按照salary_growth逆序排列](https://www.nowcoder.com/practice/eb9b13e5257744db8265aa73de04fd44?tpId=82&&tqId=29779&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
-
+```sql
+select s1.emp_no, s2.from_date, (s2.salary-s1.salary) as salary_growth 
+from salaries as s1
+inner join salaries as s2
+on s1.emp_no=s2.emp_no
+and s2.from_date=s1.to_date 
+and s2.salary-s1.salary>5000
+order by salary_growth desc;
+```
 
 [28.查找描述信息(film.description)中包含robot的电影对应的分类名称(category.name)以及电影数目(count(film.film_id))，而且还需要该分类包含电影总数量(count(film_category.category_id))>=5部](https://www.nowcoder.com/practice/3a303a39cc40489b99a7e1867e6507c5?tpId=82&&tqId=29780&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select c.name,count(c.name)  from category  c join film_category fc 
+on c.category_id=fc.category_id
+join film f on f.film_id=fc.film_id
+where f.description like '%robot%'
+and fc.category_id = (SELECT category_id FROM film_category GROUP BY category_id HAVING count(film_id)>=5)
+GROUP BY c.name
+```
 
 
 [29.使用join查询方式找出没有分类的电影id以及名称](https://www.nowcoder.com/practice/a158fa6e79274ac497832697b4b83658?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -560,7 +576,27 @@ where (
 order by g1.name,g1.score desc ,g1.id;
 ```
 
-[68.请你写出一个sql语句查询每个用户最近一天登录的日子，用户的名字，以及用户用的设备的名字，并且查询结果按照user的name升序排序，上面的例子查询结果如下](https://www.nowcoder.com/practice/7cc3c814329546e89e71bb45c805c9ad?tpId=82&&tqId=35085&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+[65.现在让你写一个sql查询，每一个日期里面，正常用户发送给正常用户邮件失败的概率是多少，结果保留到小数点后面3位(3位之后的四舍五入)，并且按照日期升序排序](https://www.nowcoder.com/practice/d6dd656483b545159d3aa89b4c26004e?tpId=82&&tqId=35083&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select e.date, round(sum(case e.type 
+when 'no_completed' then 1 else 0 end)*1.0/count(e.type),3)
+from email e 
+join user u1 on e.send_id = u1.id  
+join user u2 on u2.id = e.receive_id
+where u1.is_blacklist = 0 and u2.is_blacklist=0
+group by e.date
+```
+
+
+[66.请你写出一个sql语句查询每个用户最近一天登录的日子，并且按照user_id升序排序](https://www.nowcoder.com/practice/ca274ebe6eac40ab9c33ced3f2223bb2?tpId=82&&tqId=35084&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select user_id,max(date)as d  
+from login
+group by user_id 
+order by user_id
+```
+
+[67.请你写出一个sql语句查询每个用户最近一天登录的日子，用户的名字，以及用户用的设备的名字，并且查询结果按照user的name升序排序，上面的例子查询结果如下](https://www.nowcoder.com/practice/7cc3c814329546e89e71bb45c805c9ad?tpId=82&&tqId=35085&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
 select user.name as u_n, client.name as c_n, max(login.date) as d
 from login
@@ -569,6 +605,58 @@ on user.id=login.user_id
 inner join client
 on client.id=login.client_id
 group by u_n
+```
+
+[68.请你写出一个sql语句查询新登录用户次日成功的留存率，即第1天登陆之后，第2天再次登陆的概率,保存小数点后面3位(3位之后的四舍五入)](https://www.nowcoder.com/practice/16d41af206cd4066a06a3a0aa585ad3d?tpId=82&&tqId=35086&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select round(count(l1.user_id)*1.0 / count(l3.user_id),3) from
+(select l2.user_id, min(l2.date) as date from login l2
+group by l2.user_id) l3
+left join
+login l1 on l3.user_id = l1.user_id and l1.date = date(l3.date,'+1 day')
+```
+
+[69.请你写出一个sql语句查询每个日期登录新用户个数，并且查询结果按照日期升序排序](https://www.nowcoder.com/practice/e524dc7450234395aa21c75303a42b0a?tpId=82&&tqId=35087&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select login.date,ifnull(count,0) from login left join
+(select t1.d,count(user_id) count from
+(select l.user_id,min(date) d
+from login l 
+group by l.user_id) t1
+group by t1.d) t2
+on login.date=t2.d
+group by login.date;
+```
+
+[70.请你写出一个sql语句查询每个日期新用户的次日留存率，结果保留小数点后面3位数(3位之后的四舍五入)，并且查询结果按照日期升序排序](https://www.nowcoder.com/practice/ea0c56cd700344b590182aad03cc61b8?tpId=82&&tqId=35088&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+SELECT a.date, ROUND(COUNT(b.user_id) * 1.0/COUNT(a.user_id), 3) AS p
+FROM (
+    SELECT user_id, MIN(date) AS date
+    FROM login
+    GROUP BY user_id) a
+LEFT JOIN login b
+ON a.user_id = b.user_id
+AND b.date = date(a.date, '+1 day')
+GROUP BY a.date
+UNION
+SELECT date, 0.000 AS p
+FROM login
+WHERE date NOT IN (
+    SELECT MIN(date)
+    FROM login
+    GROUP BY user_id)
+ORDER BY date;
+```
+
+[71.请你写出一个sql语句查询刷题信息，包括: 用户的名字，以及截止到某天，累计总共通过了多少题，并且查询结果先按照日期升序排序，再按照姓名升序排序，有登录却没有刷题的哪一天的数据不需要输出](https://www.nowcoder.com/practice/572a027e52804c058e1f8b0c5e8a65b4?tpId=82&&tqId=35089&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select c.name,b.date,sum(b.number) over (partition by b.user_id order by b.date) as ps_num 
+from passing_number b
+left join
+login a on a.user_id = b.user_id and a.date = b.date
+left join user c on a.user_id = c.id
+order by a.date,c.name
 ```
 
 [72.请你写一个sql语句查询各个岗位分数的平均数，并且按照分数降序排序，结果保留小数点后面3位(3位之后四舍五入)](https://www.nowcoder.com/practice/f41b94b4efce4b76b27dd36433abe398?tpId=82&&tqId=35492&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
@@ -606,4 +694,16 @@ from grade
 group by job;
 ```
 
+[76.请你写一个sql语句查询各个岗位分数的中位数位置上的所有grade信息，并且按id升序排序](https://www.nowcoder.com/practice/b626ff9e2ad04789954c2132c74c0512?tpId=82&&tqId=35496&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
+```sql
+select t.* from 
+(select id,job,score,row_number() over(partition by job order by score desc) as rank 
+from grade
+) as t 
+where t.rank - (
+(select count(*) from grade g where g.job = t.job group by job)+1)*1.0/2 >= -0.5
+and t.rank - (
+(select count(*) from grade g where g.job = t.job group by job)+1)*1.0/2 <= 0.5
+order by id
+```
 
