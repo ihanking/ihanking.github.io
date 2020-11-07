@@ -1,5 +1,5 @@
 ---
-title: 数据处理|常用Excel函数
+title: 常用Excel函数
 date: 2020-09-09
 draft: false
 tags: ["excel"]
@@ -273,57 +273,6 @@ MAX MIN
 * MAX：求某区域中的最大值。
 * MIN：求某区域中的最小值。
 
-### 求数目
-
-COUNT COUNTIF COUNTIFS
-
-* COUNT：计数
-* COUNTIF：单条件计数
-* COUNTIFS：多条件计数
-
-```
-=COUNTIF(区域, 条件)
-=COUNTIFS(区域1, 条件1, [区域2, 条件2], ...)
-```
-
-单条件计数
-
-例1
-
-![countif](/images/202009/11/countif.jpg)
-
-例2
-
-![countif2](/images/202009/24/countif.png)
-
-多条件计数
-
-![countifs](/images/202009/11/countifs.jpg)
-
-
-COUNT(统计目标区域有多少个数值类型的单元格)
-
-![count](/images/202009/11/count.jpg)
-
-
-COUNTA(统计所有非空单元格个数) 和 COUNTBLANK(统计空白单元格个数) 
-
-![COUNTA](/images/202009/14/COUNTA.png)
-
-
-### 求和
-
-SUM
-
-功能：计算单元格区域中所有数值的和。
-
-SUMIF
-
-功能：求满足条件的单元格的和。
-
-![sumif](/images/202009/11/sumif.jpg)
-
-![sumif2](/images/202009/11/sumif2.jpg)
 
 统计函数（COUNT、COUNTA、COUNTBLANK、COUNTIFS、SUM、SUMIFS、AVERAGE、AVERAGEIFS、MAX、DMAX、MIN、DMIN、MEDIAN、SUMPRODUCT、VAR.S、SKEW、NORM.DIST等）
 
