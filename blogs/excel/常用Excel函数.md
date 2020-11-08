@@ -257,11 +257,7 @@ COLUMN
 =IF(AND(B13=1,C13=1)=TRUE,"男神",IF(AND(B13=1,C13=0)=TRUE,"靠脸吃饭",IF(AND(B13=0,C13=1)=TRUE,"肌肉男","是个好人")))
 ```
 
-### AVERAGEIF
 
-`=AVERAGEIF($D$4:$D$1046,H5,$F$4:$F$1046)`
-
-![averageif](/images/202009/24/averageif.png)
 
 
 ## 计算统计函数
