@@ -23,28 +23,28 @@ categories: ["分析实战"]
 +------------+---------------+------+-----+---------+-------+
 ```
 
-#select from
+### select from
 
-#查询前10行数据
+**查询前10行数据**
 ```sql
 select * from sec_buildings limit 10;
 ```
 
-#查询二手房的小区名称、户型、面积、单价和总价
+**查询二手房的小区名称、户型、面积、单价和总价**
 ```sql
 select name,type,size,price_unit,tot_amt
 from sec_buildings;
 ```
 
-#where
+### where
 
-#查询所有阳台朝西的二手房信息
+**查询所有阳台朝西的二手房信息**
 ```sql
 select * from sec_buildings
 where direction="朝西";
 ```
 
-#查询2014年新建的浦东、徐汇、静安、黄浦和长宁二手房信息
+**查询2014年新建的浦东、徐汇、静安、黄浦和长宁二手房信息**
 ```sql
 select *
 from sec_buildings
@@ -52,39 +52,39 @@ where built_date="2014年建"
 and region in ('浦东','徐汇','静安','黄浦','长宁');
 ```
 
-#查询黄浦区房价在7500万元以上的二手房名称、户型、面积、朝向和楼层
+**查询黄浦区房价在7500万元以上的二手房名称、户型、面积、朝向和楼层**
 ```sql
 SELECT name,type,size,direction,floor
 FROM sec_buildings
 WHERE region = '黄浦' AND tot_amt > 7500;
 ```
 
-#查询浦东新区面积在60~70平之间的二手房名称、类型、面积和总价
+**查询浦东新区面积在60~70平之间的二手房名称、类型、面积和总价**
 ```sql
 select name,type,size,tot_amt
 from sec_buildings
 where region="浦东" and size BETWEEN 60 and 70;
 ```
 
-#查询小区名称中包含"新天地"字样的二手房信息
+**查询小区名称中包含"新天地"字样的二手房信息**
 ```sql
 select * 
 from sec_buildings
 where name LIKE "%新天地%"
 ```
 
-#group by
+### group by
 
-#查询各行政区域下二手房的数量、总的可居住面积、平均总价格、最大总价格和最小单价
+**查询各行政区域下二手房的数量、总的可居住面积、平均总价格、最大总价格和最小单价**
 ```sql
 select region,COUNT(*) as counts,sum(size) as tot_size,avg(tot_amt) as avg_amt,max(tot_amt) as max_amt,min(price_unit) as min_price
 from sec_buildings
 group by region;
 ```
 
-#having
+### having
 
-#按照地区、户型、楼层和朝向分组统计黄浦区与浦东新区二手房的平均单价和总数量,并筛选出平均单价超过100000元的记录
+**按照地区、户型、楼层和朝向分组统计黄浦区与浦东新区二手房的平均单价和总数量,并筛选出平均单价超过100000元的记录**
 ```sql
 select region,type,floor,direction,avg(price_unit) as avg_price,count(*) as counts
 from sec_buildings
@@ -93,9 +93,9 @@ group by region,type,floor,direction
 having avg(price_unit) > 100000;
 ```
 
-#order by
+### order by
 
-#按面积降序、总价升序的方式查询出所有2室2厅的二手房信息（返回小区名称、面积、总价、单价、区域和朝向）
+**按面积降序、总价升序的方式查询出所有2室2厅的二手房信息（返回小区名称、面积、总价、单价、区域和朝向）**
 ```sql
 select name,size,tot_amt,price_unit,region,direction
 from sec_buildings
@@ -103,7 +103,7 @@ where type="2室2厅"
 order by size desc,tot_amt asc
 ```
 
-#按照地区、户型、楼层和朝向分组统计黄浦区与浦东新区二手房的平均单价和平均面积，并按平均单价升序，平均面积降序排序
+**按照地区、户型、楼层和朝向分组统计黄浦区与浦东新区二手房的平均单价和平均面积，并按平均单价升序，平均面积降序排序**
 ```sql
 select region,type,floor,direction,avg(price_unit) as avg_price,avg(size) as avg_size
 from sec_buildings
@@ -112,9 +112,9 @@ GROUP BY region,type,floor,direction
 order by avg_price asc,avg_size desc;
 ```
 
-#limit
+### limit
 
-#查询出建筑时间最悠久的5套二手房
+**查询出建筑时间最悠久的5套二手房**
 ```sql
 select * 
 from sec_buildings
@@ -123,7 +123,7 @@ order by built_date asc
 limit 5;
 ```
 
-#查询出浦东新区2013年建的二手房，并且总价排名在6~10
+**查询出浦东新区2013年建的二手房，并且总价排名在6~10**
 ```sql
 select * 
 from sec_buildings
