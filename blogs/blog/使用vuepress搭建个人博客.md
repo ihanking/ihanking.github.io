@@ -2,6 +2,7 @@
 title: 使用vuepress搭建个人博客
 date: 2020-09-04
 tags: ["vuepress","blog"]
+showSponsor: true
 ---
 
 ## 安装
