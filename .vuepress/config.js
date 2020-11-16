@@ -92,17 +92,17 @@ module.exports = {
   "markdown": {
     "lineNumbers": true
   },
-  "plugins": [
-    [
-     'vuepress-plugin-sponsor',
-     {
-       theme: 'simple',
-      //  alipay: '/sponsor-qrcode/qrcode-alipay.png',
-       wechat: '/qrcode-wechat.png',
-      //  qq: '/sponsor-qrcode/qrcode-qq.png',
-      //  paypal: 'https://www.paypal.me/yokefellow',
-       duration: 2000
-     }
-   ]
- ]
+//   "plugins": [
+//     [
+//      'vuepress-plugin-sponsor',
+//      {
+//        theme: 'simple',
+//       //  alipay: '/sponsor-qrcode/qrcode-alipay.png',
+//        wechat: '/qrcode-wechat.png',
+//       //  qq: '/sponsor-qrcode/qrcode-qq.png',
+//       //  paypal: 'https://www.paypal.me/yokefellow',
+//        duration: 2000
+//      }
+//    ]
+//  ]
 }
