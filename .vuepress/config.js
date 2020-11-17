@@ -88,6 +88,7 @@ module.exports = {
       "appId": "rXhqdo4xn2xcLvjKs2mBz0Bc-gzGzoHsz",//process.env.LEANCLOUD_APP_ID,
       "appKey": "n1sDcU3nqv7DdRpXuunndvql"//process.env.LEANCLOUD_APP_KEY,
     },
+    "noFoundPageByTencent": false,
   },
   "markdown": {
     "lineNumbers": true
