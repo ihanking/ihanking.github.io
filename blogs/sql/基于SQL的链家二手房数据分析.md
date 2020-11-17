@@ -6,6 +6,10 @@ tags: ["sql"]
 categories: ["数据库系列"]
 ---
 
+:::
+此项目针对二手房信息进行简单分析
+:::
+
 **二手房数据表结构如下**
 
 ```sql
@@ -26,10 +30,8 @@ categories: ["数据库系列"]
 
 **查询前10行数据**
 ```sql
-select
-    *
-from
-    sec_buildings
+select *
+from sec_buildings
 limit 10;
 ```
 
@@ -41,32 +43,22 @@ select
     size,
     price_unit,
     tot_amt
-from
-    sec_buildings;
+from sec_buildings;
 ```
 
 **查询所有阳台朝西的二手房信息**
 ```sql
-select
-    *
-from
-    sec_buildings
-where
-    direction="朝西";
+select *
+from sec_buildings
+where direction="朝西";
 ```
 
 **查询2014年新建的浦东、徐汇、静安、黄浦和长宁二手房信息**
 ```sql
-select
-    *
-from
-    sec_buildings
-where
-    built_date="2014年建"
-and
-    region
-in
-    ('浦东','徐汇','静安','黄浦','长宁');
+select *
+from sec_buildings
+where built_date="2014年建" and
+region in ('浦东','徐汇','静安','黄浦','长宁');
 ```
 
 **查询黄浦区房价在7500万元以上的二手房名称、户型、面积、朝向和楼层**
@@ -77,12 +69,8 @@ SELECT
     size,
     direction,
     floor
-FROM
-    sec_buildings
-WHERE
-    region = '黄浦'
-AND
-    tot_amt > 7500;
+FROM sec_buildings
+WHERE region = '黄浦' AND tot_amt > 7500;
 ```
 
 **查询浦东新区面积在60~70平之间的二手房名称、类型、面积和总价**
@@ -92,28 +80,16 @@ select
     type,
     size,
     tot_amt
-from
-    sec_buildings
-where
-    region="浦东"
-and
-    size
-BETWEEN
-    60
-and
-    70;
+from sec_buildings
+where region="浦东" and size
+BETWEEN 60 and 70;
 ```
 
 **查询小区名称中包含"新天地"字样的二手房信息**
 ```sql
-select
-    * 
-from
-    sec_buildings
-where
-    name
-LIKE
-    "%新天地%"
+select * 
+from sec_buildings
+where name LIKE "%新天地%"
 ```
 
 **查询各行政区域下二手房的数量、总的可居住面积、平均总价格、最大总价格和最小单价**
@@ -124,10 +100,8 @@ select
     avg(tot_amt) as avg_amt,
     max(tot_amt) as max_amt,
     min(price_unit) as min_price
-from
-    sec_buildings
-group by
-    region;
+from sec_buildings
+group by region;
 ```
 
 
@@ -138,16 +112,10 @@ select
     DATEDIFF('2018-06-30',max(Order_Date)) as R,
     count(distinct Order_Id) as F,
     sum(Pay_Amt) as M
-from
-    Orders
-where
-    Order_Date
-BETWEEN
-    '2018-01-01 00:00:00'
-and
-    '2018-06-30 23:59:59'
-GROUP BY
-    Uid;
+from Orders
+where Order_Date
+BETWEEN '2018-01-01 00:00:00' and '2018-06-30 23:59:59'
+GROUP BY Uid;
 ```
 
 
@@ -160,19 +128,14 @@ select
     direction,
     avg(price_unit) as avg_price,
     count(*) as counts
-from
-    sec_buildings
-where
-    region
-in
-    ('黄浦','浦东')
+from sec_buildings
+where region in ('黄浦','浦东')
 group by
     region,
     type,
     floor,
     direction
-having
-    avg(price_unit) > 100000;
+having avg(price_unit) > 100000;
 ```
 
 
@@ -185,10 +148,8 @@ select
     price_unit,
     region,
     direction
-from
-    sec_buildings
-where
-    type="2室2厅"
+from sec_buildings
+where type="2室2厅"
 order by
     size desc,
     tot_amt asc
@@ -203,12 +164,8 @@ select
     direction,
     avg(price_unit) as avg_price,
     avg(size) as avg_size
-from
-    sec_buildings
-where
-    region
-in
-    ('黄浦','浦东')
+from sec_buildings
+where region in ('黄浦','浦东')
 GROUP BY
     region,
     type,
@@ -222,30 +179,18 @@ order by
 
 **查询出建筑时间最悠久的5套二手房**
 ```sql
-select
-    * 
-from
-    sec_buildings
-where
-    built_date <> '\r'
-order by
-    built_date asc
-limit
-    5;
+select * 
+from sec_buildings
+where built_date <> '\r'
+order by built_date asc
+limit 5;
 ```
 
 **查询出浦东新区2013年建的二手房，并且总价排名在6~10**
 ```sql
-select
-    * 
-from
-    sec_buildings
-where
-    region='浦东'
-and
-    built_date='2013年建'
-order by
-    tot_amt DESC
-limit
-    5,5;
+select *
+from sec_buildings
+where region='浦东' and built_date='2013年建'
+order by tot_amt DESC
+limit 5,5;
 ```
