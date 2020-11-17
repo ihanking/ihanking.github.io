@@ -106,4 +106,7 @@ module.exports = {
 //      }
 //    ]
 //  ]
+  plugins: [
+    'flowchart'
+  ]
 }
