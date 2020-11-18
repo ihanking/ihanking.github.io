@@ -106,7 +106,7 @@ module.exports = {
 //      }
 //    ]
 //  ]
-  plugins: [
-    'flowchart'
-  ]
+  // plugins: [
+  //   'flowchart'
+  // ]
 }
