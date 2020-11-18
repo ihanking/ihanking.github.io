@@ -6,36 +6,54 @@ tags: ["sqlite"]
 categories: ["数据库系列"]
 ---
 
+::: tip
+刷题使用的是sqlite数据库
+:::
+
+<!-- more -->
 
 [1.查找最晚入职员工的所有信息](https://www.nowcoder.com/practice/218ae58dfdcd4af195fff264e062138f?tpId=82&rp=1&ru=%2Fta%2Fsql&qru=%2Fta%2Fsql%2Fquestion-ranking)
 ```sql
-select * from employees
-order by hire_date desc limit 0,1;
+select * 
+from employees
+order by hire_date desc
+limit 0,1;
 ```
 
 [2.查找入职员工时间排名倒数第三的员工所有信息](https://www.nowcoder.com/practice/ec1ca44c62c14ceb990c3c40def1ec6c?tpId=82&rp=1&ru=%2Fta%2Fsql&qru=%2Fta%2Fsql%2Fquestion-ranking)
 ```sql
-select * from employees
-order by hire_date desc limit 2,1;
+select * 
+from employees
+order by hire_date desc 
+limit 2,1;
 ```
 
 [3.查找当前薪水详情以及部门编号dept_no](https://www.nowcoder.com/practice/c63c5b54d86e4c6d880e4834bfd70c3b?tpId=82&rp=1&ru=%2Fta%2Fsql&qru=%2Fta%2Fsql%2Fquestion-ranking)
 ```sql
-select salaries.*,dept_manager.dept_no from salaries,dept_manager
+select salaries.*,dept_manager.dept_no
+from
+    salaries,
+    dept_manager
 on salaries.emp_no = dept_manager.emp_no
-where salaries.to_date='9999-01-01' and dept_manager.to_date='9999-01-01';
+where salaries.to_date='9999-01-01' 
+and dept_manager.to_date='9999-01-01';
 ```
 
 [4.查找所有已经分配部门的员工的last_name和first_name以及dept_no](https://www.nowcoder.com/practice/6d35b1cd593545ab985a68cd86f28671?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select employees.last_name,employees.first_name,dept_emp.dept_no
-from employees,dept_emp
+select employees.last_name,
+    employees.first_name,
+    dept_emp.dept_no
+from employees,
+    dept_emp
 on employees.emp_no = dept_emp.emp_no;
 ```
 
 [5.查找所有员工的last_name和first_name以及对应部门编号dept_no，也包括暂时没有分配具体部门的员工](https://www.nowcoder.com/practice/dbfafafb2ee2482aa390645abd4463bf?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select employees.last_name,employees.first_name,dept_emp.dept_no
+select employees.last_name,
+    employees.first_name,
+    dept_emp.dept_no
 from employees
 left join dept_emp
 on dept_emp.emp_no=employees.emp_no;
@@ -43,7 +61,9 @@ on dept_emp.emp_no=employees.emp_no;
 
 [6.查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序](https://www.nowcoder.com/practice/23142e7a23e4480781a3b978b5e0f33a?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select employees.emp_no,salaries.salary from employees
+select employees.emp_no,
+    salaries.salary
+from employees
 left join salaries
 where employees.emp_no=salaries.emp_no
 and employees.hire_date = salaries.from_date
@@ -52,7 +72,8 @@ order by employees.emp_no desc;
 
 [7.查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t](https://www.nowcoder.com/practice/6d4a4cff1d58495182f536c548fee1ae?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select emp_no,count(emp_no) as t
+select emp_no,
+    count(emp_no) as t
 from salaries
 group by emp_no
 having count(emp_no)>15;
@@ -60,15 +81,19 @@ having count(emp_no)>15;
 
 [8.找出所有员工当前(to_date='9999-01-01')具体的薪水salary情况，对于相同的薪水只显示一次,并按照逆序显示](https://www.nowcoder.com/practice/ae51e6d057c94f6d891735a48d1c2397?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select distinct salary from salaries
+select distinct salary
+from salaries
 where to_date='9999-01-01'
 order by salary desc;
 ```
 
 [9.获取所有部门当前(dept_manager.to_date='9999-01-01')manager的当前(salaries.to_date='9999-01-01')薪水情况，给出dept_no, emp_no以及salary](https://www.nowcoder.com/practice/4c8b4a10ca5b44189e411107e1d8bec1?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select d.dept_no,s.emp_no,s.salary
-from dept_manager d,salaries s
+select d.dept_no,
+    s.emp_no,
+    s.salary
+from dept_manager d,
+    salaries s
 where d.to_date='9999-01-01'
 and s.to_date='9999-01-01'
 and d.emp_no=s.emp_no;
@@ -79,12 +104,15 @@ and d.emp_no=s.emp_no;
 select emp_no
 from employees
 where emp_no
-not in (select emp_no from dept_manager);
+not in (select emp_no
+        from dept_manager
+        );
 ```
 
 [11.获取所有员工当前的(dept_manager.to_date='9999-01-01')manager，如果员工是manager的话不显示(也就是如果当前的manager是自己的话结果不显示)。输出结果第一列给出当前员工的emp_no,第二列给出其manager对应的emp_no](https://www.nowcoder.com/practice/e50d92b8673a440ebdf3a517b5b37d62?tpId=82&&tqId=29763&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select de.emp_no,dm.emp_no as manager_no
+select de.emp_no,
+    dm.emp_no as manager_no
 from dept_emp as de
 inner join dept_manager as dm
 on de.dept_no=dm.dept_no
@@ -95,16 +123,21 @@ and de.emp_no <> dm.emp_no;
 
 [12.获取所有部门中当前(dept_emp.to_date = '9999-01-01')员工当前(salaries.to_date='9999-01-01')薪水最高的相关信息，给出dept_no, emp_no以及其对应的salary，按照部门升序排列](https://www.nowcoder.com/practice/4a052e3e1df5435880d4353eb18a91c6?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select e.dept_no,e.emp_no,MAX(s.salary)
-from dept_emp e inner join salaries s
+select e.dept_no,
+    e.emp_no,
+    MAX(s.salary)
+from dept_emp e 
+inner join salaries s
 on e.emp_no = s.emp_no 
-where s.to_date='9999-01-01' and e.to_date = '9999-01-01'
+where s.to_date='9999-01-01'
+and e.to_date = '9999-01-01'
 GROUP BY e.dept_no
 ```
 
 [13.从titles表获取按照title进行分组，每组个数大于等于2，给出title以及对应的数目t](https://www.nowcoder.com/practice/72ca694734294dc78f513e147da7821e?tpId=82&&tqId=29765&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select title,count(title) t
+select title,
+    count(title) t
 from titles
 group by title
 having t >= 2
@@ -113,7 +146,8 @@ having t >= 2
 [14.从titles表获取按照title进行分组，每组个数大于等于2，给出title以及对应的数目t。
 注意对于重复的emp_no进行忽略(即emp_no重复的title不计算，title对应的数目t不增加)。](https://www.nowcoder.com/practice/c59b452f420c47f48d9c86d69efdff20?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select title,count(distinct emp_no) t
+select title,
+    count(distinct emp_no) t
 from titles
 group by title
 having t>= 2
@@ -121,7 +155,8 @@ having t>= 2
 
 [15.查找employees表所有emp_no为奇数，且last_name不为Mary(注意大小写)的员工信息，并按照hire_date逆序排列(题目不能使用mod函数)](https://www.nowcoder.com/practice/a32669eb1d1740e785f105fa22741d5c?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select * from employees
+select *
+from employees
 where emp_no%2=1
 and last_name<>"Mary"
 order by hire_date desc
@@ -129,7 +164,8 @@ order by hire_date desc
 
 [16.统计出当前(titles.to_date='9999-01-01')各个title类型对应的员工当前(salaries.to_date='9999-01-01')薪水对应的平均工资。结果给出title以及平均工资avg。](https://www.nowcoder.com/practice/c8652e9e5a354b879e2a244200f1eaae?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select t.title,avg(s.salary)
+select t.title,
+    avg(s.salary)
 from titles t
 join salaries s
 on t.emp_no=s.emp_no
@@ -140,25 +176,33 @@ group by t.title
 
 [17.获取当前（to_date='9999-01-01'）薪水第二多的员工的emp_no以及其对应的薪水salary](nowcoder.com/practice/8d2c290cc4e24403b98ca82ce45d04db?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select emp_no,salary
+select emp_no,
+    salary
 from salaries
-order by salary desc limit 1,1
+order by salary desc
+limit 1,1
 ```
 
 [18.查找当前薪水(to_date='9999-01-01')排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，你可以不使用order by完成吗](https://www.nowcoder.com/practice/c1472daba75d4635b7f8540b837cc719?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select e.emp_no,max(s.salary) as salary,e.last_name,e.first_name
+select e.emp_no,
+    max(s.salary) as salary,
+    e.last_name,
+    e.first_name
 from employees e
 join salaries s
 on e.emp_no=s.emp_no
-where s.salary not in (
-select max(salary)
-    from salaries
+where s.salary
+not in (select max(salary)
+        from salaries
+        )
 ```
 
 [19.查找所有员工的last_name和first_name以及对应的dept_name，也包括暂时没有分配部门的员工](https://www.nowcoder.com/practice/5a7975fabe1146329cee4f670c27ad55?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select e.last_name,e.first_name,d.dept_name
+select e.last_name,
+    e.first_name,
+    d.dept_name
 from employees e
 left join dept_emp de
 on e.emp_no=de.emp_no
@@ -175,7 +219,8 @@ where emp_no="10001"
 
 [21.查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序](https://www.nowcoder.com/practice/fc7344ece7294b9e98401826b94c6ea5?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select a.emp_no,(b.salary-c.salary) growth
+select a.emp_no,
+    (b.salary-c.salary) growth
 from employees as a
 inner join salaries as b
 on a.emp_no=b.emp_no
@@ -188,7 +233,9 @@ order by growth asc
 
 [22.统计各个部门的工资记录数，给出部门编码dept_no、部门名称dept_name以及部门在salaries表里面有多少条记录sum](https://www.nowcoder.com/practice/6a62b6c0a7324350a6d9959fa7c21db3?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select d.dept_no,d.dept_name,count(*)sum
+select d.dept_no,
+    d.dept_name,
+    count(*)sum
 from departments d
 inner join dept_emp de
 on d.dept_no=de.dept_no
@@ -199,7 +246,9 @@ group by de.dept_no
 
 [23.对所有员工的当前(to_date='9999-01-01')薪水按照salary进行按照1-N的排名，相同salary并列且按照emp_no升序排列](https://www.nowcoder.com/practice/b9068bfe5df74276bd015b9729eec4bf?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select emp_no,salary,dense_rank() over (order by salary desc) as rank
+select emp_no,
+    salary,
+    dense_rank() over (order by salary desc) as rank
 from salaries
 where to_date='9999-01-01'
 ```
@@ -246,14 +295,21 @@ PRIMARY KEY (`emp_no`,`from_date`));
 ```
 答案：
 ```sql
-SELECT sem.emp_no AS emp_no, sdm.emp_no AS manager_no, sem.salary AS emp_salary, sdm.salary AS manager_salary
+SELECT sem.emp_no AS emp_no, 
+    sdm.emp_no AS manager_no, 
+    sem.salary AS emp_salary, 
+    sdm.salary AS manager_salary
 FROM (
-    SELECT s.salary, s.emp_no, de.dept_no
+    SELECT s.salary, 
+        s.emp_no, 
+        de.dept_no
     FROM salaries s
     INNER JOIN dept_emp de 
     ON s.emp_no = de.emp_no
     AND s.to_date = '9999-01-01') AS sem, 
-    (SELECT s.salary, s.emp_no, dm.dept_no
+    (SELECT s.salary, 
+        s.emp_no, 
+        dm.dept_no
     FROM salaries s
     INNER JOIN dept_manager dm 
     ON s.emp_no = dm.emp_no
@@ -264,7 +320,10 @@ AND sem.salary > sdm.salary
 
 [26.汇总各个部门当前员工的title类型的分配数目，即结果给出部门编号dept_no、dept_name、其部门下所有的当前(dept_emp.to_date = '9999-01-01')员工的当前(titles.to_date = '9999-01-01')title以及该类型title对应的数目count](https://www.nowcoder.com/practice/4bcb6a7d3e39423291d2f7bdbbff87f8?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select de.dept_no,dp.dept_name,t.title,count(t.title) as title
+select de.dept_no,
+    dp.dept_name,
+    t.title,
+    count(t.title) as title
 from titles as t
 inner join dept_emp as de
 on t.emp_no=de.emp_no
@@ -277,7 +336,9 @@ group by de.dept_no,t.title
 
 [27.给出每个员工每年薪水涨幅超过5000的员工编号emp_no、薪水变更开始日期from_date以及薪水涨幅值salary_growth，并按照salary_growth逆序排列](https://www.nowcoder.com/practice/eb9b13e5257744db8265aa73de04fd44?tpId=82&&tqId=29779&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select s1.emp_no, s2.from_date, (s2.salary-s1.salary) as salary_growth 
+select s1.emp_no, 
+    s2.from_date, 
+    (s2.salary-s1.salary) as salary_growth 
 from salaries as s1
 inner join salaries as s2
 on s1.emp_no=s2.emp_no
@@ -288,11 +349,19 @@ order by salary_growth desc;
 
 [28.查找描述信息(film.description)中包含robot的电影对应的分类名称(category.name)以及电影数目(count(film.film_id))，而且还需要该分类包含电影总数量(count(film_category.category_id))>=5部](https://www.nowcoder.com/practice/3a303a39cc40489b99a7e1867e6507c5?tpId=82&&tqId=29780&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select c.name,count(c.name)  from category  c join film_category fc 
+select c.name,
+    count(c.name) 
+from category  c 
+join film_category fc 
 on c.category_id=fc.category_id
-join film f on f.film_id=fc.film_id
+join film f 
+on f.film_id=fc.film_id
 where f.description like '%robot%'
-and fc.category_id = (SELECT category_id FROM film_category GROUP BY category_id HAVING count(film_id)>=5)
+and fc.category_id = (
+    SELECT category_id 
+    FROM film_category 
+    GROUP BY category_id 
+    HAVING count(film_id)>=5)
 GROUP BY c.name
 ```
 
@@ -308,7 +377,8 @@ where fc.category_id is null
 
 [30.使用子查询的方式找出属于Action分类的所有电影对应的title,description吗](https://www.nowcoder.com/practice/2f2e556d335d469f96b91b212c4c203e?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select title,description
+select title,
+    description
 from film 
 where film_id in(
     select film_id
@@ -354,7 +424,9 @@ insert or ignore into actor values
 [36.请你创建一个actor_name表，并且将actor表中的所有first_name以及last_name导入该表.](https://www.nowcoder.com/practice/881385f388cf4fe98b2ed9f8897846df?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
 create table actor_name as
-select first_name,last_name from actor
+select first_name,
+    last_name 
+from actor
 ```
 
 [37.针对如下表actor结构创建索引](https://www.nowcoder.com/practice/e1824daa0c49404aa602cf0cb34bdd75?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -373,7 +445,10 @@ from actor
 
 [39.针对salaries表emp_no字段创建索引idx_emp_no，查询emp_no为10005, 使用强制索引。](https://www.nowcoder.com/practice/f9fa9dc1a1fc4130b08e26c22c7a1e5f?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-SELECT * FROM salaries INDEXED BY idx_emp_no WHERE emp_no = 10005
+SELECT * 
+FROM salaries 
+INDEXED BY idx_emp_no
+WHERE emp_no = 10005
 ```
 
 [40.现在在last_update后面新增加一列名字为create_date, 类型为datetime, NOT NULL，默认值为'0000-00-00 00:00:00'](https://www.nowcoder.com/practice/119f04716d284cb7a19fba65dd876b03?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -413,7 +488,9 @@ where to_date='9999-01-01'
 
 [44.将id=5以及emp_no=10001的行数据替换成id=5以及emp_no=10005,其他数据保持不变，使用replace实现](https://www.nowcoder.com/practice/2bec4d94f525458ca3d0ebf3bc8cd240?tpId=82&&tqId=29812&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-update titles_test set emp_no=replace(emp_no,"10001","10005") where id=5
+update titles_test 
+set emp_no=replace(emp_no,"10001","10005") 
+where id=5
 ```
 
 [45.将titles_test表名修改为titles_2017](https://www.nowcoder.com/practice/5277d7f92aa746ab8aa42886e5d570d4?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -473,20 +550,30 @@ group by dept_no
 
 [54.查找排除最大、最小salary之后的当前(to_date = '9999-01-01' )员工的平均工资avg_salary。](https://www.nowcoder.com/practice/95078e5e1fba4438b85d9f11240bc591?tpId=82&&tqId=29822&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select avg(salary) as avg_salary from salaries
+select avg(salary) as avg_salary 
+from salaries
 where to_date='9999-01-01'
-and salary<>(select min(salary) from salaries where to_date='9999-01-01')
-and salary<(select max(salary) from salaries where to_date='9999-01-01')
+and salary<>(select min(salary) 
+from salaries 
+where to_date='9999-01-01')
+and salary<(select max(salary) 
+from salaries 
+where to_date='9999-01-01')
 ```
 
 [55.分页查询employees表，每5行一页，返回第2页的数据](https://www.nowcoder.com/practice/f24966e0cb8a49c192b5e65339bc8c03?tpId=82&&tqId=29823&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select * from employees limit 5,5;
+select * 
+from employees 
+limit 5,5;
 ```
 
 [56.获取所有员工的emp_no、部门编号dept_no以及对应的bonus类型btype和received，没有分配奖金的员工不显示对应的bonus类型btype和received](https://www.nowcoder.com/practice/e2dab5477fdd4ec0ba84031f8e817b8a?tpId=82&&tqId=29824&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select de.emp_no as emp_no,de.dept_no as dept_no,eb.btype as btype, eb.received as received
+select de.emp_no as emp_no,
+    de.dept_no as dept_no,
+    eb.btype as btype, 
+    eb.received as received
 from dept_emp as de
 left join employees as e
 on de.emp_no=e.emp_no
@@ -496,16 +583,17 @@ on de.emp_no=eb.emp_no
 
 [57.使用含有关键字exists查找未分配具体部门的员工的所有信息。](https://www.nowcoder.com/practice/c39cbfbd111a4d92b221acec1c7c1484?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select * from employees e
+select * 
+from employees e
 where not exists(
     select emp_no from dept_emp de
-    where de.emp_no=e.emp_no
-)
+    where de.emp_no=e.emp_no)
 ```
 
 [58.获取employees中的行数据，且这些行也存在于emp_v中。注意不能使用intersect关键字。](https://www.nowcoder.com/practice/2556c1fcc92c490d9bf331ab07dfb7dc?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select * from emp_v
+select * 
+from emp_v
 ```
 
 [59.给出emp_no、first_name、last_name、奖金类型btype、对应的当前薪水情况salary以及奖金金额bonus。 bonus类型btype为1其奖金为薪水salary的10%，btype为2其奖金为薪水的20%，其他类型均为薪水的30%。 当前薪水表示to_date='9999-01-01'](https://www.nowcoder.com/practice/5cdbf1dcbe8d4c689020b6b2743820bf?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -522,11 +610,13 @@ where s.to_date='9999-01-01'
 
 [60.按照salary的累计和running_total，其中running_total为前N个当前( to_date = '9999-01-01')员工的salary累计和，其他以此类推](https://www.nowcoder.com/practice/58824cd644ea47d7b2b670c506a159a6?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select s1.emp_no,s1.salary,
-(select sum(s2.salary) from salaries as s2
-where s2.emp_no<=s1.emp_no
-and s2.to_date='9999-01-01'
-) as running_total
+select s1.emp_no,
+    s1.salary,
+    (select sum(s2.salary) 
+    from salaries as s2
+    where s2.emp_no<=s1.emp_no
+    and s2.to_date='9999-01-01'
+    ) as running_total
 from salaries as s1
 where s1.to_date='9999-01-01'
 order by s1.emp_no
@@ -534,8 +624,11 @@ order by s1.emp_no
 
 [61.对于employees表中，输出first_name排名(按first_name升序排序)为奇数的first_name](https://www.nowcoder.com/practice/e3cf1171f6cc426bac85fd4ffa786594?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select first_name from employees e1
-where (select count(*) from employees e2 where e1.first_name>=e2.first_name) %2=1;
+select first_name
+from employees e1
+where (select count(*)
+    from employees e2
+    where e1.first_name>=e2.first_name) %2=1;
 ```
 
 [62.id为用户主键id，number代表积分情况，让你写一个sql查询，积分表里面出现三次以及三次以上的积分](https://www.nowcoder.com/practice/c69ac94335744480aa50646864b7f24d?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
@@ -548,16 +641,21 @@ having count(number)>=3;
 
 [63.请你根据上表，输出通过的题目的排名，通过题目个数相同的，排名相同，此时按照id升序排列](https://www.nowcoder.com/practice/cd2e10a588dc4c1db0407d0bf63394f3?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select a.id, a.number,(select count(distinct b.number)
+select a.id,
+    a.number,
+    (select count(distinct b.number)
 from passing_number b
 where a.number<=b.number) rank
 from passing_number a
-order by a.number desc,a.id;
+order by a.number desc,
+    a.id;
 ```
 
 [64.请你找到每个人的任务情况，并且输出出来，没有任务的也要输出，而且输出结果按照person的id升序排序](https://www.nowcoder.com/practice/9dd9182d029a4f1d8c1324b63fc719c9?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select p.id,p.name,t.content
+select p.id,
+    p.name,
+    t.content
 from person p
 left join task t
 on p.id=t.person_id
@@ -566,31 +664,39 @@ order by p.id asc
 
 [65.请你找出每个岗位分数排名前2的用户，得到的结果先按照language的name升序排序，再按照积分降序排序，最后按照grade的id升序排序，得到结果如下](https://www.nowcoder.com/practice/b83f8b0e7e934d95a56c24f047260d91?tpId=82&&tqId=35082&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select g1.id, g1.name, g1.score
-from (grade gr 
-join language l on gr.language_id=l.id)g1
+select g1.id, 
+    g1.name, 
+    g1.score
+from (grade gr join language l 
+    on gr.language_id=l.id)g1
 where (
     select count(distinct g2.score)
     from grade g2
-    where g2.score>=g1.score and g1.language_id=g2.language_id)<=2 
-order by g1.name,g1.score desc ,g1.id;
+    where g2.score>=g1.score 
+    and g1.language_id=g2.language_id)<=2 
+order by g1.name,
+    g1.score desc ,
+    g1.id;
 ```
 
 [65.现在让你写一个sql查询，每一个日期里面，正常用户发送给正常用户邮件失败的概率是多少，结果保留到小数点后面3位(3位之后的四舍五入)，并且按照日期升序排序](https://www.nowcoder.com/practice/d6dd656483b545159d3aa89b4c26004e?tpId=82&&tqId=35083&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select e.date, round(sum(case e.type 
-when 'no_completed' then 1 else 0 end)*1.0/count(e.type),3)
+select e.date,
+    round(sum(case e.type 
+    when 'no_completed' then 1 else 0 end)*1.0/count(e.type),3)
 from email e 
 join user u1 on e.send_id = u1.id  
 join user u2 on u2.id = e.receive_id
-where u1.is_blacklist = 0 and u2.is_blacklist=0
+where u1.is_blacklist = 0
+and u2.is_blacklist=0
 group by e.date
 ```
 
 
 [66.请你写出一个sql语句查询每个用户最近一天登录的日子，并且按照user_id升序排序](https://www.nowcoder.com/practice/ca274ebe6eac40ab9c33ced3f2223bb2?tpId=82&&tqId=35084&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select user_id,max(date)as d  
+select user_id,
+    max(date)as d  
 from login
 group by user_id 
 order by user_id
@@ -598,7 +704,9 @@ order by user_id
 
 [67.请你写出一个sql语句查询每个用户最近一天登录的日子，用户的名字，以及用户用的设备的名字，并且查询结果按照user的name升序排序，上面的例子查询结果如下](https://www.nowcoder.com/practice/7cc3c814329546e89e71bb45c805c9ad?tpId=82&&tqId=35085&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select user.name as u_n, client.name as c_n, max(login.date) as d
+select user.name as u_n, 
+    client.name as c_n, 
+    max(login.date) as d
 from login
 inner join user
 on user.id=login.user_id
@@ -609,20 +717,25 @@ group by u_n
 
 [68.请你写出一个sql语句查询新登录用户次日成功的留存率，即第1天登陆之后，第2天再次登陆的概率,保存小数点后面3位(3位之后的四舍五入)](https://www.nowcoder.com/practice/16d41af206cd4066a06a3a0aa585ad3d?tpId=82&&tqId=35086&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select round(count(l1.user_id)*1.0 / count(l3.user_id),3) from
-(select l2.user_id, min(l2.date) as date from login l2
-group by l2.user_id) l3
+select round(count(l1.user_id)*1.0 / count(l3.user_id),3)
+from (select l2.user_id, 
+    min(l2.date) as date 
+    from login l2
+    group by l2.user_id) l3
 left join
-login l1 on l3.user_id = l1.user_id and l1.date = date(l3.date,'+1 day')
+login l1 on l3.user_id = l1.user_id
+and l1.date = date(l3.date,'+1 day')
 ```
 
 [69.请你写出一个sql语句查询每个日期登录新用户个数，并且查询结果按照日期升序排序](https://www.nowcoder.com/practice/e524dc7450234395aa21c75303a42b0a?tpId=82&&tqId=35087&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select login.date,ifnull(count,0) from login left join
-(select t1.d,count(user_id) count from
-(select l.user_id,min(date) d
-from login l 
-group by l.user_id) t1
+select login.date,
+    ifnull(count,0) 
+from login 
+left join (select t1.d,
+        count(user_id) count
+        from (select l.user_id,min(date) d from login l 
+            group by l.user_id) t1
 group by t1.d) t2
 on login.date=t2.d
 group by login.date;
@@ -630,9 +743,11 @@ group by login.date;
 
 [70.请你写出一个sql语句查询每个日期新用户的次日留存率，结果保留小数点后面3位数(3位之后的四舍五入)，并且查询结果按照日期升序排序](https://www.nowcoder.com/practice/ea0c56cd700344b590182aad03cc61b8?tpId=82&&tqId=35088&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-SELECT a.date, ROUND(COUNT(b.user_id) * 1.0/COUNT(a.user_id), 3) AS p
+SELECT a.date,
+    ROUND(COUNT(b.user_id) * 1.0/COUNT(a.user_id), 3) AS p
 FROM (
-    SELECT user_id, MIN(date) AS date
+    SELECT user_id,
+        MIN(date) AS date
     FROM login
     GROUP BY user_id) a
 LEFT JOIN login b
@@ -651,17 +766,21 @@ ORDER BY date;
 
 [71.请你写出一个sql语句查询刷题信息，包括: 用户的名字，以及截止到某天，累计总共通过了多少题，并且查询结果先按照日期升序排序，再按照姓名升序排序，有登录却没有刷题的哪一天的数据不需要输出](https://www.nowcoder.com/practice/572a027e52804c058e1f8b0c5e8a65b4?tpId=82&&tqId=35089&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select c.name,b.date,sum(b.number) over (partition by b.user_id order by b.date) as ps_num 
+select c.name,
+    b.date,
+    sum(b.number) over (partition by b.user_id order by b.date) as ps_num 
 from passing_number b
-left join
-login a on a.user_id = b.user_id and a.date = b.date
-left join user c on a.user_id = c.id
+left join login a 
+on a.user_id = b.user_id and a.date = b.date
+left join user c 
+on a.user_id = c.id
 order by a.date,c.name
 ```
 
 [72.请你写一个sql语句查询各个岗位分数的平均数，并且按照分数降序排序，结果保留小数点后面3位(3位之后四舍五入)](https://www.nowcoder.com/practice/f41b94b4efce4b76b27dd36433abe398?tpId=82&&tqId=35492&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select job, round(avg(score)*1.0,3) as avg
+select job,
+    round(avg(score)*1.0,3) as avg
 from grade
 group by job
 order by avg desc;
@@ -669,37 +788,48 @@ order by avg desc;
 
 [73.请你写一个sql语句查询用户分数大于其所在工作(job)分数的平均分的所有grade的属性，并且以id的升序排序](https://www.nowcoder.com/practice/f456dedf88a64f169aadd648491a27c1?tpId=82&tags=&title=&diffculty=0&judgeStatus=0&rp=1)
 ```sql
-select * from grade g
-where score > (select avg(score) from grade where job=g.job)
+select *
+from grade g
+where score > (select avg(score)
+            from grade 
+            where job=g.job)
 order by g.id asc;
 ```
 
 [74.请你找出每个岗位分数排名前2的用户，得到的结果先按照language的name升序排序，再按照积分降序排序，最后按照grade的id升序排序，得到结果如下](https://www.nowcoder.com/practice/b83f8b0e7e934d95a56c24f047260d91?tpId=82&&tqId=35494&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select g1.id, g1.name, g1.score
-from (grade gr 
-join language l on gr.language_id=l.id)g1
+select g1.id, 
+    g1.name, 
+    g1.score
+from (grade gr join language l 
+    on gr.language_id=l.id)g1
 where (
     select count(distinct g2.score)
     from grade g2
-    where g2.score>=g1.score and g1.language_id=g2.language_id)<=2 
+    where g2.score>=g1.score 
+    and g1.language_id=g2.language_id)<=2 
 order by g1.name,g1.score desc ,g1.id;
 ```
 
 [75.请你写一个sql语句查询各个岗位分数升序排列之后的中位数位置的范围，并且按job升序排序，结果如下](https://www.nowcoder.com/practice/502fb6e2b1ad4e56aa2e0dd90c6edf3c?tpId=82&&tqId=35495&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
 select job,
-case count(*)%2 when 1 then count(*)/2+1 else count(*)/2 end as stsr,count(*)/2+1 as end
+case count(*)%2 
+when 1 then count(*)/2+1 
+else count(*)/2 end as stsr,
+    count(*)/2+1 as end
 from grade
 group by job;
 ```
 
 [76.请你写一个sql语句查询各个岗位分数的中位数位置上的所有grade信息，并且按id升序排序](https://www.nowcoder.com/practice/b626ff9e2ad04789954c2132c74c0512?tpId=82&&tqId=35496&rp=1&ru=/ta/sql&qru=/ta/sql/question-ranking)
 ```sql
-select t.* from 
-(select id,job,score,row_number() over(partition by job order by score desc) as rank 
-from grade
-) as t 
+select t.* 
+from (select id,
+    job,
+    score,
+    row_number() over(partition by job order by score desc) as rank 
+    from grade) as t
 where t.rank - (
 (select count(*) from grade g where g.job = t.job group by job)+1)*1.0/2 >= -0.5
 and t.rank - (
