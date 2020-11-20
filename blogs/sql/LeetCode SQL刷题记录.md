@@ -7,6 +7,7 @@ categories: ["数据库系列"]
 ---
 
 
+
 175.【简单】**[组合两个表](https://leetcode-cn.com/problems/combine-two-tables/)**
 ```sql
 select 
@@ -40,6 +41,36 @@ set n=n-1;
       limit N,1
   );
 END
+```
+
+178.【中等】 **[分数排名](https://leetcode-cn.com/problems/rank-scores/submissions/)**
+```sql
+select Score,
+dense_rank() over(order by Score desc) as "Rank"
+from Scores
+```
+
+180.【中等】 **[连续出现的数字](https://leetcode-cn.com/problems/consecutive-numbers/)**
+
+方法一：使用`row_number()`函数
+```sql
+select distinct(num) "ConsecutiveNums"
+from (select num,
+        (row_number() over(order by id )-row_number() over(partition by num order by id)) rank_
+      from Logs) as t
+group by t.rank_,t.num
+having count(rank_)>=3;
+```
+
+方法二：使用`lead()`函数
+```sql
+select distinct Num consecutiveNums
+from (select Num,
+            lead(Num,1) over(order by id) n1,
+            lead(Num,2) over(order by id) n2 
+      from Logs) as t
+where Num = n1
+and Num = n2
 ```
 
 181.【简单】**[超过经理收入的员工](https://leetcode-cn.com/problems/employees-earning-more-than-their-managers/)**
