@@ -120,7 +120,7 @@ _map = (
 _map.render_notebook()
 ```
 
-![全球疫情地图](https://cdn.jsdelivr.net/gh/hank-leo/picture/2020-11-23/1606119489759-%E5%85%A8%E7%90%83%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.gif)
+![全球疫情地图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606121243176-%E5%85%A8%E7%90%83%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.png)
 
 
 ### 全国疫情地图
@@ -149,7 +149,7 @@ _map = (
 _map.render_notebook()
 ```
 
-![全国疫情地图](https://cdn.jsdelivr.net/gh/hank-leo/picture/2020-11-23/1606119536121-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.gif)
+![全国疫情地图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606121277933-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.png)
 
 
 
