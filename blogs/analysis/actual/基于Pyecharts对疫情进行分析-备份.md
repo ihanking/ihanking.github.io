@@ -1,5 +1,5 @@
 ---
-title: 基于Pyecharts对疫情进行分析
+title: 基于Pyecharts对疫情进行分析-副本
 date: 2020-09-21
 draft: false
 tags: ["requests","pandas"]
@@ -119,7 +119,8 @@ _map = (
 
 _map.render_notebook()
 ```
-![全球疫情地图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118008958-%E5%85%A8%E7%90%83%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.gif)
+
+![全球疫情地图](/images/202009/21/全球疫情地图.gif)
 
 
 ### 全国疫情地图
@@ -148,8 +149,7 @@ _map = (
 _map.render_notebook()
 ```
 
-![全国疫情地图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606117827790-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E5%9C%B0%E5%9B%BE.gif)
-
+![全国疫情地图](/images/202009/21/全国疫情地图.gif)
 
 
 ### 湖北省确诊情况
@@ -210,8 +210,7 @@ bar = (
 bar.render_notebook()
 ```
 
-![湖北省确诊情况](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118091830-%E6%B9%96%E5%8C%97%E7%9C%81%E7%A1%AE%E8%AF%8A%E6%83%85%E5%86%B5.jpg)
-
+![湖北省确诊情况](/images/202009/21/湖北省确诊情况.jpg)
 
 
 ### 全国疫情热力图
@@ -238,8 +237,8 @@ geo = (
 
 geo.render_notebook()
 ```
-![全国疫情热力图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118180844-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E7%83%AD%E5%8A%9B%E5%9B%BE.jpg)
 
+![全国疫情热力图](/images/202009/21/全国疫情热力图.jpg)
 
 
 ## 时间序列数据
@@ -357,8 +356,8 @@ for key_, value_ in data_type.items():
 
 tl.render_notebook()
 ```
-![全国疫情趋势折线图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118221714-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E8%B6%8B%E5%8A%BF%E6%8A%98%E7%BA%BF%E5%9B%BE.jpg)
 
+![全国疫情趋势折线图](/images/202009/21/全国疫情趋势折线图.jpg)
 
 ### 全国疫情新增趋势
 
@@ -386,9 +385,7 @@ line = (Line(init_opts=opts.InitOpts(theme='dark',width='600'))
 
 line.render_notebook()
 ```
-![全国疫情新增趋势](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118260131-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E6%96%B0%E5%A2%9E%E8%B6%8B%E5%8A%BF.jpg)
-
-
+![全国疫情新增趋势](/images/202009/21/全国疫情新增趋势.jpg)
 
 ### 全国疑似病例趋势
 
@@ -416,9 +413,7 @@ line = (Line(init_opts=opts.InitOpts(theme='dark',width='600'))
 
 line.render_notebook()
 ```
-![全国疑似病例趋势](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118294521-%E5%85%A8%E5%9B%BD%E7%96%91%E4%BC%BC%E7%97%85%E4%BE%8B%E8%B6%8B%E5%8A%BF.jpg)
-
-
+![全国疑似病例趋势](/images/202009/21/全国疑似病例趋势.jpg)
 
 ### 全国疫情蔓延趋势
 
@@ -492,8 +487,7 @@ for day in time_range:
 tl.render_notebook()
 ```
 
-![全国疫情热力图](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118343643-%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E7%83%AD%E5%8A%9B%E5%9B%BE.gif)
-
+![全国疫情热力图](/images/202009/21/全国疫情热力图.gif)
 
 ### 海外疫情趋势
 
@@ -574,8 +568,7 @@ for day in time_range[::-1]:
 tl.render_notebook()
 ```
 
-![海外主要国家确诊情况](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118416848-%E6%B5%B7%E5%A4%96%E4%B8%BB%E8%A6%81%E5%9B%BD%E5%AE%B6%E7%A1%AE%E8%AF%8A%E6%83%85%E5%86%B5.jpg)
-
+![海外主要国家确诊情况](/images/202009/21/海外主要国家确诊情况.jpg)
 
 ### 海外主要国家确诊/治愈率/死亡率趋势
 
@@ -642,5 +635,4 @@ for country in country_list:
 tab.render_notebook()
 ```
 
-![海外主要国家确诊治愈率死亡率趋势](https://gitee.com/hank_leo/picture/raw/master/2020-11-23/1606118436954-%E6%B5%B7%E5%A4%96%E4%B8%BB%E8%A6%81%E5%9B%BD%E5%AE%B6%E7%A1%AE%E8%AF%8A%E6%B2%BB%E6%84%88%E7%8E%87%E6%AD%BB%E4%BA%A1%E7%8E%87%E8%B6%8B%E5%8A%BF.jpg)
-
+![海外主要国家确诊治愈率死亡率趋势](/images/202009/21/海外主要国家确诊治愈率死亡率趋势.jpg)
