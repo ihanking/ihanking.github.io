@@ -2,7 +2,7 @@
 title: SQL面试50题
 date: 2020-09-11
 draft: false
-tags: ["mysql"]
+tags: ["mysql","面试题"]
 categories: ["数据库系列"]
 ---
 
