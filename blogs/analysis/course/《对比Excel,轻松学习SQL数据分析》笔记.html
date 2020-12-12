@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>《对比Excel,轻松学习SQL数据分析》笔记 | Hank&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="专注于爬虫、数据分析与挖掘,涉及python/sql/go/js">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.36fffe06.css" as="style"><link rel="preload" href="/assets/js/app.f072bc95.js" as="script"><link rel="preload" href="/assets/js/3.5fe052d6.js" as="script"><link rel="preload" href="/assets/js/1.26d2071d.js" as="script"><link rel="preload" href="/assets/js/36.bfa4031f.js" as="script"><link rel="prefetch" href="/assets/js/10.776ee9a8.js"><link rel="prefetch" href="/assets/js/100.16adb21b.js"><link rel="prefetch" href="/assets/js/101.d33e47ef.js"><link rel="prefetch" href="/assets/js/102.648f71f8.js"><link rel="prefetch" href="/assets/js/103.1c9afd8a.js"><link rel="prefetch" href="/assets/js/104.55e71557.js"><link rel="prefetch" href="/assets/js/105.99e906ac.js"><link rel="prefetch" href="/assets/js/106.8263d870.js"><link rel="prefetch" href="/assets/js/107.934e6249.js"><link rel="prefetch" href="/assets/js/108.90bc2d58.js"><link rel="prefetch" href="/assets/js/109.ccd3551d.js"><link rel="prefetch" href="/assets/js/11.1855a799.js"><link rel="prefetch" href="/assets/js/110.8c555231.js"><link rel="prefetch" href="/assets/js/111.95f55b96.js"><link rel="prefetch" href="/assets/js/112.b9300a22.js"><link rel="prefetch" href="/assets/js/113.8b6872e8.js"><link rel="prefetch" href="/assets/js/114.3ffc3098.js"><link rel="prefetch" href="/assets/js/115.2526b55b.js"><link rel="prefetch" href="/assets/js/116.63a8bc4f.js"><link rel="prefetch" href="/assets/js/117.f96bde37.js"><link rel="prefetch" href="/assets/js/118.a650916a.js"><link rel="prefetch" href="/assets/js/119.0762c7ef.js"><link rel="prefetch" href="/assets/js/12.8d5cf1ed.js"><link rel="prefetch" href="/assets/js/120.1136d1b0.js"><link rel="prefetch" href="/assets/js/121.e1fcab53.js"><link rel="prefetch" href="/assets/js/122.5f0b0ad6.js"><link rel="prefetch" href="/assets/js/123.21f0e8c0.js"><link rel="prefetch" href="/assets/js/124.09aa8323.js"><link rel="prefetch" href="/assets/js/125.32894d3d.js"><link rel="prefetch" href="/assets/js/126.3304f286.js"><link rel="prefetch" href="/assets/js/127.bd62ffbf.js"><link rel="prefetch" href="/assets/js/128.067b85d4.js"><link rel="prefetch" href="/assets/js/129.84d00b6e.js"><link rel="prefetch" href="/assets/js/13.fe8aeec9.js"><link rel="prefetch" href="/assets/js/130.3b89e6ab.js"><link rel="prefetch" href="/assets/js/131.13347ce0.js"><link rel="prefetch" href="/assets/js/132.e37368c1.js"><link rel="prefetch" href="/assets/js/133.8bf902e4.js"><link rel="prefetch" href="/assets/js/134.fa375ade.js"><link rel="prefetch" href="/assets/js/135.f6ee6727.js"><link rel="prefetch" href="/assets/js/136.f2d4fc7d.js"><link rel="prefetch" href="/assets/js/137.8b5c24a2.js"><link rel="prefetch" href="/assets/js/138.b562e90a.js"><link rel="prefetch" href="/assets/js/139.177b6dbb.js"><link rel="prefetch" href="/assets/js/14.e9ac10e4.js"><link rel="prefetch" href="/assets/js/140.8292eea9.js"><link rel="prefetch" href="/assets/js/141.409b155c.js"><link rel="prefetch" href="/assets/js/142.a96d0d5d.js"><link rel="prefetch" href="/assets/js/143.9c2a8356.js"><link rel="prefetch" href="/assets/js/144.272f136d.js"><link rel="prefetch" href="/assets/js/145.311b40ae.js"><link rel="prefetch" href="/assets/js/146.d3f68794.js"><link rel="prefetch" href="/assets/js/147.037bea07.js"><link rel="prefetch" href="/assets/js/148.b4c4cd68.js"><link rel="prefetch" href="/assets/js/149.cc375540.js"><link rel="prefetch" href="/assets/js/15.93fb7939.js"><link rel="prefetch" href="/assets/js/150.1a5bf602.js"><link rel="prefetch" href="/assets/js/151.f1f75f11.js"><link rel="prefetch" href="/assets/js/152.3dcccfc4.js"><link rel="prefetch" href="/assets/js/153.876be2ed.js"><link rel="prefetch" href="/assets/js/154.290ab6a5.js"><link rel="prefetch" href="/assets/js/155.a345039e.js"><link rel="prefetch" href="/assets/js/156.208b5143.js"><link rel="prefetch" href="/assets/js/157.e4c39f8c.js"><link rel="prefetch" href="/assets/js/158.bedfa605.js"><link rel="prefetch" href="/assets/js/159.528cda26.js"><link rel="prefetch" href="/assets/js/16.c5657d7f.js"><link rel="prefetch" href="/assets/js/160.e2f77593.js"><link rel="prefetch" href="/assets/js/161.a97d4f5a.js"><link rel="prefetch" href="/assets/js/162.f2ed1d62.js"><link rel="prefetch" href="/assets/js/163.893bc130.js"><link rel="prefetch" href="/assets/js/164.bad5350f.js"><link rel="prefetch" href="/assets/js/165.94a5cd0f.js"><link rel="prefetch" href="/assets/js/166.8b806bf5.js"><link rel="prefetch" href="/assets/js/167.b97f17ca.js"><link rel="prefetch" href="/assets/js/168.c6774f75.js"><link rel="prefetch" href="/assets/js/169.f1f8548d.js"><link rel="prefetch" href="/assets/js/17.0e88eb3e.js"><link rel="prefetch" href="/assets/js/170.22b1254e.js"><link rel="prefetch" href="/assets/js/171.e8fe965c.js"><link rel="prefetch" href="/assets/js/172.1df1268d.js"><link rel="prefetch" href="/assets/js/173.18798a71.js"><link rel="prefetch" href="/assets/js/174.ebc617f0.js"><link rel="prefetch" href="/assets/js/175.ece492b5.js"><link rel="prefetch" href="/assets/js/176.af34603a.js"><link rel="prefetch" href="/assets/js/177.eef57364.js"><link rel="prefetch" href="/assets/js/18.04d22edd.js"><link rel="prefetch" href="/assets/js/19.f1fa235f.js"><link rel="prefetch" href="/assets/js/20.a70706ea.js"><link rel="prefetch" href="/assets/js/21.8087dd46.js"><link rel="prefetch" href="/assets/js/22.c225408b.js"><link rel="prefetch" href="/assets/js/23.11426fce.js"><link rel="prefetch" href="/assets/js/24.25442a4a.js"><link rel="prefetch" href="/assets/js/25.13d020fb.js"><link rel="prefetch" href="/assets/js/26.60a8f8f1.js"><link rel="prefetch" href="/assets/js/27.aff37b87.js"><link rel="prefetch" href="/assets/js/28.e3842fce.js"><link rel="prefetch" href="/assets/js/29.35ce0297.js"><link rel="prefetch" href="/assets/js/30.d2febf12.js"><link rel="prefetch" href="/assets/js/31.ddb081cd.js"><link rel="prefetch" href="/assets/js/32.a2ea214a.js"><link rel="prefetch" href="/assets/js/33.48019083.js"><link rel="prefetch" href="/assets/js/34.73e74683.js"><link rel="prefetch" href="/assets/js/35.a9275c1f.js"><link rel="prefetch" href="/assets/js/37.2eecf50e.js"><link rel="prefetch" href="/assets/js/38.5bed1cb3.js"><link rel="prefetch" href="/assets/js/39.9bd4a79d.js"><link rel="prefetch" href="/assets/js/4.4bd9dd63.js"><link rel="prefetch" href="/assets/js/40.98e27f80.js"><link rel="prefetch" href="/assets/js/41.580e29ae.js"><link rel="prefetch" href="/assets/js/42.5ff2308b.js"><link rel="prefetch" href="/assets/js/43.b4076a6c.js"><link rel="prefetch" href="/assets/js/44.5969e23b.js"><link rel="prefetch" href="/assets/js/45.08280162.js"><link rel="prefetch" href="/assets/js/46.c4abdf8b.js"><link rel="prefetch" href="/assets/js/47.1c7ad5c0.js"><link rel="prefetch" href="/assets/js/48.5934caa7.js"><link rel="prefetch" href="/assets/js/49.aa8487e1.js"><link rel="prefetch" href="/assets/js/5.f0dd78c3.js"><link rel="prefetch" href="/assets/js/50.71a5e091.js"><link rel="prefetch" href="/assets/js/51.81d23e36.js"><link rel="prefetch" href="/assets/js/52.975bcc54.js"><link rel="prefetch" href="/assets/js/53.0dbeac75.js"><link rel="prefetch" href="/assets/js/54.511e31ec.js"><link rel="prefetch" href="/assets/js/55.7a16c68f.js"><link rel="prefetch" href="/assets/js/56.46b399c8.js"><link rel="prefetch" href="/assets/js/57.86ca2356.js"><link rel="prefetch" href="/assets/js/58.f8a83b19.js"><link rel="prefetch" href="/assets/js/59.d098f78c.js"><link rel="prefetch" href="/assets/js/6.00aabcc1.js"><link rel="prefetch" href="/assets/js/60.11f53afd.js"><link rel="prefetch" href="/assets/js/61.fa436bef.js"><link rel="prefetch" href="/assets/js/62.7cd49e1e.js"><link rel="prefetch" href="/assets/js/63.e33f4724.js"><link rel="prefetch" href="/assets/js/64.aef4a89a.js"><link rel="prefetch" href="/assets/js/65.a08c3d83.js"><link rel="prefetch" href="/assets/js/66.31a9c3f7.js"><link rel="prefetch" href="/assets/js/67.8315ea2e.js"><link rel="prefetch" href="/assets/js/68.1982200c.js"><link rel="prefetch" href="/assets/js/69.6808ba0c.js"><link rel="prefetch" href="/assets/js/7.de697a5f.js"><link rel="prefetch" href="/assets/js/70.9ef6e780.js"><link rel="prefetch" href="/assets/js/71.3dc041a3.js"><link rel="prefetch" href="/assets/js/72.c1c5d546.js"><link rel="prefetch" href="/assets/js/73.e2b0ff72.js"><link rel="prefetch" href="/assets/js/74.d8163d37.js"><link rel="prefetch" href="/assets/js/75.f6d8744b.js"><link rel="prefetch" href="/assets/js/76.8fc3ca7b.js"><link rel="prefetch" href="/assets/js/77.e06cab82.js"><link rel="prefetch" href="/assets/js/78.9fe8bde6.js"><link rel="prefetch" href="/assets/js/79.4af107a8.js"><link rel="prefetch" href="/assets/js/8.7dbc80f1.js"><link rel="prefetch" href="/assets/js/80.6dc2f220.js"><link rel="prefetch" href="/assets/js/81.7ed3b58c.js"><link rel="prefetch" href="/assets/js/82.6dab52de.js"><link rel="prefetch" href="/assets/js/83.9ac7f5e1.js"><link rel="prefetch" href="/assets/js/84.4dbc2675.js"><link rel="prefetch" href="/assets/js/85.93bcb2b6.js"><link rel="prefetch" href="/assets/js/86.407b3b6c.js"><link rel="prefetch" href="/assets/js/87.b34aa572.js"><link rel="prefetch" href="/assets/js/88.318c2ef7.js"><link rel="prefetch" href="/assets/js/89.36d32032.js"><link rel="prefetch" href="/assets/js/9.02c22cc6.js"><link rel="prefetch" href="/assets/js/90.404742a7.js"><link rel="prefetch" href="/assets/js/91.110ace0d.js"><link rel="prefetch" href="/assets/js/92.6d2f6bc6.js"><link rel="prefetch" href="/assets/js/93.720c23c1.js"><link rel="prefetch" href="/assets/js/94.35c7df37.js"><link rel="prefetch" href="/assets/js/95.cf82ba06.js"><link rel="prefetch" href="/assets/js/96.b4be3d18.js"><link rel="prefetch" href="/assets/js/97.fd753a9e.js"><link rel="prefetch" href="/assets/js/98.0e3ff96c.js"><link rel="prefetch" href="/assets/js/99.57b78057.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36fffe06.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Hank's Blog</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hank</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Hank's Blog" class="logo"> <span class="site-name">Hank's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/算法学习/" class="nav-link"><i class="iconfont undefined"></i>
+  算法学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/分析实战/" class="nav-link"><i class="iconfont undefined"></i>
+  分析实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据可视化/" class="nav-link"><i class="iconfont undefined"></i>
+  数据可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析系列/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库系列/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/机器学习/" class="nav-link"><i class="iconfont undefined"></i>
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Python学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫系列/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/统计学系列/" class="nav-link"><i class="iconfont undefined"></i>
+  统计学系列
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/ihanking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Hank
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>152</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>48</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/算法学习/" class="nav-link"><i class="iconfont undefined"></i>
+  算法学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/分析实战/" class="nav-link"><i class="iconfont undefined"></i>
+  分析实战
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据可视化/" class="nav-link"><i class="iconfont undefined"></i>
+  数据可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据分析系列/" class="nav-link"><i class="iconfont undefined"></i>
+  数据分析系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库系列/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/机器学习/" class="nav-link"><i class="iconfont undefined"></i>
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python学习/" class="nav-link"><i class="iconfont undefined"></i>
+  Python学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/爬虫系列/" class="nav-link"><i class="iconfont undefined"></i>
+  爬虫系列
+</a></li><li class="dropdown-item"><!----> <a href="/categories/统计学系列/" class="nav-link"><i class="iconfont undefined"></i>
+  统计学系列
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/ihanking" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>《对比Excel,轻松学习SQL数据分析》笔记</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Hank</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>《对比Excel,轻松学习SQL数据分析》笔记</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>Hank</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-11-18</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/blogs/analysis/course/%E3%80%8A%E5%AF%B9%E6%AF%94Excel,%E8%BD%BB%E6%9D%BE%E5%AD%A6%E4%B9%A0SQL%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>sql</span><span class="tag-item" data-v-3b7f5bdf>笔记</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p><strong>limit</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> chapter5 
+<span class="token keyword">limit</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>筛选条件</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> chapter5
+<span class="token keyword">where</span> age<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> chapter5
+<span class="token keyword">where</span> age<span class="token operator">=</span><span class="token number">18</span> 
+<span class="token operator">and</span> class<span class="token operator">=</span><span class="token string">&quot;一班&quot;</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>name
+<span class="token keyword">from</span> chapter5
+<span class="token keyword">where</span> age<span class="token operator">=</span><span class="token number">18</span> 
+<span class="token operator">and</span> class<span class="token operator">=</span><span class="token string">&quot;一班&quot;</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	<span class="token string">&quot;age&lt;20&quot;</span> <span class="token keyword">as</span> label
+<span class="token keyword">from</span> chapter5
+<span class="token keyword">where</span> age<span class="token operator">&lt;</span><span class="token number">20</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>json列解析</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	json_extract<span class="token punctuation">(</span>score<span class="token punctuation">,</span><span class="token string">'$.数学'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;数学成绩&quot;</span>
+<span class="token keyword">from</span> chapter5<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	json_keys<span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;科目&quot;</span>
+<span class="token keyword">from</span> chapter5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>排序</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter5
+<span class="token keyword">order</span> <span class="token keyword">by</span> class <span class="token keyword">asc</span><span class="token punctuation">,</span>
+	age <span class="token keyword">desc</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>缺失值处理</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter6
+<span class="token keyword">where</span> profession <span class="token operator">!=</span><span class="token string">&quot;&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>coalesce函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> order_id<span class="token punctuation">,</span>
+	memberid<span class="token punctuation">,</span>
+	<span class="token keyword">coalesce</span><span class="token punctuation">(</span>profession<span class="token punctuation">,</span><span class="token string">&quot;其他&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">coalesce</span><span class="token punctuation">(</span><span class="token boolean">null</span><span class="token punctuation">,</span><span class="token string">&quot;填充值&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>重复值处理</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">distinct</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">distinct</span> order_id<span class="token punctuation">,</span>
+	memberid
+<span class="token keyword">from</span> chapter6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>使用group by删除重复值</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> order_id<span class="token punctuation">,</span>
+	memberid
+<span class="token keyword">from</span> chapter6
+<span class="token keyword">group</span> <span class="token keyword">by</span> order_id<span class="token punctuation">,</span>
+	memberid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>cast()函数和convert()函数更改数据类型</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> age<span class="token punctuation">,</span>
+	cast<span class="token punctuation">(</span>age <span class="token keyword">as</span> <span class="token keyword">decimal</span><span class="token punctuation">)</span> <span class="token keyword">as</span> decimal_age<span class="token punctuation">,</span>
+	<span class="token keyword">convert</span><span class="token punctuation">(</span>age<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token keyword">as</span> char_age
+<span class="token keyword">from</span> chapter6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>重命名</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	order_id <span class="token keyword">as</span> <span class="token string">&quot;订单ID&quot;</span><span class="token punctuation">,</span>
+	<span class="token keyword">date</span> <span class="token keyword">as</span> <span class="token string">&quot;下单日期&quot;</span><span class="token punctuation">,</span>
+	<span class="token keyword">value</span> <span class="token keyword">as</span> <span class="token string">&quot;订单金额(元)&quot;</span><span class="token punctuation">,</span>
+	memberid <span class="token keyword">as</span> <span class="token string">&quot;会员ID&quot;</span><span class="token punctuation">,</span>
+	age <span class="token keyword">as</span> <span class="token string">&quot;年龄&quot;</span><span class="token punctuation">,</span>
+	sex <span class="token keyword">as</span> <span class="token string">&quot;性别&quot;</span><span class="token punctuation">,</span>
+	profession <span class="token keyword">as</span> <span class="token string">&quot;行业&quot;</span>
+<span class="token keyword">from</span> chapter6
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>sales_a<span class="token operator">+</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> all_sales<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>sales_a<span class="token operator">-</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> sales_a_b<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>sales_a<span class="token operator">*</span>price_a<span class="token operator">+</span>sales_b<span class="token operator">*</span>price_b<span class="token punctuation">)</span> <span class="token keyword">as</span> gmv<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>price_a<span class="token operator">/</span>price_b<span class="token punctuation">)</span> <span class="token keyword">as</span> price_a_b<span class="token punctuation">,</span>
+	sales_a<span class="token operator">*</span><span class="token number">2</span> <span class="token keyword">as</span> <span class="token number">2</span>_sales_a
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>算术运算</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token number">7</span> <span class="token operator">div</span> <span class="token number">2</span>
+
+<span class="token keyword">select</span> <span class="token number">7</span> <span class="token operator">%</span> <span class="token number">2</span>
+
+<span class="token keyword">select</span> <span class="token number">7</span> mod <span class="token number">2</span>
+
+<span class="token keyword">select</span> <span class="token number">1</span><span class="token operator">+</span><span class="token boolean">null</span><span class="token punctuation">,</span>
+	<span class="token number">1</span><span class="token operator">-</span><span class="token boolean">null</span><span class="token punctuation">,</span>
+	<span class="token number">1</span><span class="token operator">*</span><span class="token boolean">null</span><span class="token punctuation">,</span>
+	<span class="token number">1</span><span class="token operator">/</span><span class="token boolean">null</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>比较运算</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a<span class="token punctuation">,</span>
+	sales_b<span class="token punctuation">,</span>
+	sales_a<span class="token operator">&gt;</span>sales_b <span class="token keyword">as</span> <span class="token string">&quot;大于&quot;</span><span class="token punctuation">,</span>
+	sales_a<span class="token operator">&lt;</span>sales_b <span class="token keyword">as</span> <span class="token string">&quot;小于&quot;</span><span class="token punctuation">,</span>
+	sales_a <span class="token operator">!=</span> sales_b <span class="token keyword">as</span> <span class="token string">&quot;不等于&quot;</span><span class="token punctuation">,</span>
+	sales_a <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token keyword">as</span> <span class="token string">&quot;空值&quot;</span><span class="token punctuation">,</span>
+	sales_a <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">as</span> <span class="token string">&quot;非空值&quot;</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">where</span> sales_a
+<span class="token operator">BETWEEN</span> <span class="token number">15</span> <span class="token operator">and</span> <span class="token number">20</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">where</span> sales_a <span class="token operator">&gt;</span> <span class="token number">15</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>逻辑运算</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a<span class="token punctuation">,</span>
+	sales_b<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token punctuation">(</span>sales_a<span class="token operator">&gt;</span><span class="token number">15</span><span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>sales_b<span class="token operator">&gt;</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;双优&quot;</span><span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token punctuation">(</span>sales_a<span class="token operator">&gt;</span><span class="token number">15</span><span class="token punctuation">)</span> <span class="token operator">or</span> <span class="token punctuation">(</span>sales_b<span class="token operator">&gt;</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;单优&quot;</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>绝对值</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a<span class="token punctuation">,</span>
+	sales_b<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>sales_a<span class="token operator">-</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;差值&quot;</span><span class="token punctuation">,</span>
+	abs<span class="token punctuation">(</span>sales_a<span class="token operator">-</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;绝对差值&quot;</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>最小整数值</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> ceil<span class="token punctuation">(</span><span class="token number">2.9</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>最大整数值</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> floor<span class="token punctuation">(</span><span class="token number">2.1</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>随机数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> rand<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>排序和筛选</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	rand<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;随机数&quot;</span>
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">order</span> <span class="token keyword">by</span> rand<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">limit</span> <span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>小数点位数调整</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">round</span><span class="token punctuation">(</span><span class="token number">1.111</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>正负判断</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	sales_a<span class="token punctuation">,</span>
+	sales_b<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span>sales_a<span class="token operator">-</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> sales_a_b<span class="token punctuation">,</span>
+	sign<span class="token punctuation">(</span>sales_a<span class="token operator">-</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;正负&quot;</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>字符串替换</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token keyword">replace</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span><span class="token string">&quot;E&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;e&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> replace_id
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>字符串合并</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> concat<span class="token punctuation">(</span><span class="token string">&quot;hank&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;leo&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	concat<span class="token punctuation">(</span>id<span class="token punctuation">,</span>name<span class="token punctuation">)</span> <span class="token keyword">as</span> id_name
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>concat_ws()函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	concat_ws<span class="token punctuation">(</span><span class="token string">&quot;-&quot;</span><span class="token punctuation">,</span>id<span class="token punctuation">,</span>name<span class="token punctuation">)</span> <span class="token keyword">as</span> id_name
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>字符串截取</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">left</span><span class="token punctuation">(</span><span class="token string">&quot;2019-10-01 12:30:21&quot;</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">right</span><span class="token punctuation">(</span><span class="token string">&quot;2019-10-01 12:30:21&quot;</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> substring<span class="token punctuation">(</span><span class="token string">&quot;2019-10-01 12:30:21&quot;</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>字符串匹配</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">&quot;张_&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter7
+<span class="token keyword">where</span> name <span class="token operator">not</span> <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>字符串计数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> length<span class="token punctuation">(</span><span class="token string">&quot;sql&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> char_length<span class="token punctuation">(</span><span class="token string">&quot;hankleo&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>去除字符串空格</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> length<span class="token punctuation">(</span><span class="token string">&quot;abcdef&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> str_length<span class="token punctuation">,</span>
+	length<span class="token punctuation">(</span>ltrim<span class="token punctuation">(</span><span class="token string">&quot;abcdef&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> lstr_length<span class="token punctuation">,</span>
+	length<span class="token punctuation">(</span>rtrim<span class="token punctuation">(</span><span class="token string">&quot;abcdef&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rstr_length<span class="token punctuation">,</span>
+	length<span class="token punctuation">(</span>trim<span class="token punctuation">(</span><span class="token string">&quot;abcdef&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> tstr_length
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>字符串重复</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token keyword">repeat</span><span class="token punctuation">(</span><span class="token string">&quot;sql&quot;</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="聚合运算"><a href="#聚合运算" class="header-anchor">#</a> 聚合运算</h3> <p><strong>针对id列非空值的计数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>对整张表计数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 空格算1个</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token string">&quot; &quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- null算0个</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token boolean">null</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 删除后再计数</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> sales_a<span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>sum</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_a<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_b
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>avg</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_a<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_b
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>max</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	<span class="token function">max</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> max_a<span class="token punctuation">,</span>
+	<span class="token function">max</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> max_b
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>min</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	<span class="token function">min</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> min_a<span class="token punctuation">,</span>
+	<span class="token function">min</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> min_b
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>方差</strong></p> <p><strong>总体方差var_pop()/样本方差var_samp()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	var_pop<span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	var_samp<span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>标准差</strong></p> <p><strong>总体标准差std()/样本标准差stddev_samp()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	std<span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> std_a<span class="token punctuation">,</span>
+	stddev_samp<span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> stddev_a
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>聚合函数运算</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_a<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_b<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span>sales_a<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">sum</span><span class="token punctuation">(</span>sales_b<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> sum_all
+<span class="token keyword">from</span> chapter7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="控制函数"><a href="#控制函数" class="header-anchor">#</a> 控制函数</h3> <p><strong>if()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	score<span class="token punctuation">,</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>score<span class="token operator">&lt;</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token string">&quot;不及格&quot;</span><span class="token punctuation">,</span><span class="token keyword">if</span><span class="token punctuation">(</span>score<span class="token operator">&lt;</span><span class="token number">80</span><span class="token punctuation">,</span><span class="token string">&quot;良好&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;优秀&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> score_result
+<span class="token keyword">from</span> chapter8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>case when</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	class<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token keyword">case</span> class 
+	<span class="token keyword">when</span> <span class="token string">&quot;一班&quot;</span> <span class="token keyword">then</span> <span class="token string">&quot;class1&quot;</span>
+	<span class="token keyword">when</span> <span class="token string">&quot;二班&quot;</span> <span class="token keyword">then</span> <span class="token string">&quot;class2&quot;</span>
+	<span class="token keyword">when</span> <span class="token string">&quot;三班&quot;</span> <span class="token keyword">then</span> <span class="token string">&quot;class3&quot;</span>
+	<span class="token keyword">else</span> <span class="token string">&quot;其他&quot;</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> class_result
+<span class="token keyword">from</span> chapter8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>比较运算</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	score<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> score<span class="token operator">&lt;</span><span class="token number">60</span> <span class="token keyword">then</span> <span class="token string">&quot;不及格&quot;</span>
+	<span class="token keyword">when</span> score<span class="token operator">&lt;</span><span class="token number">80</span> <span class="token keyword">then</span> <span class="token string">&quot;良好&quot;</span>
+	<span class="token keyword">else</span> <span class="token string">&quot;优秀&quot;</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> score_result
+<span class="token keyword">from</span> chapter8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>between</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	score<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> score <span class="token operator">between</span> <span class="token number">0</span> <span class="token operator">and</span> <span class="token number">59</span> <span class="token keyword">then</span> <span class="token string">&quot;不及格&quot;</span>
+	<span class="token keyword">when</span> score <span class="token operator">between</span> <span class="token number">60</span> <span class="token operator">and</span> <span class="token number">79</span> <span class="token keyword">then</span> <span class="token string">&quot;良好&quot;</span>
+	<span class="token keyword">else</span> <span class="token string">&quot;优秀&quot;</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> score_result
+<span class="token keyword">from</span> chapter8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>日期和时间</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 当前日期和时间</span>
+<span class="token keyword">select</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 当前日期</span>
+<span class="token keyword">select</span> curdate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 当前日期</span>
+<span class="token keyword">select</span> <span class="token keyword">date</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 年</span>
+<span class="token keyword">select</span> <span class="token keyword">year</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 月</span>
+<span class="token keyword">select</span> <span class="token keyword">month</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 日</span>
+<span class="token keyword">select</span> <span class="token keyword">day</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 当前时间</span>
+<span class="token keyword">select</span> curtime<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> <span class="token keyword">time</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> <span class="token keyword">hour</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> <span class="token keyword">minute</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> <span class="token keyword">second</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 全年第几周数</span>
+<span class="token keyword">select</span> weekofyear<span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 当前星期几</span>
+<span class="token keyword">select</span> dayofweek<span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 当前季度</span>
+<span class="token keyword">select</span> 
+	quarter<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> quarter_1<span class="token punctuation">,</span>
+	quarter<span class="token punctuation">(</span><span class="token string">&quot;2020-04-01&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> quarter_2<span class="token punctuation">,</span>
+	quarter<span class="token punctuation">(</span><span class="token string">&quot;2020-07-01&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> quarter_3<span class="token punctuation">,</span>
+	quarter<span class="token punctuation">(</span><span class="token string">&quot;2020-10-01&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> quarter_4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><p><strong>日期和时间的转换</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- date_format()</span>
+<span class="token keyword">select</span> date_format<span class="token punctuation">(</span><span class="token string">&quot;2020-11-15 12:05:11&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;%Y-%m-%d&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> date_format<span class="token punctuation">(</span><span class="token string">&quot;2020-1-1 12:05:11&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;%Y-%m-%d&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> date_format<span class="token punctuation">(</span><span class="token string">&quot;2020-11-15 12:05:11&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;%H:%i:%S&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- extract()</span>
+<span class="token keyword">select</span>
+	extract<span class="token punctuation">(</span><span class="token keyword">year</span> <span class="token keyword">from</span> <span class="token string">&quot;2020-11-15 12:09:11&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	extract<span class="token punctuation">(</span><span class="token keyword">month</span> <span class="token keyword">from</span> <span class="token string">&quot;2020-1-10 12:09:11&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	extract<span class="token punctuation">(</span><span class="token keyword">day</span> <span class="token keyword">from</span> <span class="token string">&quot;2020-10-11 12:09:11&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col3
+
+<span class="token comment">-- date_add() 向后偏移</span>
+<span class="token keyword">select</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">year</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">month</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col3<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">day</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col4
+
+<span class="token keyword">select</span>
+	<span class="token string">&quot;2020-01-01 01:01:01&quot;</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01 01:01:01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">hour</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01 01:01:01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">minute</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col3<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01 01:01:01&quot;</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">second</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col4
+
+<span class="token comment">-- date_sub() 向前偏移</span>
+<span class="token keyword">select</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	date_sub<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">year</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	date_sub<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">month</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col3<span class="token punctuation">,</span>
+	date_sub<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token number">7</span> <span class="token keyword">day</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col4
+
+<span class="token comment">-- 结果同上</span>
+	<span class="token keyword">select</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token operator">-</span><span class="token number">7</span> <span class="token keyword">year</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token operator">-</span><span class="token number">7</span> <span class="token keyword">month</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col3<span class="token punctuation">,</span>
+	date_add<span class="token punctuation">(</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span> <span class="token keyword">interval</span> <span class="token operator">-</span><span class="token number">7</span> <span class="token keyword">day</span><span class="token punctuation">)</span> <span class="token keyword">as</span> col4
+
+<span class="token comment">-- 两日期之间做差</span>
+<span class="token comment">-- datediff(end_date,start_date)</span>
+<span class="token keyword">select</span> datediff<span class="token punctuation">(</span><span class="token string">&quot;2020-11-11&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 日期比较</span>
+<span class="token keyword">select</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token operator">&gt;</span> <span class="token string">&quot;2020-01-02&quot;</span> <span class="token keyword">as</span> col1<span class="token punctuation">,</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token operator">&lt;</span> <span class="token string">&quot;2020-01-02&quot;</span> <span class="token keyword">as</span> col2<span class="token punctuation">,</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;2020-01-02&quot;</span> <span class="token keyword">as</span> col3<span class="token punctuation">,</span>
+	<span class="token string">&quot;2020-01-01&quot;</span> <span class="token operator">!=</span> <span class="token string">&quot;2020-01-02&quot;</span> <span class="token keyword">as</span> col4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><h3 id="数据分组"><a href="#数据分组" class="header-anchor">#</a> 数据分组</h3> <p><strong>group by</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	city<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province<span class="token punctuation">,</span>city
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	city<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>shop<span class="token punctuation">)</span> <span class="token keyword">as</span> count_shop
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province<span class="token punctuation">,</span>city
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>聚合后进行条件筛选</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province
+<span class="token keyword">having</span> <span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">10</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>group_concat()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	group_concat<span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> score_group
+<span class="token keyword">from</span> chapter10_11
+<span class="token keyword">group</span> <span class="token keyword">by</span> id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>rollup</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	province<span class="token punctuation">,</span>
+	<span class="token boolean">null</span> <span class="token keyword">as</span> city<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province
+<span class="token keyword">union</span> <span class="token keyword">all</span>
+<span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	city<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province<span class="token punctuation">,</span>city
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> province<span class="token punctuation">,</span>
+	city<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> sum_sales
+<span class="token keyword">from</span> chapter10_1
+<span class="token keyword">group</span> <span class="token keyword">by</span> province<span class="token punctuation">,</span>city <span class="token keyword">with rollup</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>透视表</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> deal_date<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> area<span class="token operator">=</span><span class="token string">&quot;A区&quot;</span> <span class="token keyword">then</span> order_id <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;A区&quot;</span><span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> area<span class="token operator">=</span><span class="token string">&quot;B区&quot;</span> <span class="token keyword">then</span> order_id <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;B区&quot;</span><span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> area<span class="token operator">=</span><span class="token string">&quot;C区&quot;</span> <span class="token keyword">then</span> order_id <span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token string">&quot;C区&quot;</span>
+<span class="token keyword">from</span> chapter10_7
+<span class="token keyword">group</span> <span class="token keyword">by</span> deal_date
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="窗口函数"><a href="#窗口函数" class="header-anchor">#</a> 窗口函数</h3> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span>
+	<span class="token keyword">from</span> chapter11<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_sales
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>over()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> avg_sales
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>partition by</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 普通用法</span>
+<span class="token keyword">select</span> 
+	chapter11<span class="token punctuation">.</span>shopname<span class="token punctuation">,</span>
+	chapter11<span class="token punctuation">.</span>sales<span class="token punctuation">,</span>
+	chapter11<span class="token punctuation">.</span>sale_date<span class="token punctuation">,</span>
+	avg_table<span class="token punctuation">.</span>avg_sales
+<span class="token keyword">from</span> chapter11
+<span class="token keyword">left</span> <span class="token keyword">join</span>
+	<span class="token punctuation">(</span><span class="token keyword">select</span> shopname<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_sales
+	<span class="token keyword">from</span> chapter11
+	<span class="token keyword">group</span> <span class="token keyword">by</span> shopname<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_table
+<span class="token keyword">on</span> chapter11<span class="token punctuation">.</span>shopname<span class="token operator">=</span>avg_table<span class="token punctuation">.</span>shopname
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_sales
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>sales<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sale_date<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_sales
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="序列函数"><a href="#序列函数" class="header-anchor">#</a> 序列函数</h3> <p><strong>ntile()函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 根据整张表排名</span>
+<span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	ntile<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> cut_group
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 根据每家店铺排名</span>
+<span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	ntile<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname<span class="token punctuation">)</span> <span class="token keyword">as</span> cut_group
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 根据每家店铺销售额排名</span>
+<span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	ntile<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sales<span class="token punctuation">)</span> <span class="token keyword">as</span> cut_group
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>row_number()函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	row_number<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">order</span> <span class="token keyword">by</span> sales<span class="token punctuation">)</span> <span class="token keyword">as</span> rank_num
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	row_number<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sales<span class="token punctuation">)</span> <span class="token keyword">as</span> rank_num
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>lag()函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 向下移动</span>
+<span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	lag<span class="token punctuation">(</span>sales<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sale_date<span class="token punctuation">)</span> <span class="token keyword">as</span> lag_value
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>lead()函数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 向上移动</span>
+<span class="token keyword">select</span>
+	shopname<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	lead<span class="token punctuation">(</span>sales<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sale_date<span class="token punctuation">)</span> <span class="token keyword">as</span> lead_value
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>first_value()/last_value()</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> shopname<span class="token punctuation">,</span>
+	sale_date<span class="token punctuation">,</span>
+	sales<span class="token punctuation">,</span>
+	first_value<span class="token punctuation">(</span>sale_date<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sale_date<span class="token punctuation">)</span> <span class="token keyword">as</span> first_date<span class="token punctuation">,</span>
+	last_value<span class="token punctuation">(</span>sale_date<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> shopname <span class="token keyword">order</span> <span class="token keyword">by</span> sale_date<span class="token punctuation">)</span> <span class="token keyword">as</span> last_date
+<span class="token keyword">from</span> chapter11
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="多表连接"><a href="#多表连接" class="header-anchor">#</a> 多表连接</h3> <p><strong>left join</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>city_name<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">left</span> <span class="token keyword">join</span>
+chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>right join</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>city_name<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">right</span> <span class="token keyword">join</span>
+chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>inner join</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>city_name<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">inner</span> <span class="token keyword">join</span>
+chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>city_name<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> 
+	chapter12_user <span class="token keyword">as</span> user_table<span class="token punctuation">,</span>
+	chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">where</span>
+user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><strong>outer join</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+<span class="token keyword">union</span>
+<span class="token keyword">select</span>
+	user_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_7<span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>orders_14
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">right</span> <span class="token keyword">join</span> chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter12_order_info <span class="token keyword">as</span> order_info
+<span class="token keyword">on</span> user_table<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_info<span class="token punctuation">.</span>userid
+<span class="token keyword">order</span> <span class="token keyword">by</span> user_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>多表连接</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	order_info<span class="token punctuation">.</span>orderid<span class="token punctuation">,</span>
+	order_info<span class="token punctuation">.</span>userid<span class="token punctuation">,</span>
+	order_info<span class="token punctuation">.</span>gmv<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span><span class="token keyword">level</span><span class="token punctuation">,</span>
+	order_table<span class="token punctuation">.</span>first_time
+<span class="token keyword">from</span>  chapter12_order_info <span class="token keyword">as</span> order_info
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter12_user <span class="token keyword">as</span> user_table
+<span class="token keyword">on</span> order_info<span class="token punctuation">.</span>userid<span class="token operator">=</span>user_table<span class="token punctuation">.</span>userid
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter12_order <span class="token keyword">as</span> order_table
+<span class="token keyword">on</span> order_info<span class="token punctuation">.</span>userid<span class="token operator">=</span>order_table<span class="token punctuation">.</span>userid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="自查询"><a href="#自查询" class="header-anchor">#</a> 自查询</h3> <p><strong>select子查询</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	chapter13_score<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	chapter13_score<span class="token punctuation">.</span>score<span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+	<span class="token keyword">from</span> chapter13_score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+<span class="token keyword">from</span> chapter13_score
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>from子查询</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 方法一</span>
+<span class="token keyword">select</span> 
+	avg_table<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	avg_table<span class="token punctuation">.</span>avg_score<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>class
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+	<span class="token keyword">from</span> chapter13_score
+	<span class="token keyword">group</span> <span class="token keyword">by</span> id<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_table
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter13_user <span class="token keyword">as</span> user_info
+<span class="token keyword">on</span> avg_table<span class="token punctuation">.</span>id<span class="token operator">=</span>user_info<span class="token punctuation">.</span>id
+<span class="token keyword">where</span> avg_table<span class="token punctuation">.</span>avg_score<span class="token operator">&gt;</span><span class="token number">600</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 方法二</span>
+<span class="token keyword">select</span> 
+	avg_table<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	avg_table<span class="token punctuation">.</span>avg_score<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>sex<span class="token punctuation">,</span>
+	user_info<span class="token punctuation">.</span>class
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+	<span class="token keyword">from</span> chapter13_score
+	<span class="token keyword">group</span> <span class="token keyword">by</span> id
+	<span class="token keyword">having</span> avg_score<span class="token operator">&gt;</span><span class="token number">600</span><span class="token punctuation">)</span> <span class="token keyword">as</span> avg_table
+<span class="token keyword">left</span> <span class="token keyword">join</span> chapter13_user <span class="token keyword">as</span> user_info
+<span class="token keyword">on</span> avg_table<span class="token punctuation">.</span>id<span class="token operator">=</span>user_info<span class="token punctuation">.</span>id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- where子查询</span>
+<span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	score<span class="token punctuation">,</span>
+	month_num
+<span class="token keyword">from</span> chapter13_score
+<span class="token keyword">where</span> id
+<span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id
+	<span class="token keyword">from</span> chapter13_score
+	<span class="token keyword">group</span> <span class="token keyword">by</span> id
+	<span class="token keyword">having</span> <span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">600</span>
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id
+<span class="token keyword">from</span> chapter13_score 
+<span class="token keyword">group</span> <span class="token keyword">by</span> id 
+<span class="token keyword">having</span> <span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">600</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	score<span class="token punctuation">,</span>
+	month_num
+<span class="token keyword">from</span> chapter13_score
+<span class="token keyword">where</span> score<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span>
+<span class="token keyword">from</span> chapter13_score
+<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>with临时表</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> avg_table<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	avg_table<span class="token punctuation">.</span>avg_score<span class="token punctuation">,</span>
+	<span class="token string">&quot;大于600&quot;</span> <span class="token keyword">as</span> score_bin
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+	<span class="token keyword">from</span> chapter13_score
+	<span class="token keyword">group</span> <span class="token keyword">by</span> id
+	<span class="token keyword">having</span> avg_score<span class="token operator">&gt;</span><span class="token number">600</span>
+	<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_table
+<span class="token keyword">union</span> <span class="token keyword">all</span>
+<span class="token keyword">select</span> avg_table<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	avg_table<span class="token punctuation">.</span>avg_score<span class="token punctuation">,</span>
+	<span class="token string">&quot;小于600&quot;</span> <span class="token keyword">as</span> score_bin
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+	<span class="token keyword">from</span> chapter13_score
+	<span class="token keyword">group</span> <span class="token keyword">by</span> id
+	<span class="token keyword">having</span> avg_score<span class="token operator">&lt;</span><span class="token number">600</span>
+	<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_table
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 一个临时表</span>
+<span class="token keyword">with</span> avg_score_table <span class="token keyword">as</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+						<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+						<span class="token keyword">from</span> chapter13_score
+						<span class="token keyword">group</span> <span class="token keyword">by</span> id<span class="token punctuation">)</span>
+<span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	avg_score<span class="token punctuation">,</span>
+	<span class="token string">&quot;大于600&quot;</span> <span class="token keyword">as</span> score_bin
+<span class="token keyword">from</span> avg_score_table
+<span class="token keyword">where</span> avg_score <span class="token operator">&gt;</span> <span class="token number">600</span>
+<span class="token keyword">union</span> <span class="token keyword">all</span>
+<span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	avg_score<span class="token punctuation">,</span>
+	<span class="token string">&quot;小于600&quot;</span> <span class="token keyword">as</span> score_bin
+<span class="token keyword">from</span> avg_score_table
+<span class="token keyword">where</span> avg_score <span class="token operator">&lt;</span> <span class="token number">600</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 多个临时表</span>
+<span class="token keyword">with</span> 
+avg_score_table <span class="token keyword">as</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id<span class="token punctuation">,</span>
+						<span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
+					<span class="token keyword">from</span> chapter13_score
+					<span class="token keyword">group</span> <span class="token keyword">by</span> id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+user_table <span class="token keyword">as</span> <span class="token punctuation">(</span>
+<span class="token keyword">select</span> id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	sex
+<span class="token keyword">from</span> chapter13_user
+<span class="token keyword">where</span> sex<span class="token operator">=</span><span class="token string">&quot;男&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> avg_score_table<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+	avg_score_table<span class="token punctuation">.</span>avg_score<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+	user_table<span class="token punctuation">.</span>sex
+<span class="token keyword">from</span> avg_score_table
+<span class="token keyword">left</span> <span class="token keyword">join</span> user_table
+<span class="token keyword">on</span> avg_score_table<span class="token punctuation">.</span>id<span class="token operator">=</span>user_table<span class="token punctuation">.</span>id
+<span class="token keyword">where</span> user_table<span class="token punctuation">.</span>sex <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 执行顺序</span>
+<span class="token keyword">select</span> 
+	catid<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span> <span class="token keyword">as</span> sales
+<span class="token keyword">from</span> t
+<span class="token keyword">where</span> catid<span class="token operator">&lt;&gt;</span><span class="token string">&quot;c666&quot;</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> catid
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">10</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span> <span class="token keyword">desc</span>
+<span class="token keyword">limit</span> <span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>顺序：from-where-group by -having-select-order by limit</p> <h3 id="变量设置"><a href="#变量设置" class="header-anchor">#</a> 变量设置</h3> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">set</span> <span class="token variable">@day</span><span class="token operator">=</span><span class="token string">&quot;2019-08-01&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span>
+	order_id<span class="token punctuation">,</span>
+	time1<span class="token punctuation">,</span>
+	time2<span class="token punctuation">,</span>
+	time3<span class="token punctuation">,</span>
+	time4
+<span class="token keyword">from</span> chapter14_1
+<span class="token keyword">where</span> time1<span class="token operator">=</span><span class="token variable">@day</span>
+<span class="token operator">and</span> time2<span class="token operator">=</span><span class="token variable">@day</span>
+<span class="token operator">and</span> time3<span class="token operator">=</span><span class="token variable">@day</span>
+<span class="token operator">and</span> time4<span class="token operator">=</span><span class="token variable">@day</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>#全量表
+#增量表
+#快照表
+#拉链表
+#流水表</p> <p>#数据回溯</p> <p>#数据仓库分层：ODS(操作性数据)/DW(数据仓库)/DM(数据集市)</p> <h3 id="代码规范"><a href="#代码规范" class="header-anchor">#</a> 代码规范</h3> <p><strong>1.代码缩进</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	catid<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span> <span class="token keyword">as</span> sales
+<span class="token keyword">from</span>
+	t
+<span class="token keyword">where</span>
+	catid <span class="token operator">&lt;&gt;</span> <span class="token string">&quot;c666&quot;</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span>
+	catid
+<span class="token keyword">having</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">10</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>orderid<span class="token punctuation">)</span> <span class="token keyword">desc</span>
+<span class="token keyword">limit</span> <span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><strong>2.逗号位置</strong></p> <p><strong>3.注释</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">/*
+员工信息表
+销售表
+*/</span>
+
+<span class="token keyword">select</span> col1 <span class="token comment">-- 销售人员id</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>梳理数据库逻辑</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token comment">-- 创建表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> test<span class="token punctuation">(</span>
+	id <span class="token keyword">int</span> <span class="token keyword">comment</span> <span class="token string">&quot;学号&quot;</span><span class="token punctuation">,</span>
+	name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token keyword">comment</span> <span class="token string">&quot;姓名&quot;</span><span class="token punctuation">,</span>
+	<span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 插入数据</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> test <span class="token keyword">values</span>
+	<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">&quot;李华&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">&quot;李明&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 修改</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> test <span class="token keyword">add</span> class <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 删除</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> test
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="实战"><a href="#实战" class="header-anchor">#</a> 实战</h3> <p><strong>查询每个区人数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> class<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">group</span> <span class="token keyword">by</span> class
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>查询姓张用户数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>筛选出id3-id5的用户</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">order</span> <span class="token keyword">by</span> id <span class="token keyword">asc</span>
+<span class="token keyword">limit</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>不合格人员信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> score_table
+<span class="token keyword">where</span> score <span class="token operator">&lt;</span> <span class="token number">60</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>姓张且不合格的信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> score_table
+<span class="token keyword">where</span> score <span class="token operator">&lt;</span> <span class="token number">60</span>
+<span class="token operator">and</span> name <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>获得两次冠军的人员信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>month_num<span class="token punctuation">)</span> <span class="token keyword">as</span> num
+<span class="token keyword">from</span> month_table
+<span class="token keyword">group</span> <span class="token keyword">by</span> 
+	id<span class="token punctuation">,</span>
+	name
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>month_num<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>查询每个区人数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	class<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">group</span> <span class="token keyword">by</span> class
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>查询姓张用户数</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>筛选出id3-id5的用户</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> stu_table
+<span class="token keyword">order</span> <span class="token keyword">by</span> id <span class="token keyword">asc</span>
+<span class="token keyword">limit</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>不合格人员信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> score_table
+<span class="token keyword">where</span> score <span class="token operator">&lt;</span> <span class="token number">60</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>姓张且不合格的信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> 
+<span class="token keyword">from</span> score_table
+<span class="token keyword">where</span> score <span class="token operator">&lt;</span> <span class="token number">60</span>
+<span class="token operator">and</span> name <span class="token operator">like</span> <span class="token string">&quot;张%&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>获得两次冠军的人员信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	id<span class="token punctuation">,</span>
+	name<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>month_num<span class="token punctuation">)</span> <span class="token keyword">as</span> num
+<span class="token keyword">from</span> month_table
+<span class="token keyword">group</span> <span class="token keyword">by</span>
+	id<span class="token punctuation">,</span>
+	name
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>month_num<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>周环比数据</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>order_id<span class="token punctuation">)</span> <span class="token keyword">as</span> order_cnt<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">if</span><span class="token punctuation">(</span>date_sub<span class="token punctuation">(</span>curdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">1</span> <span class="token keyword">day</span><span class="token punctuation">)</span><span class="token operator">=</span>order_date<span class="token punctuation">,</span>order_id<span class="token punctuation">,</span><span class="token boolean">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span> last_order_cnt
+<span class="token keyword">from</span> order_table
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>获奖员工信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> table1<span class="token punctuation">.</span><span class="token operator">*</span>
+<span class="token keyword">from</span> table1
+<span class="token keyword">left</span> <span class="token keyword">join</span> table2
+<span class="token keyword">on</span> table1<span class="token punctuation">.</span>id<span class="token operator">=</span>table2<span class="token punctuation">.</span>id
+<span class="token keyword">where</span> table2<span class="token punctuation">.</span>id <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>计算用户留存情况</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">1</span> <span class="token keyword">then</span> <span class="token string">&quot;次日留存&quot;</span>
+		<span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">3</span> <span class="token keyword">then</span> <span class="token string">&quot;三日留存&quot;</span>
+		<span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">7</span> <span class="token keyword">then</span> <span class="token string">&quot;七日留存&quot;</span>
+		<span class="token keyword">else</span> <span class="token string">&quot;其他&quot;</span>
+		<span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token keyword">type</span><span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>t3<span class="token punctuation">.</span>uid<span class="token punctuation">)</span> <span class="token keyword">as</span> uid_cnt
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> t1<span class="token punctuation">.</span>uid<span class="token punctuation">,</span>t1<span class="token punctuation">.</span>first_time<span class="token punctuation">,</span>t2<span class="token punctuation">.</span>last_time<span class="token punctuation">,</span>datediff<span class="token punctuation">(</span>t2<span class="token punctuation">.</span>last_time<span class="token punctuation">,</span>t1<span class="token punctuation">.</span>first_time<span class="token punctuation">)</span> day_value
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> uid<span class="token punctuation">,</span>
+		<span class="token keyword">date</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span>login_time<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> first_time
+	<span class="token keyword">from</span> user_login
+	<span class="token keyword">group</span> <span class="token keyword">by</span> uid<span class="token punctuation">)</span> t1
+<span class="token keyword">left</span> <span class="token keyword">join</span><span class="token punctuation">(</span><span class="token keyword">select</span>
+			uid<span class="token punctuation">,</span>
+			<span class="token keyword">date</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span>login_time<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> last_time
+		<span class="token keyword">from</span> user_login
+		<span class="token keyword">group</span> <span class="token keyword">by</span> uid<span class="token punctuation">)</span> t3
+<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">(</span><span class="token keyword">case</span> <span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">1</span> <span class="token keyword">then</span> <span class="token string">&quot;次日留存&quot;</span>
+	<span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">3</span> <span class="token keyword">then</span> <span class="token string">&quot;三日留存&quot;</span>
+	<span class="token keyword">when</span> t3<span class="token punctuation">.</span>day_value<span class="token operator">=</span><span class="token number">7</span> <span class="token keyword">then</span> <span class="token string">&quot;七日留存&quot;</span>
+	<span class="token keyword">else</span> <span class="token string">&quot;其他&quot;</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p><strong>筛选最受欢迎的课程（包括不同课程有相同学生数）</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> course<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+<span class="token keyword">from</span> course_table
+<span class="token keyword">group</span> <span class="token keyword">by</span> course
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>stu_num<span class="token punctuation">)</span>
+				<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> course<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+					  <span class="token keyword">from</span> course_table
+						<span class="token keyword">group</span> <span class="token keyword">by</span> course<span class="token punctuation">)</span> <span class="token keyword">as</span> a
+				<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>筛选出每个年级最受欢迎的三门课</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> grade<span class="token punctuation">,</span>
+			course<span class="token punctuation">,</span>
+			stu_num<span class="token punctuation">,</span>
+			row_number<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">partition</span> <span class="token keyword">by</span> grade <span class="token keyword">order</span> <span class="token keyword">by</span> stu_num <span class="token keyword">desc</span><span class="token punctuation">)</span> <span class="token keyword">as</span> course_rank
+	<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> grade<span class="token punctuation">,</span>
+				course<span class="token punctuation">,</span>
+				<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_num
+		<span class="token keyword">from</span> course_table
+		<span class="token keyword">group</span> <span class="token keyword">by</span> grade<span class="token punctuation">,</span>course<span class="token punctuation">)</span> <span class="token keyword">as</span> a
+	<span class="token punctuation">)</span> <span class="token keyword">as</span> b
+<span class="token keyword">where</span> b<span class="token punctuation">.</span>course_rank<span class="token operator">&lt;</span><span class="token number">4</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>求累积和</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>uid<span class="token punctuation">)</span>
+<span class="token keyword">from</span> <span class="token punctuation">(</span><span class="token keyword">select</span> uid<span class="token punctuation">,</span>
+			amount<span class="token punctuation">,</span>
+			<span class="token function">sum</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">order</span> <span class="token keyword">by</span> amount <span class="token keyword">desc</span><span class="token punctuation">)</span> <span class="token keyword">as</span> consum_amount<span class="token punctuation">,</span>
+			<span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">over</span><span class="token punctuation">(</span><span class="token keyword">order</span> <span class="token keyword">by</span> amount <span class="token keyword">desc</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>获取借款到期名单</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span> 
+	<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> loan_cnt<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">as</span> loan_amount<span class="token punctuation">,</span>
+	<span class="token function">avg</span><span class="token punctuation">(</span>DATEDIFF<span class="token punctuation">(</span>reback_time<span class="token punctuation">,</span>loan_time<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> avg_day
+<span class="token keyword">from</span> loan_table
+<span class="token keyword">where</span> expire_time<span class="token operator">=</span><span class="token string">&quot;2020-01-05&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>获取即将到期的借款信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> loan_cnt<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">status</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>id<span class="token punctuation">,</span><span class="token boolean">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> reback_cnt
+<span class="token keyword">from</span> loan_table
+<span class="token keyword">where</span> expire_time
+<span class="token operator">between</span> curdate<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">and</span> date_sub<span class="token punctuation">(</span>curdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">interval</span> <span class="token number">6</span> <span class="token keyword">day</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>历史逾期借款信息</strong></p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">select</span>
+	<span class="token function">count</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token keyword">as</span> loan_cnt<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">as</span> loan_amount<span class="token punctuation">,</span>
+	<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">status</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>id<span class="token punctuation">,</span><span class="token boolean">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> no_reback_cnt<span class="token punctuation">,</span>
+	<span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">status</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>amount<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> no_reback_amount
+<span class="token keyword">from</span>
+	loan_table
+<span class="token keyword">where</span>
+	<span class="token punctuation">(</span>reback_time<span class="token operator">&gt;</span>expire_time<span class="token punctuation">)</span>
+	<span class="token operator">or</span>
+	<span class="token punctuation">(</span>reback_time <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">and</span> expire_time<span class="token operator">&lt;</span>curdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">12/12/2020, 10:21:50 AM</span></div></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.f072bc95.js" defer></script><script src="/assets/js/3.5fe052d6.js" defer></script><script src="/assets/js/1.26d2071d.js" defer></script><script src="/assets/js/36.bfa4031f.js" defer></script>
+  </body>
+</html>
