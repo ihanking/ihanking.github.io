@@ -1,8 +1,8 @@
 ---
-title: 《对比Excel,轻松学习SQL数据分析》读书笔记
+title: 《对比Excel,轻松学习SQL数据分析》笔记
 date: 2020-11-18
 draft: false
-tags: ["sql"]
+tags: ["sql","笔记"]
 categories: ["数据库系列"]
 ---
 
