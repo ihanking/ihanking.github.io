@@ -32,17 +32,17 @@ module.exports = {
         "link": "/timeline/",
         "icon": "reco-date"
       },
-      {
-        "text": "联系",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "GitHub",
-            "link": "https://github.com/ihanking",
-            "icon": "reco-github"
-          }
-        ]
-      }
+      // {
+      //   "text": "联系",
+      //   "icon": "reco-message",
+      //   "items": [
+      //     {
+      //       "text": "GitHub",
+      //       "link": "https://github.com/ihanking",
+      //       "icon": "reco-github"
+      //     }
+      //   ]
+      // }
     ],
     "type": "blog",
     "blogConfig": {
