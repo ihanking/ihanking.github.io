@@ -2,7 +2,7 @@
 title: Python算法|例1两数之和
 date: 2020-09-13
 draft: false
-categories: ["算法学习"]
+categories: ["算法系列"]
 ---
 
 ```python

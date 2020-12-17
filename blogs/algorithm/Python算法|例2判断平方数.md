@@ -2,7 +2,7 @@
 title: "Python算法|例2判断平方数"
 date: 2020-09-01
 draft: false
-categories: ["算法学习"]
+categories: ["算法系列"]
 ---
 
 #示例: 输入num=16, 输出True, sqrt(16)=4; 输入num=15, 输出False, sqrt(15)=3.87

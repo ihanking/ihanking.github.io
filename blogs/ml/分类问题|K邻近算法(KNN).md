@@ -1,8 +1,8 @@
 ---
-title: 分类问题|KNN算法
+title: 分类问题|K邻近算法(KNN)
 date: 2020-09-19
 draft: false
-categories: ["算法学习"]
+categories: ["机器学习系列"]
 ---
 
 ## 简介

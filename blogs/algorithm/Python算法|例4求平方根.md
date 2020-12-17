@@ -2,7 +2,7 @@
 title: "Python算法|例4求平方根"
 date: 2020-09-01
 draft: false
-categories: ["算法学习"]
+categories: ["算法系列"]
 ---
 
 

@@ -3,7 +3,7 @@ title: LeetCode算法|26.删除排序数组中的重复项
 date: 2020-09-13
 draft: false
 tags: ["leetcode"]
-categories: ["算法学习"]
+categories: ["算法系列"]
 ---
 
 ```python
