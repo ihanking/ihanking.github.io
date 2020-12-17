@@ -2,7 +2,7 @@
 title: 《SQL必知必会》笔记
 date: 2020-11-25
 draft: false
-tags: ["sql","笔记"]
+tags: ["sql","notes"]
 categories: ["数据库系列"]
 ---
 
