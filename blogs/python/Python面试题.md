@@ -3,6 +3,7 @@ title: "Python面试题"
 date: 2019-12-10
 draft: false
 tags: ["面试题"]
+categories: ["Python系列"]
 ---
 ## Python语言特性
 

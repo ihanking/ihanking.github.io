@@ -3,7 +3,7 @@ title: "GUI Tkinter登陆"
 date: 2020-09-01
 draft: false
 tags: ["tkinter"]
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 ## 介绍

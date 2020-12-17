@@ -3,7 +3,7 @@ title: "Xpath的实际应用"
 date: 2019-12-05
 draft: false
 tags: ["xpath"]
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 #### xpath中使用contains

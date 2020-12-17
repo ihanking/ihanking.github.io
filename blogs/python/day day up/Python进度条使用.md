@@ -3,7 +3,7 @@ title: Python进度条使用
 date: 2020-09-18
 draft: false
 tags: ["python"]
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 ## 普通进度条

@@ -3,7 +3,7 @@ title: Flask Web框架
 date: 2020-09-28
 draft: false
 tags: ["flask"]
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 >因为在学Pyecharts涉及到Flask框架，今天就其进行简单了解和学习

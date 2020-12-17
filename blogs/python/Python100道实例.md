@@ -1,7 +1,7 @@
 ---
 title: Python100道实例
 date: 2019-12-11
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 ### 实例001：数字组合

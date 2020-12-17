@@ -3,6 +3,7 @@ title: Python综合题
 date: 2020-09-15
 draft: false
 tags: ["面试题"]
+categories: ["Python系列"]
 ---
 
 ## 第一章 python基础

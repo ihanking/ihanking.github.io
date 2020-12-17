@@ -1,6 +1,6 @@
 module.exports = {
   "title": "Hank's Blog",
-  "description": "专注于爬虫、数据分析与挖掘,涉及python/sql/go/js",
+  "description": "专注于爬虫、数据分析/挖掘/可视化,涉及python/sql/go/js",
   "dest": "public",
   "base":"",
   "head": [

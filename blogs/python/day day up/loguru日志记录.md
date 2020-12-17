@@ -3,7 +3,7 @@ title: loguru日志记录
 date: 2020-09-24
 draft: false
 tags: ["python"]
-categories: ["Python学习"]
+categories: ["Python系列"]
 ---
 
 使用loguru记录不同消息，存放到各自文件中

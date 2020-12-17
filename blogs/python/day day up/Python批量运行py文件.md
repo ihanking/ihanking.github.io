@@ -3,6 +3,7 @@ title: Python批量运行py文件
 date: 2020-09-24
 draft: false
 tags: ["python","办公自动化"]
+categories: ["Python系列"]
 ---
 
 方法一：
