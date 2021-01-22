@@ -55,20 +55,20 @@ module.exports = {
         "text": "标签"
       }
     },
-    "friendLink": [
-      {
-        "title": "博客园",
-        "desc": "Just Gan It",
-        //"email": "1156743527@qq.com",
-        "link": "https://www.cnblogs.com/hankleo/"
-      },
+    // "friendLink": [
+    //   {
+    //     "title": "博客园",
+    //     "desc": "Just Gan It",
+    //     //"email": "1156743527@qq.com",
+    //     "link": "https://www.cnblogs.com/hankleo/"
+    //   },
       // {
       //   "title": "vuepress-theme-reco",
       //   "desc": "A simple and beautiful vuepress Blog & Doc theme.",
       //   "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
       //   "link": "https://vuepress-theme-reco.recoluan.com"
       // }
-    ],
+    // ],
     "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
