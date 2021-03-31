@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: yarn ci
-    - run: yarn build
+    - run: npm ci
+    - run: npm run build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
